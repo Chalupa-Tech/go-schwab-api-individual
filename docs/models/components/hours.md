@@ -1,0 +1,15 @@
+# Hours
+
+
+## Fields
+
+| Field                                                                   | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `Date`                                                                  | **string*                                                               | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `MarketType`                                                            | [*components.MarketType](../../models/components/markettype.md)         | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `Exchange`                                                              | **string*                                                               | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `Category`                                                              | **string*                                                               | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `Product`                                                               | **string*                                                               | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `ProductName`                                                           | **string*                                                               | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `IsOpen`                                                                | **bool*                                                                 | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `SessionHours`                                                          | map[string][][components.Interval](../../models/components/interval.md) | :heavy_minus_sign:                                                      | N/A                                                                     |

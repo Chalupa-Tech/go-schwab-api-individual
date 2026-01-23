@@ -1,0 +1,15 @@
+# Bond
+
+
+## Fields
+
+| Field                                                                 | Type                                                                  | Required                                                              | Description                                                           |
+| --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `Cusip`                                                               | **string*                                                             | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `Symbol`                                                              | **string*                                                             | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `Description`                                                         | **string*                                                             | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `Exchange`                                                            | **string*                                                             | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `AssetType`                                                           | [*components.BondAssetType](../../models/components/bondassettype.md) | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `BondFactor`                                                          | **string*                                                             | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `BondMultiplier`                                                      | **string*                                                             | :heavy_minus_sign:                                                    | N/A                                                                   |
+| `BondPrice`                                                           | **float64*                                                            | :heavy_minus_sign:                                                    | N/A                                                                   |

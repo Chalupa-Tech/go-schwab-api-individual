@@ -1,0 +1,12 @@
+# ErrorSource
+
+Who is responsible for triggering these errors.
+
+
+## Fields
+
+| Field                                                                               | Type                                                                                | Required                                                                            | Description                                                                         | Example                                                                             |
+| ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| `Pointer`                                                                           | []*string*                                                                          | :heavy_minus_sign:                                                                  | list of attributes which lead to this error message.                                | [<br/>"/data/attributes/symbols",<br/>"/data/attributes/cusips",<br/>"/data/attributes/ssids"<br/>] |
+| `Parameter`                                                                         | **string*                                                                           | :heavy_minus_sign:                                                                  | parameter name which lead to this error message.                                    | fields                                                                              |
+| `Header`                                                                            | **string*                                                                           | :heavy_minus_sign:                                                                  | header name which lead to this error message.                                       | Schwab-Client-CorrelId                                                              |

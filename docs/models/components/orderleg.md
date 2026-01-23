@@ -1,0 +1,17 @@
+# OrderLeg
+
+
+## Fields
+
+| Field                                                             | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `AskPrice`                                                        | **float64*                                                        | :heavy_minus_sign:                                                | N/A                                                               |
+| `BidPrice`                                                        | **float64*                                                        | :heavy_minus_sign:                                                | N/A                                                               |
+| `LastPrice`                                                       | **float64*                                                        | :heavy_minus_sign:                                                | N/A                                                               |
+| `MarkPrice`                                                       | **float64*                                                        | :heavy_minus_sign:                                                | N/A                                                               |
+| `ProjectedCommission`                                             | **float64*                                                        | :heavy_minus_sign:                                                | N/A                                                               |
+| `Quantity`                                                        | **float64*                                                        | :heavy_minus_sign:                                                | N/A                                                               |
+| `FinalSymbol`                                                     | **string*                                                         | :heavy_minus_sign:                                                | N/A                                                               |
+| `LegID`                                                           | **float64*                                                        | :heavy_minus_sign:                                                | N/A                                                               |
+| `AssetType`                                                       | [*components.AssetType](../../models/components/assettype.md)     | :heavy_minus_sign:                                                | N/A                                                               |
+| `Instruction`                                                     | [*components.Instruction](../../models/components/instruction.md) | :heavy_minus_sign:                                                | N/A                                                               |

@@ -1,0 +1,12 @@
+# Instrument
+
+
+## Fields
+
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `Cusip`                                                                           | **string*                                                                         | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `Symbol`                                                                          | **string*                                                                         | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `Description`                                                                     | **string*                                                                         | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `Exchange`                                                                        | **string*                                                                         | :heavy_minus_sign:                                                                | N/A                                                                               |
+| `AssetType`                                                                       | [*components.InstrumentAssetType](../../models/components/instrumentassettype.md) | :heavy_minus_sign:                                                                | N/A                                                                               |

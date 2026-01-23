@@ -1,0 +1,10 @@
+# GetMoversRequest
+
+
+## Fields
+
+| Field                                                                             | Type                                                                              | Required                                                                          | Description                                                                       | Example                                                                           |
+| --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| `SymbolID`                                                                        | [components.PathParamSymbol](../../models/components/pathparamsymbol.md)          | :heavy_check_mark:                                                                | Index Symbol                                                                      | $DJI                                                                              |
+| `Sort`                                                                            | [*components.QueryParamSort](../../models/components/queryparamsort.md)           | :heavy_minus_sign:                                                                | Sort by a particular attribute                                                    | VOLUME                                                                            |
+| `Frequency`                                                                       | [*components.QueryParamFrequency](../../models/components/queryparamfrequency.md) | :heavy_minus_sign:                                                                | To return movers with the specified directions of up or down                      |                                                                                   |

@@ -1,0 +1,10 @@
+# GetMoversResponse
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `HTTPMeta`                                                                            | [components.HTTPMetadata](../../models/components/httpmetadata.md)                    | :heavy_check_mark:                                                                    | N/A                                                                                   |
+| `Object`                                                                              | [*operations.GetMoversResponseBody](../../models/operations/getmoversresponsebody.md) | :heavy_minus_sign:                                                                    | Analytics for the symbol was returned successfully.                                   |
+| `Headers`                                                                             | map[string][]*string*                                                                 | :heavy_check_mark:                                                                    | N/A                                                                                   |

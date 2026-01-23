@@ -1,0 +1,2255 @@
+lockVersion: 2.0.0
+id: 75caea02-f844-4b0a-ac9a-865915debbd8
+management:
+  docChecksum: 5fa66d4a4196410fc3cc617bd4859838
+  docVersion: 1.0.0
+  speakeasyVersion: 1.696.0
+  generationVersion: 2.799.0
+  releaseVersion: 0.0.1
+  configChecksum: b00a538912208e9cf5b982191b5a4b61
+  repoURL: https://github.com/Chalupa-Tech/go-schwab-api-individual
+persistentEdits:
+  generation_id: 37698b79-5333-4a60-a568-c09d27ace314
+  pristine_commit_hash: 20faaec384ec232666623c202ea5ed49c293e895
+  pristine_tree_hash: 9aaa1f2ad7a118237d07cd21728c32fbca26203d
+features:
+  go:
+    additionalDependencies: 0.1.0
+    constsAndDefaults: 0.1.12
+    core: 3.13.10
+    defaultEnabledRetries: 0.2.0
+    envVarSecurityUsage: 0.3.2
+    flattening: 2.81.1
+    globalSecurity: 2.82.12
+    globalSecurityCallbacks: 0.1.0
+    globalSecurityFlattening: 0.1.0
+    globalServerURLs: 2.83.0
+    inputOutputModels: 2.83.0
+    intellisenseMarkdownSupport: 0.1.0
+    nullables: 0.2.1
+    responseFormat: 0.1.2
+    retries: 2.84.2
+    sdkHooks: 0.3.0
+    stringNumberFormats: 0.2.2
+    unions: 2.87.2
+trackedFiles:
+  .gitattributes:
+    id: 24139dae6567
+    last_write_checksum: sha1:84b0115789fc3ea52e31df701d8a27f76077e29f
+    pristine_git_object: e6a994416d0f527912d2d272e2583458f4fc9bcb
+  USAGE.md:
+    id: 3aed33ce6e6f
+    last_write_checksum: sha1:84e27d0c191394631fb39a47372132a52702d194
+    pristine_git_object: 9812cf31f6ccf9e7577475822fe942062e8ecb62
+  accounts.go:
+    id: c7bd7b26c9d3
+    last_write_checksum: sha1:5b8fee99f91aa4ef220bfd2c63a1094dd0a3966f
+    pristine_git_object: 03ae71b673d4630885e0043429b918f00df59717
+  docs/models/apierrors/errorresponse.md:
+    id: 385118d32265
+    last_write_checksum: sha1:d2bf260ab24062f65864b71da66735ffc9bd86e2
+    pristine_git_object: 8dc71c7c75994ad020b4a8f58e8556808b772219
+  docs/models/apierrors/serviceerror.md:
+    id: 9ff4fcd5d55b
+    last_write_checksum: sha1:3e4ea478d1af4255e802376500c5f305491f3c6f
+    pristine_git_object: 378b960981183461a73f169000545ec818536e2c
+  docs/models/components/account.md:
+    id: 5a56328e8a4e
+    last_write_checksum: sha1:4d88918cc2c0bfa2ea2e6824c6d2ce4cafef956b
+    pristine_git_object: 46b230da2c46cecb7d57bd565af29b64153cd7b1
+  docs/models/components/accountapioptiondeliverable.md:
+    id: e5c470fb3a9c
+    last_write_checksum: sha1:3d946578549dc42d7cddcf45ce362d97924a126c
+    pristine_git_object: f039d33577eccf7a3d1a8d6ee43a0689039e2267
+  docs/models/components/accountcashequivalent.md:
+    id: bc62826e4619
+    last_write_checksum: sha1:f68903ec1b4ccb34f9500cd1a1b831657c9f869b
+    pristine_git_object: 640a298836e24de166d2740a7f5f869c1fd14e56
+  docs/models/components/accountcashequivalentassettype.md:
+    id: 0d81244718f7
+    last_write_checksum: sha1:54156cd2316d8a6da5553687a3665758950252c6
+    pristine_git_object: 95d17eddd612f18932faaaed888ee44c4e716cfa
+  docs/models/components/accountcashequivalenttype.md:
+    id: 21166a025ca8
+    last_write_checksum: sha1:ed1f8aeb91af8998439260536cdcc12ec764aa52
+    pristine_git_object: ee632c20f69adc8f7181d024ae8924d0e415fd8e
+  docs/models/components/accountfixedincome.md:
+    id: 2c4a0c44033e
+    last_write_checksum: sha1:57dd9a470739e431e3cc31d8de4e5d6813e8fed2
+    pristine_git_object: 651bc0f9f217fc54e43465472ddaf09bd3775bf2
+  docs/models/components/accountfixedincomeassettype.md:
+    id: 72079845e312
+    last_write_checksum: sha1:fad45fe07602b0497da97dfbc5ac7e4a6946452a
+    pristine_git_object: 46f2d629d73b0b9d018872f5607a906fce012fe4
+  docs/models/components/accountnumberhash.md:
+    id: b91feac664c8
+    last_write_checksum: sha1:ab68cadf465c727511d41fb26953b1dd852537b8
+    pristine_git_object: bb69f599388bff5f3e352d1cd030cdbee6d9511c
+  docs/models/components/accountoption.md:
+    id: b8bab5546d58
+    last_write_checksum: sha1:066769b1b5c2552667e85b353a00574519685543
+    pristine_git_object: 895084b1b1b95b8d5358967cf1cdc5016f074d78
+  docs/models/components/accountoptionassettype.md:
+    id: 133eee3343b1
+    last_write_checksum: sha1:d39b731bf4614eca516d8388bd772f28ae50c0bf
+    pristine_git_object: f8c3d6a5e9d748b3e932fcd5c7d1612bb79f652a
+  docs/models/components/accountoptionputcall.md:
+    id: cca958c979b8
+    last_write_checksum: sha1:04f3b36ade10876bdd4cfab595effd9cae3f1cfe
+    pristine_git_object: f6530d7dd9fc46891c20160f853e7943cd95ab0b
+  docs/models/components/accountoptiontype.md:
+    id: 31340cccc15a
+    last_write_checksum: sha1:bf8d2f17b49e6d5b08540f156cff2691917339d5
+    pristine_git_object: 0abc1dff788eb7dddc5a5513d28bae4f495e0f69
+  docs/models/components/accountsbaseinstrument.md:
+    id: b69df08d62f8
+    last_write_checksum: sha1:58d7696c16ac8afcc94f6b3cac6ad3bc8c2c4d20
+    pristine_git_object: ff7270e2f4eee83b11b4aaf5d7acdb02c2a0f011
+  docs/models/components/accountsbaseinstrumentassettype.md:
+    id: 040841066fc1
+    last_write_checksum: sha1:41ae85dfa1000c3be9b52285cc7e92e98cd49e5e
+    pristine_git_object: 2b506ae85a19c2b79a7ca4f82a15c73131ece8a2
+  docs/models/components/accountsinstrument.md:
+    id: fd9deba3315b
+    last_write_checksum: sha1:642b6926d914544c9422599b3bed7d5441e78306
+    pristine_git_object: d03ee3abb36d916041942526e2346e065c5ea55f
+  docs/models/components/advancedordertype.md:
+    id: fce201cdbf4c
+    last_write_checksum: sha1:9c898fada01a72e4a918c3b49a3937487d25e637
+    pristine_git_object: bba6792daf573852dcb1318599820ecad037e8f9
+  docs/models/components/amountindicator.md:
+    id: 1f89bc232a99
+    last_write_checksum: sha1:ca1c7f776e5d8039422ef8a3a5c1b359bdf8a540
+    pristine_git_object: 93451b2ceaa62427ef61291b51501043ea1e56a0
+  docs/models/components/apicurrencytype.md:
+    id: 5cd0b9fe04b0
+    last_write_checksum: sha1:b62947694727bfbd40088e9048940caf8d869245
+    pristine_git_object: 3e38559c89bd7feb5fb7d9dfc0accd8a66eeda89
+  docs/models/components/apiorderstatus.md:
+    id: 31a5d3ceffc5
+    last_write_checksum: sha1:539c76912b4c81d8181185b2d842b4687659b459
+    pristine_git_object: 4a8c368c59256d8ab470a23ae922f9be82e36ffc
+  docs/models/components/apiruleaction.md:
+    id: f43ba6ffb28b
+    last_write_checksum: sha1:cf266caafbe821f22fb827e4ec15fff26708c4a1
+    pristine_git_object: 17e3b6cb2a773730067f01126abfc6cbc3d53743
+  docs/models/components/assetmaintype.md:
+    id: a7c2783ee1b5
+    last_write_checksum: sha1:928efd3196884743929a3ab6e1cafe98dfdbcd78
+    pristine_git_object: 8af41dcdd1b2f9766d5089c85570ab5a3402a0ed
+  docs/models/components/assettype.md:
+    id: 73d61baa74e2
+    last_write_checksum: sha1:5ba610fd6f3535df1b63e02cf5f9a4193ae3e0b9
+    pristine_git_object: b4912ff2e5d5323621732647e18b515e29d74495
+  docs/models/components/bond.md:
+    id: dcc4e9f7784e
+    last_write_checksum: sha1:006cabe9ef1b4dfd2f97d84237ef268d1560d974
+    pristine_git_object: 3eeda9a00fd9f2b0b4544270b0fd27678fa0990a
+  docs/models/components/bondassettype.md:
+    id: d3881238ba6a
+    last_write_checksum: sha1:92fc4681fb2d154898afcd4af815e652b0a2e364
+    pristine_git_object: e39dab21719e3b4dc5ae3262f8ab6e3875eccaef
+  docs/models/components/candle.md:
+    id: 9ead8355dc9c
+    last_write_checksum: sha1:a849a7dc788bc7406df9e664602a2950528b0c2f
+    pristine_git_object: a3725f43c32d07296fbc17ae5c08b3ebb18c2975
+  docs/models/components/candlelist.md:
+    id: 190a13ef4e01
+    last_write_checksum: sha1:34f3c9a8193ad1065c7f9e981e273f73ff3c5897
+    pristine_git_object: 2c4c40f803179c6b8ccb9436122fd60ac273bb9a
+  docs/models/components/cashaccount.md:
+    id: 0eff4383e700
+    last_write_checksum: sha1:6dd58778e334d0a8bf8be461b6711839f43a6778
+    pristine_git_object: 582b2df6031108e6abcf6f1e95201bde2991313d
+  docs/models/components/cashaccounttype.md:
+    id: 70cd2ae127d4
+    last_write_checksum: sha1:84d1a9a2dc9bb7e1975c1e2f724de9f549dbce80
+    pristine_git_object: f69007bbee616de7d17db8227b4ce45fb08036a6
+  docs/models/components/cashbalance.md:
+    id: fba61e2e9ef4
+    last_write_checksum: sha1:55b73491799d16fc12e6bde8693a49804857ce97
+    pristine_git_object: f12cd2cabfac75f29f71780d23370e1c1e793653
+  docs/models/components/cashinitialbalance.md:
+    id: 0d964401cdec
+    last_write_checksum: sha1:c91622c31b08f505bc577a8ad649a77aa4f4ae20
+    pristine_git_object: 4de64df9bd18a9b8b19b6cc181b4e27ffbeac11f
+  docs/models/components/collectiveinvestment.md:
+    id: 8d58b3094a0a
+    last_write_checksum: sha1:c0678f38c76cb8b8e040d91c8fc8028031b8b9c9
+    pristine_git_object: f5c7b2e724fb9442ad8f57f3f3d67fc901d2ef1b
+  docs/models/components/collectiveinvestmentassettype.md:
+    id: 3ba85f5b07b0
+    last_write_checksum: sha1:67a0bbb59cd4bb13d68451994cee05c56b44264f
+    pristine_git_object: 2041227b5ac6e5ed46cdd0a3073c82588f15424b
+  docs/models/components/collectiveinvestmenttype.md:
+    id: 4e240d03a7d6
+    last_write_checksum: sha1:f62e1021b215d481035380dcb4a0233e33fa22da
+    pristine_git_object: f8d6acaf5b6adf3a9843a0025605a3b404a5ee2c
+  docs/models/components/commission.md:
+    id: 38d497a8f772
+    last_write_checksum: sha1:7e1be9404609262344fe4f93914fca1af82589b4
+    pristine_git_object: 7773f4eb42d952fff5e84b77b18bb7cc94f39f30
+  docs/models/components/commissionandfee.md:
+    id: 9dd1f3ef1fea
+    last_write_checksum: sha1:28639301d98c4023859fc4603d3c0a19055dce28
+    pristine_git_object: 02ed88db550a8247364ea31a729c6c060fcd60d5
+  docs/models/components/commissionleg.md:
+    id: 0f8916ed4c92
+    last_write_checksum: sha1:5ead24fa61bd5e695383debb5a8d162cc617197d
+    pristine_git_object: 6b00bdd6472f28a768fea640c61eb14729b5eaa7
+  docs/models/components/commissionvalue.md:
+    id: 6ca03bc72998
+    last_write_checksum: sha1:df00412734be96892449161c6b59c0590ee25f23
+    pristine_git_object: 6d77f57b9059ab3fe8039ec103d5876b5e8d29d9
+  docs/models/components/complexorderstrategytype.md:
+    id: 209c6aaa1b43
+    last_write_checksum: sha1:9ca4b9aadcea30fb0730723ec7830e17516e089a
+    pristine_git_object: e32d442781e1b58501e5f70d18504e93ebdbf179
+  docs/models/components/contracttype.md:
+    id: 9973fbe8ef16
+    last_write_checksum: sha1:8c2fe4fb8ab050f60b831c392ad0027ecab1aeb3
+    pristine_git_object: 1f27e4bbee67ab93c62c6ab90c9a38947ba02731
+  docs/models/components/direction.md:
+    id: 184efcdcbc2f
+    last_write_checksum: sha1:38cb95f48715b2845918f189aa793b64a321e97f
+    pristine_git_object: 86b80b4920d30231fec9df89032711529342681c
+  docs/models/components/divcapgains.md:
+    id: c4c96409d634
+    last_write_checksum: sha1:b52428cf69656bff7aaf43a9691fa070902e0e63
+    pristine_git_object: 0c2452e992402046256ff9cdf2999846301e4c17
+  docs/models/components/divfreq.md:
+    id: 689c4fec391e
+    last_write_checksum: sha1:0b9cb2daa91ce75f22ff7f9bea3b31e09c3c8ed5
+    pristine_git_object: 2f8a14b941563ff74082d4260a2e17747c38b659
+  docs/models/components/duration.md:
+    id: f14d4eaaeaf9
+    last_write_checksum: sha1:a97e7916b9da19856259a4fb48a79fa365fc2439
+    pristine_git_object: 3a2db264f99f3ce90b2deaeafd81e6af6c19a933
+  docs/models/components/equityassetsubtype.md:
+    id: 98bab9be0ad6
+    last_write_checksum: sha1:300d0b2c08053042f892d74a0240c3b8d00aebbc
+    pristine_git_object: 9f518193573ed8d79dd18086ae796a1a68b793c1
+  docs/models/components/equityresponse.md:
+    id: caad6a4e1d8b
+    last_write_checksum: sha1:630e40abeee84b5a8a4be20aa92dbe2d6e78ab62
+    pristine_git_object: dfd94636180bc2386084acce243ee3694de6aefa
+  docs/models/components/error.md:
+    id: 8ccbea40d025
+    last_write_checksum: sha1:7018925138187ab75e1b1d1205f22618bfc9c093
+    pristine_git_object: ebc7111c6ebabeab7e19f99c799203f0d3e26f32
+  docs/models/components/errorsource.md:
+    id: 774ac8e6ce81
+    last_write_checksum: sha1:c5c73ffc50fc75563652091748b40f509732572a
+    pristine_git_object: 00736e4caafe0d409ceeeac823a7d309c1147ccf
+  docs/models/components/errorstatus.md:
+    id: efcc64b54b90
+    last_write_checksum: sha1:82a9d12bbf5c6b4ccf064ced2a92d8f624446d5c
+    pristine_git_object: f8f709498673905ad76818246e9ae027efa41405
+  docs/models/components/exchangename.md:
+    id: 9af2c46187c2
+    last_write_checksum: sha1:67c56fc17f0452e3a154e9e7b24342edde7bbad2
+    pristine_git_object: d03694a1a1da81de5c0edc29ce90ebde117e61d5
+  docs/models/components/executionleg.md:
+    id: 433f7f553017
+    last_write_checksum: sha1:5fb067bf0e705faefd59c33806e1b02d7db07b36
+    pristine_git_object: 1e8bd1dc2affeab3670b1ba36a30a134070a6ab1
+  docs/models/components/executiontype.md:
+    id: 657ed4424c9f
+    last_write_checksum: sha1:dd798b0be98bf7b0a9065eb2e0300397ed5a8080
+    pristine_git_object: c7aa729ba440e0c43608150321f86d3f6e5cda09
+  docs/models/components/exercisetype.md:
+    id: f9e70f46ed86
+    last_write_checksum: sha1:576dfaf2a65c05c8a3490e471c230541e0b0aed9
+    pristine_git_object: e6b5fe76b633984d5559ff2224d7f9e59e2a7760
+  docs/models/components/expiration.md:
+    id: 6119c7d1e5ea
+    last_write_checksum: sha1:6bc71c725d424bc06bebe1dd01cae54dd108c9c1
+    pristine_git_object: 7dd33d1594881cd38a4f988012895426f6722ae8
+  docs/models/components/expirationchain.md:
+    id: 62cde162995f
+    last_write_checksum: sha1:bc764710836faa6593f6f07f53f31f5485d64d4b
+    pristine_git_object: 705e4ab5053545bd37bc54d672b74ba670c6dc2f
+  docs/models/components/expirationtype.md:
+    id: 357576a99416
+    last_write_checksum: sha1:51f6223c5ae174547bfee25dbcdaa77c237ba69d
+    pristine_git_object: 7c3e197ad6769f9f3883f158f6da44e3b7105374
+  docs/models/components/extendedmarket.md:
+    id: 07843df3b11c
+    last_write_checksum: sha1:73b51445716d7cfe4f2a5560ed96c16e68bb5291
+    pristine_git_object: 6a4a5b1242ea6eda3529456fd36e7a9d675355a8
+  docs/models/components/feeleg.md:
+    id: 5a769532885f
+    last_write_checksum: sha1:1df44e675916f2d8b334dfe62eb299791a602b21
+    pristine_git_object: 159fbf34d702ca90c32b19a8a9d20fe8338b3774
+  docs/models/components/fees.md:
+    id: 2a8eb6718f82
+    last_write_checksum: sha1:b837df7a8e3909519d898e064319dee63fb2f62b
+    pristine_git_object: beec6098c1913e99183fbdd2c6be5b822f0b78d4
+  docs/models/components/feetype.md:
+    id: 178b3e12d663
+    last_write_checksum: sha1:e94e98af8903f363a28e20f8301c02102c6acb1b
+    pristine_git_object: af0f562f96692e072ca160155a787e98d48370b5
+  docs/models/components/feevalue.md:
+    id: c7d902bb0c51
+    last_write_checksum: sha1:5d9ad455642ba07a113cb6e727e20257f687277c
+    pristine_git_object: 22842179d4d3d95aa1a8d251d21b997dd3541d96
+  docs/models/components/forex.md:
+    id: e86ade3403d3
+    last_write_checksum: sha1:647e3ef5d7ef95ef9fa1a32866e5a3c48efe3793
+    pristine_git_object: f9a01f2fdba3b16f7e07fa79d08bdc1977ae85bd
+  docs/models/components/forexassettype.md:
+    id: 19e09b56c8a3
+    last_write_checksum: sha1:8b64fc01b323a71ece7d646e7d32f61383a45b5e
+    pristine_git_object: 70c0194fc530d5a768505013e4fe5631c450b985
+  docs/models/components/forexresponse.md:
+    id: 3dc3f5d2f2dc
+    last_write_checksum: sha1:e080671577e64736272c4a76dfa43e2c21f4cfdb
+    pristine_git_object: 0ed2efd8866dcc5cb9743aa551aefab40c23abb9
+  docs/models/components/forextype.md:
+    id: 08150bccbfb1
+    last_write_checksum: sha1:50b0b0204e590ab766c7bf78a2a509649afacfaa
+    pristine_git_object: 120c47036af447ee62d52125fde2ad239f7970f8
+  docs/models/components/fundamental.md:
+    id: 291856c49d1c
+    last_write_checksum: sha1:5cfb5f4d5e71a6ca77b78a7996660e7b6605b05a
+    pristine_git_object: 3818a777c985d0c35394c757fdd5eed62598d001
+  docs/models/components/fundamentalinst.md:
+    id: f232717acb9c
+    last_write_checksum: sha1:ed2d42b2b03aaec359105b3befdf0b29b0ca9b87
+    pristine_git_object: 434266e940df015d575f0a83f72969e174d82ddf
+  docs/models/components/fundstrategy.md:
+    id: 0dc86a59f660
+    last_write_checksum: sha1:599614b902e8ab0b82c0c96fed3522c603f5ab03
+    pristine_git_object: 05e887b402eeaa1e7950d7792f52cf78969e57e3
+  docs/models/components/future.md:
+    id: 7c4737991ed9
+    last_write_checksum: sha1:f2ddb0b16e71e7df5a3414652b455826fa38a712
+    pristine_git_object: 9ae5f8a69466213c96e877dfdc77c0adc91d8740
+  docs/models/components/futureoptionresponse.md:
+    id: 06fe5ee4529b
+    last_write_checksum: sha1:178079eda5b2a8515ce902ea3467f65b8f62440c
+    pristine_git_object: 118ba04a351fb6d13c3ad91355147db27503919d
+  docs/models/components/futureresponse.md:
+    id: fa30d206b026
+    last_write_checksum: sha1:c9616dba6fe05c23d5ae5ee0ce95b1c2e81bae82
+    pristine_git_object: 7ec77adae0b2eabbbc9a6a4a1d5e0c45e83e8eac
+  docs/models/components/futuretype.md:
+    id: 68e1a9d4d878
+    last_write_checksum: sha1:81271299250e5291b5e6214aa3c73e9ffd653f15
+    pristine_git_object: b73cae4f9c79f1a96456d48d503d0ef663dd3e92
+  docs/models/components/hours.md:
+    id: 8db41234d0e3
+    last_write_checksum: sha1:bfe2b4ad8ef311a1964bf074f4b5987f4c4db1b9
+    pristine_git_object: 977f5d376181ece751a1fd43f12177cbafec5e79
+  docs/models/components/httpmetadata.md:
+    id: 728948c70168
+    last_write_checksum: sha1:7c40945dac218ce5e5e11e7c907d27a3ea14c417
+    pristine_git_object: df1fdd59f3c85e4ba70573ff7954b12ac1d33d08
+  docs/models/components/index.md:
+    id: df3a7b3dde6a
+    last_write_checksum: sha1:effb29fa1a698026c61a73bfe7d1ba6bd0d85899
+    pristine_git_object: 9cedb8ea6005c3e26c1912e7f56e9dfbf74a92b0
+  docs/models/components/indexresponse.md:
+    id: 0866330cd734
+    last_write_checksum: sha1:f921cbd350cdb138a40a41365c403cd497ea2edc
+    pristine_git_object: 602f3e95b3ae46f0b94f83ac033d66e97fd91bff
+  docs/models/components/indextype.md:
+    id: 5eb86ba7b47e
+    last_write_checksum: sha1:a988e234fcf0e1bb52774a3c0c949a87fcbcccc3
+    pristine_git_object: 677f3920c607159ae62f9c416241d072aedf031a
+  docs/models/components/instruction.md:
+    id: 8dc71b33a7d9
+    last_write_checksum: sha1:68998c25c453c4b9a0d57bc25dd86c503339a15e
+    pristine_git_object: c236d20fbfa832738745dc831ae2054cc1c4d3ce
+  docs/models/components/instrument.md:
+    id: 492ac149c60d
+    last_write_checksum: sha1:3d8f28791d69a880bb5beb1c9cc37f527b4e5bfb
+    pristine_git_object: aa1cf4f524675527af2311d4f2f482ee7ea994a3
+  docs/models/components/instrumentassettype.md:
+    id: 9535ba551ba4
+    last_write_checksum: sha1:e9b9ae723b9604eda2a9e6a267479a07a13297c2
+    pristine_git_object: 3550da0dc8ab421660d498b83af1e5fefc8568ec
+  docs/models/components/instrumentresponse.md:
+    id: 222001b34c38
+    last_write_checksum: sha1:91d2e0d79658e6a5ef6c7b32fb4d5e34192b841a
+    pristine_git_object: d06f7db7d7e9b0662c6695b3d48e0dae6559c73e
+  docs/models/components/instrumentresponseassettype.md:
+    id: 287af9e0c7ef
+    last_write_checksum: sha1:ad2805268fa839ca3ad2aafe9637759d7141edd6
+    pristine_git_object: 9d1d7ece938cf6667e6ddb2bbbbdb3ecac7e6f7b
+  docs/models/components/interval.md:
+    id: 1f14281098d7
+    last_write_checksum: sha1:d5f7f1507ae07e919496fb1bb47d4a9b4eae8c1d
+    pristine_git_object: 10fee25fbb11417eb0b8caf5e35b5daee2fae0cb
+  docs/models/components/marginaccount.md:
+    id: 7038ccfe1014
+    last_write_checksum: sha1:fc05a244ce79e5be56c4ab34b873e57d31737627
+    pristine_git_object: 7ddeec9838e83127e45df6226474209f537f36bf
+  docs/models/components/marginaccounttype.md:
+    id: d5ebde2a6dbb
+    last_write_checksum: sha1:d6490f24fb90bbd89f1eac9f756f144708dba92e
+    pristine_git_object: 905c36496d873e6c0f38b2a167cc73e584dbf836
+  docs/models/components/marginbalance.md:
+    id: 0397bdca3b7c
+    last_write_checksum: sha1:cf5373424e520b5143d88b2731946da483412462
+    pristine_git_object: 5fe08b832c6f2ac4e8a3e3552f45423c48bd7c19
+  docs/models/components/margininitialbalance.md:
+    id: bdb76d09ef53
+    last_write_checksum: sha1:fb143b65be9f661c8e1fe8d1fa9e105df25f98d2
+    pristine_git_object: 31d0427b39ebabadf2f025cef72f478208fcccd9
+  docs/models/components/markettype.md:
+    id: 1e60aefdc7bf
+    last_write_checksum: sha1:fdfede41424c0b1b59c4b600644d1f105701ce10
+    pristine_git_object: 9638a728de04ca0b572410e73f08c433b0a8def8
+  docs/models/components/mutualfundassetsubtype.md:
+    id: 12f20e7b2dbf
+    last_write_checksum: sha1:aa8194ac79037af3e06aacfb1867bdff9d14062e
+    pristine_git_object: aba488fc71e6a7b4ed6a8235ff82d73bc1e6b811
+  docs/models/components/mutualfundresponse.md:
+    id: 85a6627d168b
+    last_write_checksum: sha1:9b42c3b8c402176344e914afa817c60507c56ebe
+    pristine_git_object: cf01457fe5ffa7d669a16dc81498d8cd81d3650b
+  docs/models/components/offer.md:
+    id: 6a9d5952b0a1
+    last_write_checksum: sha1:2955c59758d61b2699a8bc3984ec60f3bb6f67cd
+    pristine_git_object: 7bb2fddea0d9114e45f9e8488510fe80c5342283
+  docs/models/components/optionchain.md:
+    id: f3ae2501f8d5
+    last_write_checksum: sha1:d21ce72112ee7216d1339b5f9cb4a649b96e693a
+    pristine_git_object: da8a98e2bb50731ee38e4d19c9734c72f76112b3
+  docs/models/components/optioncontract.md:
+    id: b65051480921
+    last_write_checksum: sha1:8d2ea52e7687fe31445d80e7f7a310e7393651f4
+    pristine_git_object: f2988955c8c46fbc0dabff822366b1d58bcecda0
+  docs/models/components/optioncontractputcall.md:
+    id: bad14722a4fb
+    last_write_checksum: sha1:2392c7b74121a630d5bad907aeed5a8601bf63b1
+    pristine_git_object: f3ac0bd1c6fc1d757cb01b6c3791f9358f9c9915
+  docs/models/components/optiondeliverables.md:
+    id: 2aec78c856cb
+    last_write_checksum: sha1:50322f25855ed907c3049817bc1a73a467decb08
+    pristine_git_object: f34577cfea79d0dae9ce937c36e46e79c8d30046
+  docs/models/components/optionresponse.md:
+    id: 783879ac9bf3
+    last_write_checksum: sha1:b9de9332d326ef9473c52221fcf98fbde82892bd
+    pristine_git_object: bf28f4d1dfe87beec556678b3991429388eea164
+  docs/models/components/order.md:
+    id: 6e3d74da5756
+    last_write_checksum: sha1:8db154dc8ea7be6fc9bd50905e3a53fefc23aea0
+    pristine_git_object: d63759c91a5e69c65df1be91e66a799dd2412271
+  docs/models/components/orderactivity.md:
+    id: 1b776356bd1b
+    last_write_checksum: sha1:2357a9eb995282a2ba62a2a8cd7a291c6824b0a6
+    pristine_git_object: 740894923ba5eb63d76857ab1e21916afe15a1d2
+  docs/models/components/orderactivityactivitytype.md:
+    id: 39965ddad354
+    last_write_checksum: sha1:78fdf516109586cfe0f0db8acdf8ef91a2e1f2a5
+    pristine_git_object: 4584e6ae52e1eb6cf52e90cd14bb9e00eef8ed60
+  docs/models/components/orderbalance.md:
+    id: be76eed656e2
+    last_write_checksum: sha1:77f0843839bb7c057c265ba72b934a01c51f026a
+    pristine_git_object: 7b43743bffacece92896c85ea13a786f48855e2a
+  docs/models/components/orderleg.md:
+    id: c053e11e1efb
+    last_write_checksum: sha1:f6461fa24e088c69be11b08b15d29c7e1f4f0e5a
+    pristine_git_object: 13f06d994e58fe05fc8cedcf9a32ec06fd3aa517
+  docs/models/components/orderlegcollection.md:
+    id: c3d69ad3e64c
+    last_write_checksum: sha1:82edb1ecbab47c62a6ebc01674ebf906400faa19
+    pristine_git_object: 88d21fc4d5f939f1a50167df0848d4316a448951
+  docs/models/components/orderlegcollectionpositioneffect.md:
+    id: 025f25c80f15
+    last_write_checksum: sha1:2552f83358ad78720fbcff019ed410dfee45d0a9
+    pristine_git_object: 027e3a17ef62840616511229c201e5a4f3a32362
+  docs/models/components/orderlegtype.md:
+    id: 0b3777428512
+    last_write_checksum: sha1:37bbd177f8c2f6b2e0d051b2d128f7169398105c
+    pristine_git_object: e377c98f3c2da060f1c1ee5f7b82238559a4baac
+  docs/models/components/orderrequest.md:
+    id: 4fd997233bfa
+    last_write_checksum: sha1:f79a00735d4a90ab629112ca821d2f61823ef3a3
+    pristine_git_object: 8481056ccf8ffefa16f94281d7ba78a07c0a76a2
+  docs/models/components/orderstrategy.md:
+    id: 1238c566b226
+    last_write_checksum: sha1:03cda642771e05a9ae7cbf222c39a66ce2ae583b
+    pristine_git_object: f783e813e683be196531e76e0ea9d26fadf169e9
+  docs/models/components/orderstrategytype.md:
+    id: e2f8c2d31487
+    last_write_checksum: sha1:24e6307130a6c469b4a0a9a8d4afc6cd59685824
+    pristine_git_object: 17974cf0c4d50313e46ad649a21a48904f5cc4b5
+  docs/models/components/ordertype.md:
+    id: 5e1706c049cf
+    last_write_checksum: sha1:755b27a107c5b41abd5f63f495e68207398eddf0
+    pristine_git_object: 4c892d62ef07619ad095db8ff0b0f4f6c7ad4ed1
+  docs/models/components/ordertyperequest.md:
+    id: 973072b9cf70
+    last_write_checksum: sha1:ab47e5d29bbd1a973b08d2ac1113feff3414b950
+    pristine_git_object: 0224b259eb25d539780f772e1f8b743cab02c5f2
+  docs/models/components/ordervalidationdetail.md:
+    id: 5cc750c05927
+    last_write_checksum: sha1:2842fa4dfa327c60034fa7c6ff28769924c02d94
+    pristine_git_object: bc0ea878e46859eb8b2dd8cd2df76a60dc773f8e
+  docs/models/components/ordervalidationresult.md:
+    id: 0504573dbc60
+    last_write_checksum: sha1:decb5fc6f710c5505d60c708280bd2b11e8b2aee
+    pristine_git_object: 3a0d0f5680da62ff1261465d1eea1a0914d059f1
+  docs/models/components/pathparammarket.md:
+    id: 95f1ab740223
+    last_write_checksum: sha1:3da923984ab98d64f87ecab28c60ef62b080cdc1
+    pristine_git_object: 5295b0d03f94fc4c37872b57bde91489645e9575
+  docs/models/components/pathparamsymbol.md:
+    id: d661f8afe61c
+    last_write_checksum: sha1:3cc70a5b560c1698a9eb448974f0dab3934e324e
+    pristine_git_object: 1134d370e19ba2aae055a4f2139fea8928c26582
+  docs/models/components/position.md:
+    id: 5a4ce9f60b6b
+    last_write_checksum: sha1:99eb62c4a157ac4165c724e13a8a76969360d266
+    pristine_git_object: b7ec83b8e2ad687b58f3d1eaec08d3b4533a3a41
+  docs/models/components/previeworder.md:
+    id: 200b08467a1e
+    last_write_checksum: sha1:e7905afab90114e4d31c76742bb88bfeddf1b603
+    pristine_git_object: 84158978aa26bd2e57610c903746a391f66909cb
+  docs/models/components/pricelinkbasis.md:
+    id: 519626eb5714
+    last_write_checksum: sha1:dcf990ca7c831f8ec960052650a5882a480a8d2b
+    pristine_git_object: a086b0c2e2622108c996456155137b3f07d13ed7
+  docs/models/components/pricelinktype.md:
+    id: c2dbe7d27430
+    last_write_checksum: sha1:c94f254d48dece719a40511686a48560b9d46b7e
+    pristine_git_object: 86711d5d66ccd8ebb9ca07e82334b3a583be2dd2
+  docs/models/components/product.md:
+    id: ba34ccd38ab6
+    last_write_checksum: sha1:02fab23cebe52add1fc1d6b474061b6a81e28946
+    pristine_git_object: b5324090a80d4e265183ab837338466c8c92fcd4
+  docs/models/components/productassettype.md:
+    id: 417cd72e30c3
+    last_write_checksum: sha1:14a193fdd0f5ddca4099db31a49f18af9d04185e
+    pristine_git_object: 60cfacbf9191211674f14a66fd178cd58f3ad99b
+  docs/models/components/producttype.md:
+    id: 3f5ae5b7bd3c
+    last_write_checksum: sha1:30ce339de12702187fdf9fbc8b4cf68f2052f234
+    pristine_git_object: 48475f56db100de54366c0d0d9306263f966920b
+  docs/models/components/quantitytype.md:
+    id: 43e06659afe9
+    last_write_checksum: sha1:2ec70458b719d227042d21d99560683edbf713ff
+    pristine_git_object: a597640f0f4ddc2294a74a8e26fc0b7716c46477
+  docs/models/components/queryparamcontracttype.md:
+    id: d0280e9910c5
+    last_write_checksum: sha1:e1d5397e4bd38875d417bddcd22170cd7e370ae8
+    pristine_git_object: ffbab83fe9f22b501889f619fb1d711644d9f4f9
+  docs/models/components/queryparamentitlement.md:
+    id: f6a6fec30477
+    last_write_checksum: sha1:6c56f4cca2c9286252c3489abdf904f012900452
+    pristine_git_object: ce62a9090d60e5f5d8f87c9e7fe813d2a3a5451d
+  docs/models/components/queryparamexpmonth.md:
+    id: ed8c15e3f3a0
+    last_write_checksum: sha1:29ba6c4dce0031cada4a747fa77eaa94a1ea973e
+    pristine_git_object: c26ba2b5ed68d24e362db8bec1630c15402d94cb
+  docs/models/components/queryparamfrequency.md:
+    id: 10d5b48aa040
+    last_write_checksum: sha1:489564b4f0d146f5d69c36ecc32ae1e823f86e30
+    pristine_git_object: 94da0f182cf25306af35f8035ccf085aeaaca5af
+  docs/models/components/queryparamfrequencytype.md:
+    id: 1859084379b6
+    last_write_checksum: sha1:c6c050dd1253efd0f31c0b86e53aa3207a6fc7e2
+    pristine_git_object: b1970c9aee0422337c0a6d2b9b678100151e5ed6
+  docs/models/components/queryparammarkets.md:
+    id: 31939787eac7
+    last_write_checksum: sha1:109da88968ecaff60526090521ac259f966a820e
+    pristine_git_object: 8f77dd35883a5df7163c218cb603f49003af3349
+  docs/models/components/queryparamperiodtype.md:
+    id: dfb203fd5447
+    last_write_checksum: sha1:da5bc2766108c9f3369b75b0f561507b5233051d
+    pristine_git_object: 3d3fc47adbf479febf3c8be75b59a1aad343191e
+  docs/models/components/queryparamprojection.md:
+    id: 1039702ce628
+    last_write_checksum: sha1:f362d8315c8e41b25d5a0ac25bbfdf5d774b3715
+    pristine_git_object: 8112f0d2e1839c4c9dd5fb2f0492df9d159c169b
+  docs/models/components/queryparamsort.md:
+    id: 78c5b30dd5ee
+    last_write_checksum: sha1:d7a4dbdb7040096de4f2f3b4aa0f935811c0414e
+    pristine_git_object: c5d3cd76ce0bd98b1989b302b1f3414083b7c09a
+  docs/models/components/queryparamstrategy.md:
+    id: "569444072374"
+    last_write_checksum: sha1:d75b8ff611f3dca746c487508e0891b144f04ea3
+    pristine_git_object: 831e6feb5b3bf4416d7c6287d6f77f10db940355
+  docs/models/components/quoteequity.md:
+    id: c53eefca5c32
+    last_write_checksum: sha1:2953369e4dc7db95ca848e8b6e88306a6bebe05f
+    pristine_git_object: 7d5dd41a12a00676c304d97ce24794fd848b2d71
+  docs/models/components/quoteerror.md:
+    id: 6dc0c232e80b
+    last_write_checksum: sha1:c00f95f2ff9c09898a76ec961f05222de92c2c16
+    pristine_git_object: c194abd08b6325d22bfe37c30ff8032f83ae48f2
+  docs/models/components/quoteforex.md:
+    id: aba9f0bf22df
+    last_write_checksum: sha1:1a2657b91b920f271eb72f128ef0ea783a8578c4
+    pristine_git_object: 45be733c3d50b9e25a6fb98a17dfe248b2f23bec
+  docs/models/components/quotefuture.md:
+    id: 95e1733e14df
+    last_write_checksum: sha1:20342cb176566e2577c6218ca20efd4fb47e69d5
+    pristine_git_object: 6f2ab480cb81a74f65a981b0addc7997b0288545
+  docs/models/components/quotefutureoption.md:
+    id: 1f2eda605c2a
+    last_write_checksum: sha1:0403111f0c55dab48b5e4ea5f8a3a1761157c89e
+    pristine_git_object: fc1d0e6d0174cc1d9ce75c176adf6ea44051cb17
+  docs/models/components/quoteindex.md:
+    id: fee1e4880e6f
+    last_write_checksum: sha1:eb0c37e8730e5bc16e6101b4eccb6ea36f499633
+    pristine_git_object: 8e556401bd8d4f6ad78d25478a8c58dc766caa54
+  docs/models/components/quotemutualfund.md:
+    id: 2557972d6182
+    last_write_checksum: sha1:6673cefba6364d21d6ff868c03681e0f55c099bb
+    pristine_git_object: 45baec04578c8c559acbd6287a7b5255fa20966f
+  docs/models/components/quoteoption.md:
+    id: d930ac3cd512
+    last_write_checksum: sha1:ad7e6152545a01b8c9fc961027d85d08ecba7154
+    pristine_git_object: 43e9bb87595316efc960e2ae0961a872655a5408
+  docs/models/components/quoteresponseobject.md:
+    id: d0a85ab7d9de
+    last_write_checksum: sha1:cf8d5f6dc3aa68e771238009cf4ee91eeae0a7c5
+    pristine_git_object: 82679e3ecf378982b540bd65faf3fad1b464cf90
+  docs/models/components/quotetype.md:
+    id: a7ca575519bd
+    last_write_checksum: sha1:6bd9acc6a8e2ae0da5ff99396d02cf70d0fe23fa
+    pristine_git_object: 0ee9ac135f980007b1ff871ce015cfcb1f62f632
+  docs/models/components/referenceequity.md:
+    id: e38b31fd2c27
+    last_write_checksum: sha1:efe48442f7fd545d805d25db7e6c18dcb8c99798
+    pristine_git_object: 472775945227f4556fa0e86f5a85011d593bcb8d
+  docs/models/components/referenceforex.md:
+    id: 027f8b43fdc1
+    last_write_checksum: sha1:9a653c57e9f0de840d9af0266ee769066e06e28f
+    pristine_git_object: 40a8233c3ef4708c48932e592fb340d040b834dd
+  docs/models/components/referencefuture.md:
+    id: 163031fb0954
+    last_write_checksum: sha1:ab3063ae4e9d4e2668472da696b3eaf12fdb1a7b
+    pristine_git_object: 1e50f515733526d31e9bf4dd17ea0d2d99de051a
+  docs/models/components/referencefutureoption.md:
+    id: 9b6faca74a10
+    last_write_checksum: sha1:a807a8b74ab2105fc636e65311b3a761cd9c82e3
+    pristine_git_object: f8da1d8bd6cae973adf54534ed0fe2ff18dfe3f4
+  docs/models/components/referenceindex.md:
+    id: 7dd744c36a5f
+    last_write_checksum: sha1:32744d2d0cacfd2c06a692d3f8a7b913b30b01fe
+    pristine_git_object: 51efa438cac5e22ec6784ca6bc1d4324f2c27105
+  docs/models/components/referencemutualfund.md:
+    id: 392e85136952
+    last_write_checksum: sha1:466a54ec65d133d45ae3dbe1e70a77a0004826e1
+    pristine_git_object: dfe095abeb2e76ba4c4b319d0b8a49d2da613e56
+  docs/models/components/referenceoption.md:
+    id: aa385bd54158
+    last_write_checksum: sha1:df97cad1d86de189813ac95c7b39fcbe58f9a483
+    pristine_git_object: 884c8432ac1859990083bab00f6b4eaaf0536050
+  docs/models/components/regularmarket.md:
+    id: 5847f2eb9826
+    last_write_checksum: sha1:2b9d6f8ce6b2bcbfbb6348414cb651e6e615d929
+    pristine_git_object: 2d5d9f4cc4dfd5c458a2055346289ab58c0cc137
+  docs/models/components/requesteddestination.md:
+    id: f19d5c54fd89
+    last_write_checksum: sha1:2ce8d06ae25bda8de0f640403e36d61e2e26cc73
+    pristine_git_object: c47e0d9e77ae4addf29269067ee3ffa1a4d9ad90
+  docs/models/components/screener.md:
+    id: 04c463a930e4
+    last_write_checksum: sha1:03abea03723f4c956bbca0d65a6319b077a68806
+    pristine_git_object: b583264d2e24fac57d3e67bb222f1fe1e78e2e6d
+  docs/models/components/securitiesaccount.md:
+    id: e678d249e50a
+    last_write_checksum: sha1:7f05b0342612555fdf046be6db204a46a6504076
+    pristine_git_object: 99a0307a55a502a583acd9fc795a5883d2adee51
+  docs/models/components/security.md:
+    id: 54906b49ea28
+    last_write_checksum: sha1:c9e5fe8ec71f70cc7d8f83fadd1128261d0c7355
+    pristine_git_object: b220fb207ce9eb20dd8c1a37c8a2087bba47ca76
+  docs/models/components/session.md:
+    id: 0af1ad73cf6c
+    last_write_checksum: sha1:7ecf71c7be503cf1eb1d1c37fa0bac6c92fec566
+    pristine_git_object: 09c0fd7db4bfc43d323df45cc997a070d3394ac3
+  docs/models/components/settlementinstruction.md:
+    id: f1c4d8d3a678
+    last_write_checksum: sha1:15644c4167989273680f04703d6e1c0c903c3521
+    pristine_git_object: e5644de05014eb1cd6c48b3fd5d9dac277b863a9
+  docs/models/components/settlementtype.md:
+    id: f1bf8b705b83
+    last_write_checksum: sha1:f37d73a02b55f93dcb68739f53f45177adbbf2ab
+    pristine_git_object: b46cdb233694fd6006007c2a72b42677f96bcfa9
+  docs/models/components/specialinstruction.md:
+    id: 092828ffebb4
+    last_write_checksum: sha1:d59bae2714d39b8730d5c7626730d9369891a578
+    pristine_git_object: 4742a5490a9bcf883dd8e85432a3a0772c5248a8
+  docs/models/components/status.md:
+    id: e26b2fe7f53e
+    last_write_checksum: sha1:e8cbce94937a04b8ce310d04aa47aafbb65d7ec3
+    pristine_git_object: c666abeb87ff04de2302011cea9ab45e33a53e96
+  docs/models/components/stoppricelinkbasis.md:
+    id: 44426618c604
+    last_write_checksum: sha1:5527d3a497fa2516d44c9bc3eed85b3d9eed1cdf
+    pristine_git_object: 631c91c8f87a936bbb632d6fa9811079b948a6e0
+  docs/models/components/stoppricelinktype.md:
+    id: 2675a74b482d
+    last_write_checksum: sha1:6058d792f86e76622c3f3975fce12cf38195acea
+    pristine_git_object: b7c37021cf0a56614a30ebeba8cc7cb519519f2a
+  docs/models/components/stoptype.md:
+    id: 37b3e0b6b779
+    last_write_checksum: sha1:df80a0edbb46ded20388600ddf48f8f47b7ddb2a
+    pristine_git_object: 70792457b2e6b758acbd354c4b8358904f9b2678
+  docs/models/components/strategy.md:
+    id: 2ea7eae54196
+    last_write_checksum: sha1:0ce012322c73bede1eb98bd6bc7f9e8e02b27146
+    pristine_git_object: 6a54cee133af510662d8079cee487355cc917beb
+  docs/models/components/streamerinfo.md:
+    id: 513d0ae8b2fc
+    last_write_checksum: sha1:611e0da80a88f1bfa88c35987e1293cec727f3a6
+    pristine_git_object: 776e6bc0762b27915eeea114dc46724e5ef348f6
+  docs/models/components/subaccount.md:
+    id: dc151782d188
+    last_write_checksum: sha1:8bc155dec44b59525661df0a2cf046fd922377bc
+    pristine_git_object: 65d247c263c8680d22ddd52b42fd212bff358f6c
+  docs/models/components/taxlotmethod.md:
+    id: 90b0a26d8730
+    last_write_checksum: sha1:6b6a80eff88ae72892398c368a20ec3eaa968223
+    pristine_git_object: ae23b9ad22ecf419408273ac81c10a0b1d089176
+  docs/models/components/transaction.md:
+    id: 8c92ca082bdd
+    last_write_checksum: sha1:e628b5b93fff87facf346e86c018a1932e86fbe7
+    pristine_git_object: cc9160c7f06d84cf0b6301aa11e5670a17c50c11
+  docs/models/components/transactionactivitytype.md:
+    id: 22b1a569daea
+    last_write_checksum: sha1:cfc51e1c6de13a4b7844ed5fc9265f741a3d5fb5
+    pristine_git_object: f980a827006fee8c96b8666741c60a3626848ccb
+  docs/models/components/transactionapioptiondeliverable1.md:
+    id: 4a757f9d78bb
+    last_write_checksum: sha1:10e9b497d767432b52cbc2e358f50e3f7f370be5
+    pristine_git_object: c7d8dc25a7a96ebb89c4b514305bcd8bb413657d
+  docs/models/components/transactionbaseinstrument.md:
+    id: 0685b5c60557
+    last_write_checksum: sha1:d3cd51532dfca3e25f8bc4bd58e4e28aed0f5b0a
+    pristine_git_object: 402d47acc7c5bfdc078dcae344275bfd320216d6
+  docs/models/components/transactionbaseinstrumentassettype.md:
+    id: e0a00bc7c2da
+    last_write_checksum: sha1:3a72f97a6d8c6ddb3f179a73e1110709ecf9f587
+    pristine_git_object: 28067994c1ee119a55077c12a511208098a3333f
+  docs/models/components/transactioncashequivalent.md:
+    id: 34d4810840b7
+    last_write_checksum: sha1:d216a5c657da67ed90be2e0cbef1b030c8595b0d
+    pristine_git_object: 5b39fcbc24c7d8c0ebe270c3c57ba223f11fd383
+  docs/models/components/transactioncashequivalentassettype.md:
+    id: f866784d9c40
+    last_write_checksum: sha1:b1590350c4e12bbaf4d3559a5ff219dbf455ac2e
+    pristine_git_object: fd5e0a3e60e928ee381b63265e688fa780344649
+  docs/models/components/transactioncashequivalenttype.md:
+    id: fe93cbf1058e
+    last_write_checksum: sha1:9281783e0a7305802fd26954fc6d1dcb98966f29
+    pristine_git_object: f13476a1cf4718d4a724ed493ba5f1e4e1449378
+  docs/models/components/transactionequity.md:
+    id: 2219d73479ee
+    last_write_checksum: sha1:3cfcef5693a727ba4cf495eb836a779d82e5a573
+    pristine_git_object: 3f2d40079ac0a6d111039d692d9609a145b4b6e2
+  docs/models/components/transactionequityassettype.md:
+    id: b091e582b879
+    last_write_checksum: sha1:0c727911a94820bc9af2096cb81801f88f23ca85
+    pristine_git_object: f90dc6ded5f15278c48589f56ae70513a021e3bd
+  docs/models/components/transactionequitytype.md:
+    id: ef278656dc39
+    last_write_checksum: sha1:70c023040d85c7284befc0b1241c9032b8717e63
+    pristine_git_object: ef85514bc1027c9d46992a33bf1c39c156a0f9b7
+  docs/models/components/transactionfixedincome.md:
+    id: 7ec29bfb309f
+    last_write_checksum: sha1:588d7166a0cf2f451bc1f028380e6cf17f2568a5
+    pristine_git_object: c3246d8627193e90cf4285cef1e40798ee23e2da
+  docs/models/components/transactionfixedincomeassettype.md:
+    id: 4191b1d21c06
+    last_write_checksum: sha1:f3091d38dfc7cd61a66ca7998621a7dc97357f7a
+    pristine_git_object: d35a65cb972c0ce7712f7b1ca5c89d920ffb3598
+  docs/models/components/transactionfixedincometype.md:
+    id: 26d057d77365
+    last_write_checksum: sha1:45bcc18db73b7337ba6c5a6fecb1c691dfafd302
+    pristine_git_object: fcad86c071a59378ebce366c61a94c54c14db0da
+  docs/models/components/transactioninstrument.md:
+    id: a7ffee97953c
+    last_write_checksum: sha1:101587ce79960d8ed30412caf5bec8158653bbbb
+    pristine_git_object: a2cc8b5ebc58fd271bd82898546aeef7edd44828
+  docs/models/components/transactionmutualfund.md:
+    id: 890405cffd8e
+    last_write_checksum: sha1:fca20720128de57d4dae31c79d8374cec14f3378
+    pristine_git_object: 33f10aced2b0c8ea25f28262f152c18014725b5c
+  docs/models/components/transactionmutualfundassettype.md:
+    id: 79e453d4e0b3
+    last_write_checksum: sha1:a7db2dc8eb9871998b9fddd3610ab46b0002cde1
+    pristine_git_object: 6cbabb468350e2df0b6ae972fc2c56b776024d0c
+  docs/models/components/transactionmutualfundtype.md:
+    id: 699a80a64db9
+    last_write_checksum: sha1:e08040c1446d4d87d6af338f008b3585e64e3647
+    pristine_git_object: b3646d213081dd1b99b9af8027a7eaaec5583bd9
+  docs/models/components/transactionoption1.md:
+    id: aa0e1f5fff2e
+    last_write_checksum: sha1:6d960ddebbc09205fb2c2a45774588fb483a6724
+    pristine_git_object: fb7c3693d4285112bb3a8d0b820c89f37f9570c6
+  docs/models/components/transactionoptionassettype.md:
+    id: 4e164041304c
+    last_write_checksum: sha1:87c34846f325f91d00f394c05c6c4546b0d5720e
+    pristine_git_object: ab0b66f939d882875bce7ceef27618802c7184cf
+  docs/models/components/transactionoptionputcall.md:
+    id: fc66eba69b6c
+    last_write_checksum: sha1:f692d2ad19871a8aa0717109af6cf3f1d4aaea20
+    pristine_git_object: 4341f4dbecea9b0acdb10f378d42b0fcaa2c8461
+  docs/models/components/transactionoptiontype.md:
+    id: a2fdd1f3bd54
+    last_write_checksum: sha1:f3ba3a79e7694b3d9251d5f1eede914b0cd09796
+    pristine_git_object: 00cee5db4991159e6869d11f252360b0fb5328c6
+  docs/models/components/transactionstatus.md:
+    id: 079083f4cb34
+    last_write_checksum: sha1:4136ade97f7a003abb3f999f9dcef030832799d1
+    pristine_git_object: 9ce1d2c7776185c16e98b6a222305abf50707dc7
+  docs/models/components/transactiontype.md:
+    id: 48cd8e184ec8
+    last_write_checksum: sha1:415eda251109bb361c8d5653e1742211b1e0e7b6
+    pristine_git_object: de64185af72c7cc0ce4af4e21e8892faeb8ef4b1
+  docs/models/components/transferitem.md:
+    id: c25c12eda257
+    last_write_checksum: sha1:4609226febb2bcaca34d5cf10f03ca6959e91891
+    pristine_git_object: ba68e0f9764347e6bc9821e5743c71fd72a12bf7
+  docs/models/components/transferitemfeetype.md:
+    id: 909bb777674c
+    last_write_checksum: sha1:34881fc5c63dc408631b6a9d40af8541a76c4173
+    pristine_git_object: 63a164a75db91e5f59a9550bd5ee27e85bdcf523
+  docs/models/components/transferitempositioneffect.md:
+    id: c5e7454e2e2c
+    last_write_checksum: sha1:93e815df698c8f51d8503a7efd177a7010ed21fc
+    pristine_git_object: dc4d3b32cdb914f4c2f2fcf65084135f16854886
+  docs/models/components/underlying.md:
+    id: 36315de86fb2
+    last_write_checksum: sha1:87b12a8906a4835c8df6a4b6bc4db4e23e690590
+    pristine_git_object: eeb59c4f015c25ed1655e033a18b1a14698d8050
+  docs/models/components/userdetails.md:
+    id: ef57b3acb0d3
+    last_write_checksum: sha1:5f0d14979cefb0e489880a2d48ef2e95980f02a8
+    pristine_git_object: 443c25a1031438c613bb1e8dd424956ac019dac1
+  docs/models/components/userdetailstype.md:
+    id: 127a21904c3c
+    last_write_checksum: sha1:beda4ef85466e1d550c309492fb3ca2f8c2c28b7
+    pristine_git_object: 912f888aeb085d00ce8054b272d10e092c785639
+  docs/models/components/userpreference.md:
+    id: 95be98e448c0
+    last_write_checksum: sha1:dd7b989072c169ba504462fd16e80f06cc64a044
+    pristine_git_object: 618782efd96739f561bd5623e2cc9a5a7a46a38c
+  docs/models/components/userpreferenceaccount.md:
+    id: 8b24e2d61a1a
+    last_write_checksum: sha1:aa8bdb930e3fa499585ec78b3a80c21c97be6fd4
+    pristine_git_object: a9fd8c379d9b5fb037f545bb3a22331e1762f188
+  docs/models/operations/cancelorderrequest.md:
+    id: 698f09d3dc35
+    last_write_checksum: sha1:a9c4a05863ca71595be7afe20afcb991f6047a3c
+    pristine_git_object: 57510fac2afa79051947c6ddc788f9f6a63f0955
+  docs/models/operations/cancelorderresponse.md:
+    id: 013ce3c925f6
+    last_write_checksum: sha1:94cf5a32eb5d174e36d38da3dab60e446b6403a8
+    pristine_git_object: 8029c423e508e2833c1ce03c31c594156e6255b4
+  docs/models/operations/getaccountnumbersresponse.md:
+    id: 598a99ccd3dd
+    last_write_checksum: sha1:c6b5925707678a8991cd5241d04c8dbba920559c
+    pristine_git_object: b1a8115c7165f2c8f883f18e6b08f860c51b70d7
+  docs/models/operations/getaccountrequest.md:
+    id: 130a6f0dfa6a
+    last_write_checksum: sha1:c5dc88eea9f82488c6cb2bb8f678c3b5b7052d41
+    pristine_git_object: c1159f5a95a06275c48d014c9ab456c7fa381d03
+  docs/models/operations/getaccountresponse.md:
+    id: fe07e5086216
+    last_write_checksum: sha1:808d2d52272180d1a89d1f20958b4d0887a81509
+    pristine_git_object: e22ff5e98dbdbef8d8fd91684b686ddddba3255d
+  docs/models/operations/getaccountsrequest.md:
+    id: 2dd32d914bc4
+    last_write_checksum: sha1:fdd09695b4d0828b25db396b0b235b50ccddb8d9
+    pristine_git_object: 78bfc7031c9b5e7f6c518172b71949754a1696c2
+  docs/models/operations/getaccountsresponse.md:
+    id: 0619476dcc2b
+    last_write_checksum: sha1:8a46a667c334bb46d18d17d4d98be8c33555d059
+    pristine_git_object: 5cc735089f90614cfae7cbb06b949495e1866887
+  docs/models/operations/getchainrequest.md:
+    id: 7adaf844cd32
+    last_write_checksum: sha1:bc4a8c63a69a12e32df8dc7eef83e12f5d4e6b2f
+    pristine_git_object: 7e5c66a83968f2b63885bd6f8bac57b180b1f7b2
+  docs/models/operations/getchainresponse.md:
+    id: 14be1b86c1ff
+    last_write_checksum: sha1:9763f5469d56f358ee3afde01dc4edbefbdad3db
+    pristine_git_object: 214379756f81fbc0246f19eab61aef9731777925
+  docs/models/operations/getexpirationchainrequest.md:
+    id: 8f5eb802407d
+    last_write_checksum: sha1:eab21e8f4102b5c861a69171c996d37c3b6cd839
+    pristine_git_object: b36743834504ee5e03be974ced35bf980617ec6a
+  docs/models/operations/getexpirationchainresponse.md:
+    id: 6a6c0557bc2b
+    last_write_checksum: sha1:4055118fbd3d1cec1c25a4183e8149c861f548bc
+    pristine_git_object: 8169f33befe324f8545e97462e0073866922c437
+  docs/models/operations/getinstrumentsbycusiprequest.md:
+    id: bfe0244501c6
+    last_write_checksum: sha1:4d1fc0e6eb7727539bee89879499cf9aa155e67e
+    pristine_git_object: b6130fe4614922b16aecae68ba83d88410ee26d2
+  docs/models/operations/getinstrumentsbycusipresponse.md:
+    id: 8044489de0ef
+    last_write_checksum: sha1:4be182bf69c5154e57d36d3cbaeff45b78e70490
+    pristine_git_object: 5f904f92c46941e11508c721ac871d0e6c8d701d
+  docs/models/operations/getinstrumentsrequest.md:
+    id: 269567782ab4
+    last_write_checksum: sha1:50db1d5420b27bcf84cedda074b21a80454b3537
+    pristine_git_object: c8387f57327ead6cf6edd1f9751c16e6154b14cb
+  docs/models/operations/getinstrumentsresponse.md:
+    id: 092adf250994
+    last_write_checksum: sha1:3a8d971b2f4608522f9da4c62127fff2ecf7f585
+    pristine_git_object: 674b288f588905c6f1465b336984e50fdf9a32ec
+  docs/models/operations/getinstrumentsresponsebody.md:
+    id: ea5514562442
+    last_write_checksum: sha1:6b01cb6f4b46e09c4d67cf02b12669ecc8355b98
+    pristine_git_object: 638a72d6e2972432ce994202f8a16ab1cb7c4225
+  docs/models/operations/getmarkethourrequest.md:
+    id: 00c82805e360
+    last_write_checksum: sha1:a2589c5f9bab5e0dde31722ff0b63d450d3e6354
+    pristine_git_object: 6d4e25a763c4547520469b2a9464e3d4184d5bd1
+  docs/models/operations/getmarkethourresponse.md:
+    id: c493806ea41f
+    last_write_checksum: sha1:888a52c2a53dba258c7e6c7ac89c5da7e5a62428
+    pristine_git_object: 966efb758127e72dda23d547e6a7ba32d3757c28
+  docs/models/operations/getmarkethoursrequest.md:
+    id: bb417a711e2f
+    last_write_checksum: sha1:585f36ebafc7576af7c178e881b82cd89f6631b9
+    pristine_git_object: f8aa10d067ad462482ebbd687f81458fa91c3b14
+  docs/models/operations/getmarkethoursresponse.md:
+    id: 3ea034d2bd78
+    last_write_checksum: sha1:39b3271596a60a5ecaf1be623cfe1526b960b543
+    pristine_git_object: 2d25040ca4d4b2f4c3f255f8f667c45b75646a83
+  docs/models/operations/getmoversrequest.md:
+    id: 01eec8fc609b
+    last_write_checksum: sha1:2bbfe669ffe5dcaf3ee4ecd88ab631c2322e3a9e
+    pristine_git_object: 0cbc69d4fcf76569cd3a9b284c4f104003824057
+  docs/models/operations/getmoversresponse.md:
+    id: c395c693f555
+    last_write_checksum: sha1:6551e288b9212c7a1759c28fc86336ef62e7b9ba
+    pristine_git_object: 419386fe63fdb6f9cb3d1415230dcf93e43b94af
+  docs/models/operations/getmoversresponsebody.md:
+    id: 0adca80b5312
+    last_write_checksum: sha1:db12f23b11c671b787f525fac0558a112fa640ca
+    pristine_git_object: fecf8e1c930ec9f7f62d0c6815d09f59b7b70b74
+  docs/models/operations/getorderrequest.md:
+    id: 27923df83f19
+    last_write_checksum: sha1:8e0d66488f350002987a07b721cf3ef399ee8109
+    pristine_git_object: e0368bddc112640a9e61e12bcde8b6235e6ead1f
+  docs/models/operations/getorderresponse.md:
+    id: c33ffcc49a9d
+    last_write_checksum: sha1:f5ed5681a05669992132e1fa493373dc8a34447f
+    pristine_git_object: 51c5d63f81a4c526ed177fb5999b23602c694137
+  docs/models/operations/getordersbypathparamrequest.md:
+    id: 7cb88d352b5c
+    last_write_checksum: sha1:a317016e47dfb5171be5bfe892d39015ab8aeabc
+    pristine_git_object: 791298d0837579d06b36e6bf34456fbe35ad9d00
+  docs/models/operations/getordersbypathparamresponse.md:
+    id: 91ccc363c079
+    last_write_checksum: sha1:d3784c2d3a7aeee96e3a3bab4f2ecc3b902e986c
+    pristine_git_object: 455de7bca62d83e73c870119bb2816986296e6e6
+  docs/models/operations/getordersbyqueryparamrequest.md:
+    id: ab10cc5f0929
+    last_write_checksum: sha1:4abad31b52b2ea8a5ac6c8e44d74bb40671803d3
+    pristine_git_object: 1b895e2a5495ae40f7f78f8e3ca52242d0f3451a
+  docs/models/operations/getordersbyqueryparamresponse.md:
+    id: 4d08e1569798
+    last_write_checksum: sha1:941c4a0ee6aa00386f611354b5a5b655afb61356
+    pristine_git_object: 550a691d137b5eb954604854b59ce4ec2337e7a2
+  docs/models/operations/getpricehistoryrequest.md:
+    id: 6cdbf939ee14
+    last_write_checksum: sha1:50e1c44b769b18597639ac63b5a597c8f60f638a
+    pristine_git_object: bfefb825251543815ad0cb02c35480eccc187696
+  docs/models/operations/getpricehistoryresponse.md:
+    id: 0e03d92d8764
+    last_write_checksum: sha1:0ddbd7cd0517d52f1ead6d4dca3f2e27056f1e0d
+    pristine_git_object: d85a452337e7865d0c519cb3b537fc7a9c74bb7b
+  docs/models/operations/getquoterequest.md:
+    id: 23cdae316621
+    last_write_checksum: sha1:17f0a5d558e8b90750ca63c2dc9b76dbfcf94d39
+    pristine_git_object: 0622c19491e70a396d364625d48d21614e1f5c86
+  docs/models/operations/getquoteresponse.md:
+    id: 7796dccc9d05
+    last_write_checksum: sha1:35c261c633dd7c70a12b8b13c620726343822dc7
+    pristine_git_object: d343706b089178320b1d5d58b2f37c621e282da6
+  docs/models/operations/getquotesrequest.md:
+    id: d961f1ad1e38
+    last_write_checksum: sha1:a48ebfd8082c23870b1337abc79bb5364af18b7d
+    pristine_git_object: d3badfb58d21726038dea1f7267cdeed8ab3c357
+  docs/models/operations/getquotesresponse.md:
+    id: 444efb2eed7c
+    last_write_checksum: sha1:2ad152f04d5a7f2ca5c6f015e51228a69ef47f0b
+    pristine_git_object: 1bfb5d40b6ca38f5a4a41ab6ef36cb5a83d26903
+  docs/models/operations/gettransactionsbyidrequest.md:
+    id: 120c3f8ccc04
+    last_write_checksum: sha1:f5d87d4ac57efa61e63c56d86c67a09cec7c0f9c
+    pristine_git_object: 2c9917898d55b64e905f89648aeebbcf0d96c9f0
+  docs/models/operations/gettransactionsbyidresponse.md:
+    id: accc3b6835e5
+    last_write_checksum: sha1:59f5fe737e30aa01e87405f5d3467dc27075397a
+    pristine_git_object: becdc4a5539ce3ef4aaedebc2909326c68390605
+  docs/models/operations/gettransactionsbypathparamrequest.md:
+    id: cd5b888d4b58
+    last_write_checksum: sha1:c64cf39fcb224f4316312c19474ed569f4e01fa7
+    pristine_git_object: a46be49bfd8b577e946ff854421b3dea1fc8e48c
+  docs/models/operations/gettransactionsbypathparamresponse.md:
+    id: 91964903a7f1
+    last_write_checksum: sha1:b3b387576ce811b13d5bc5bb0159e077cf89860c
+    pristine_git_object: e7b985dfd1280d79f34590ff216d0dbb376d8327
+  docs/models/operations/getuserpreferenceresponse.md:
+    id: 91977ec64191
+    last_write_checksum: sha1:d459aa32af613ffc99958b9d2e185ba0da38e40f
+    pristine_git_object: bea24488aa6a4003f520a4f83bad1fd30b311f2d
+  docs/models/operations/option.md:
+    id: 2ac1bd52a5fb
+    last_write_checksum: sha1:08cfee5d266c9d82987e448f6c98a143aa42c5f8
+    pristine_git_object: 35d8a1e2ad48a64702c6a654ac8880dabec053b0
+  docs/models/operations/placeorderrequest.md:
+    id: f4dfcfa3e923
+    last_write_checksum: sha1:0791fe481be29d8bcec323a67308f1025fd77ee0
+    pristine_git_object: ac4b412824075cbcc3b8a5dedbf97ec80b37cc1e
+  docs/models/operations/placeorderresponse.md:
+    id: 484201e300ff
+    last_write_checksum: sha1:485d8e3b7982897074a1104c78294bfa02203c5e
+    pristine_git_object: 0574625e0698df14ce28056ceb4c814d914ef322
+  docs/models/operations/previeworderrequest.md:
+    id: b45e03f27e7d
+    last_write_checksum: sha1:f5f00e105cef57a6a2ea33148116dcabc3ffc960
+    pristine_git_object: e9f92f1c6b4096fd306053d7ee8eb7bed8cefea0
+  docs/models/operations/previeworderresponse.md:
+    id: 80324a819097
+    last_write_checksum: sha1:9148c8c85ca046ceb181bdbb59690844a234bcf4
+    pristine_git_object: c70930adaa51ccfed1a8db7c92eea1f744befe4c
+  docs/models/operations/replaceorderrequest.md:
+    id: "707012019041"
+    last_write_checksum: sha1:4ad5e4ba564f9bb929e60ec6bc6eb93f73f4b2c8
+    pristine_git_object: 2b04b983f7ddc34d190664bf51abd7f610b3d845
+  docs/models/operations/replaceorderresponse.md:
+    id: cb7f3bba083f
+    last_write_checksum: sha1:52c75ad6bfaf5777a297533698cd9a7f9b7ac7ec
+    pristine_git_object: 6065673f22d76fff287fbbecf3789554bdeff6d4
+  docs/sdks/accounts/README.md:
+    id: d6c754b1ca96
+    last_write_checksum: sha1:ed008044a36d390990cb950240aa92c1b78ef720
+    pristine_git_object: 83266370594d428c8101f54b3944040093f5b9d3
+  docs/sdks/instruments/README.md:
+    id: b23698d5511d
+    last_write_checksum: sha1:a84bce8e493394050935c1015be06b657873562e
+    pristine_git_object: 13dff331915f497901ac63ce29d119ea4c609ee0
+  docs/sdks/markethours/README.md:
+    id: 78944ca0d078
+    last_write_checksum: sha1:a58e83038f79110d499740a039fdf7b5f7299f1f
+    pristine_git_object: 28d8fa53690fede3323b4d1553f3e704b1d272f5
+  docs/sdks/movers/README.md:
+    id: 303aa27b97f6
+    last_write_checksum: sha1:cc8ebd0388f7f5cbb089e1e48bd1e00a9b440327
+    pristine_git_object: 6a5c7914c69af8ba1581e15b017d2cbfae96262d
+  docs/sdks/optionchains/README.md:
+    id: af07086937dd
+    last_write_checksum: sha1:c540ebc9769a10e7995df59fc2fa342e7f49979e
+    pristine_git_object: 84786c50609466869c6dba77defe4a9a1aa033d8
+  docs/sdks/optionexpirationchain/README.md:
+    id: 1873a58975c9
+    last_write_checksum: sha1:0ea45287907bb6314e7eb1f2878a53050aafdffc
+    pristine_git_object: effa8891d48fe027ff027f63241dfcdd4bee6324
+  docs/sdks/orders/README.md:
+    id: fc5b2caf3cb2
+    last_write_checksum: sha1:66307084540c2f3d050443cac86f6de89f3c90fc
+    pristine_git_object: eb70035ced8c1b2f17d101c2f627354557bc538d
+  docs/sdks/pricehistory/README.md:
+    id: 79d408e549c0
+    last_write_checksum: sha1:f9538d0ab804340f04fa148b632695c86dc99ef0
+    pristine_git_object: 135d69ee2b79f2e0a033f36515ec9bb7c97ae48a
+  docs/sdks/quotes/README.md:
+    id: 05d5cafc463e
+    last_write_checksum: sha1:b8e3e728c7981c335fc0c7e72ba98281fe249a41
+    pristine_git_object: 9f67c88f633ceaa9e3a50dc5c3926069cb16955e
+  docs/sdks/transactions/README.md:
+    id: 85592abe3c6b
+    last_write_checksum: sha1:6a1367ab31bc2cc4ae0485dac330321a51cf1d8f
+    pristine_git_object: 1418c69c59aa4935b78103c6775b910aa5a026bd
+  docs/sdks/userpreference/README.md:
+    id: 208d47711db2
+    last_write_checksum: sha1:d54816e638c4c628d2dda06a09a447be7a0c1263
+    pristine_git_object: bb57174e99c340fcea249ffe6c3262d5bb08c7d5
+  docs/types/date.md:
+    id: 3a10eb495943
+    last_write_checksum: sha1:45ab0675ea1c52ce29e9b5c70c4ef5c0ae29f2bf
+    pristine_git_object: 3d83ed2f48ff36968042694693ec08d892ef94fe
+  go.mod:
+    id: c47645c391ad
+    last_write_checksum: sha1:554c5483d2eef5bd770820d98b32554c5e247f34
+    pristine_git_object: 904d9efd738a42475fa5a5465af2a3370751a432
+  instruments.go:
+    id: b00f1d6b5a1f
+    last_write_checksum: sha1:1b9e2a6bd1c55a4e5e58ae5411ec067d75a43fd9
+    pristine_git_object: 2471dc20e20b88329a60374d5f97580e612cc98a
+  internal/config/sdkconfiguration.go:
+    id: 33b8bfac5265
+    last_write_checksum: sha1:266e86c3099150eeb44650a2c657205e8ca73dff
+    pristine_git_object: 5d04d12864437ff35e394210204fbc14803c527f
+  internal/hooks/hooks.go:
+    id: 336be70ed5c0
+    last_write_checksum: sha1:df7c5bacbe1b5904f745639ae8d710e2e09de81c
+    pristine_git_object: abf11a5e2c6600d1cb7befdbd3ca370c487b521d
+  internal/utils/contenttype.go:
+    id: 928a56fe6755
+    last_write_checksum: sha1:ab5cfd860d02c6e6a37f89e2b5649a9859947fb1
+    pristine_git_object: f6487e01eb987c0aa49e7aa50b5ff24830314c63
+  internal/utils/env.go:
+    id: ac8bab30c73d
+    last_write_checksum: sha1:1e0bcb2d2caed9f3657f1dbc99b55811bed0298c
+    pristine_git_object: 110d464eacf2387b347bad1cb903666354a339e9
+  internal/utils/form.go:
+    id: 8ea133d76535
+    last_write_checksum: sha1:ff4a90b700875e4ab322abf042f0e9cbc3156473
+    pristine_git_object: e9d789be1c3b7d092163f501480fa504162bbc18
+  internal/utils/headers.go:
+    id: 90d4f18d4adf
+    last_write_checksum: sha1:9aaccc17e166399a90927ec87aa763395ba86c40
+    pristine_git_object: 5765f2e5afce2c3a4ae704f9427ddf34278c0bca
+  internal/utils/json.go:
+    id: ad03e3c502d8
+    last_write_checksum: sha1:fdb6ddffe895492f402f7c9c689bd6975f67f6b1
+    pristine_git_object: 309cfe8d8d52c24ce627167f537a1eda7c4b6232
+  internal/utils/pathparams.go:
+    id: 1f3e0c30fd90
+    last_write_checksum: sha1:fcccf7d674d54df56afd944542e71c3679054ba5
+    pristine_git_object: 4b60c87daeda702b7770698ba142c633af5685b8
+  internal/utils/queryparams.go:
+    id: e7f604e65a58
+    last_write_checksum: sha1:c89f233f1c755f34eb35b22f56a0a1fcdc0564c2
+    pristine_git_object: 1276c23d90452e3d13b5f1cde54e9c802dee123b
+  internal/utils/requestbody.go:
+    id: 22445ec1c044
+    last_write_checksum: sha1:13126f2f1a7cc8677894aa4494a8b0a526ef7cdc
+    pristine_git_object: 13407803c13ed1c9174ac4017c6a5baf998c919e
+  internal/utils/retries.go:
+    id: b5e011d15c2d
+    last_write_checksum: sha1:8e0763afb97abce1acc4fe6ff89fe27c7b466419
+    pristine_git_object: 0f5b2a4e15b28101f22ee40e4929b7d34160c1a6
+  internal/utils/security.go:
+    id: eeb54c55241b
+    last_write_checksum: sha1:bb9cc1870101f6d2a990766f3eb0ea37292f7507
+    pristine_git_object: 19dfa6f4607dea64b1dd61c211e072212e7a3cb2
+  internal/utils/union.go:
+    id: db86c85746b6
+    last_write_checksum: sha1:c8dba917ff93dc2636c159db9e0d84c7d189fd96
+    pristine_git_object: 3e2c378d04b14af195093db6c25e6566f967bcf2
+  internal/utils/union_test.go:
+    id: 4b56247171bd
+    last_write_checksum: sha1:83ac73c1901de4c6db90f65cf5879163f3d47a00
+    pristine_git_object: f66814c73ace94d8e71d785fd6161fb405745754
+  internal/utils/utils.go:
+    id: 1133b2a27019
+    last_write_checksum: sha1:d88d96cc244301d137581432095043f27a3e17b0
+    pristine_git_object: 0415b536598baa76c5d1a8fc32816ed1b83f9137
+  markethours.go:
+    id: 9cc4e7719845
+    last_write_checksum: sha1:78cd6129b139db10045ab588b3add9e01b677ea1
+    pristine_git_object: 86be94d072ee6a497625926ead99b8473c33e616
+  models/apierrors/apierror.go:
+    id: 4cecf27a5a54
+    last_write_checksum: sha1:e699d3325ea82ea2b0d29656396210f0513c3391
+    pristine_git_object: 61a9628a6533548245be5af929f1d4f96dd780b5
+  models/apierrors/errorresponse.go:
+    id: 182eb0b81d4c
+    last_write_checksum: sha1:ae4f35491e5b65cf8cc6fd56833dd0085816767f
+    pristine_git_object: ea66a9b5a95e9258528fdccd71fa3497d6832877
+  models/apierrors/serviceerror.go:
+    id: f97515956c10
+    last_write_checksum: sha1:4271453d7686f6775fc76215366c80dc16a2ab83
+    pristine_git_object: 700696e7ddcd9ab6b92ea12aa5e65c88b716763e
+  models/components/account.go:
+    id: 5117546ac57a
+    last_write_checksum: sha1:024ff57e52c105527dd65fefac3e1466983686a9
+    pristine_git_object: ae29ac0fcbb09e14eb26af48cac49e9cb4909a92
+  models/components/accountapioptiondeliverable.go:
+    id: 5f56b52e87e6
+    last_write_checksum: sha1:f75660e4606ce51990a7e820bb31f0da1b7aa969
+    pristine_git_object: 9283c8dffff5e50c87c1dd78b78dc03cb77d2b6c
+  models/components/accountcashequivalent.go:
+    id: e0fadbd6ce82
+    last_write_checksum: sha1:7722858afea3900f668c3e83d4cc8dace27de2e7
+    pristine_git_object: 1ad8d82e4fd273c74c9867da69e3108e37bf4c15
+  models/components/accountfixedincome.go:
+    id: a00b60264ac4
+    last_write_checksum: sha1:0367513460fdd716c5b88cf50df48e58b2c92fc0
+    pristine_git_object: e21924fe0653ff4d28cc7f238aaf9e0ed366fac5
+  models/components/accountnumberhash.go:
+    id: 9b07693e7625
+    last_write_checksum: sha1:602f7f919f5311c120dd7d729ed2b6c6e88a1785
+    pristine_git_object: a2fcfd8b410fd42ec4a7199ab3859fed2109af5c
+  models/components/accountoption.go:
+    id: 91f51afe65b1
+    last_write_checksum: sha1:9a4d139f46e950192862340dc9e0d0a0041e1e4a
+    pristine_git_object: d62e06a08a3a115e7f9937f4c5d8e637d54e2b3b
+  models/components/accountsbaseinstrument.go:
+    id: c763296f4d62
+    last_write_checksum: sha1:06497fa3cde1ce0adae34c932e2e6c16c1b8c3e9
+    pristine_git_object: 0b89c1b4f04b74c3f91676538afce4d29c7f26bf
+  models/components/accountsinstrument.go:
+    id: 93bff31e7b7b
+    last_write_checksum: sha1:0b454a32db0b0dc6c7989b207710bdda9e76b24a
+    pristine_git_object: 6d2e6d42c4a66b202638e94d708956c1d6c61ae7
+  models/components/amountindicator.go:
+    id: 51befd89c39d
+    last_write_checksum: sha1:265dd21175844dd7fcdc2faa006efa2098b1af81
+    pristine_git_object: 78cf4538bc615e0c86951f8512e3597fbbf62ad5
+  models/components/apiorderstatus.go:
+    id: a422c9f0d8f6
+    last_write_checksum: sha1:683955adc13fff5ead754102fe1647fee6b38684
+    pristine_git_object: af9cddb4e3f6b45613b522993e060404024d6ec9
+  models/components/apiruleaction.go:
+    id: 01f23a065ea1
+    last_write_checksum: sha1:c1b14c6caf83ed9a622c1a1d4bf127d5c3f0f055
+    pristine_git_object: fd884699883bf68fbd9ceb9020d02041f8dd3517
+  models/components/assetmaintype.go:
+    id: 30647b594b22
+    last_write_checksum: sha1:9050197aee9ac4b50430bc7535eda03c670eab9b
+    pristine_git_object: 9a34da7141f82a562d7904dc5373c890495f2e47
+  models/components/assettype.go:
+    id: 0dea58096349
+    last_write_checksum: sha1:ad03e7a21eb5b2a45981703e879c1cc93298911d
+    pristine_git_object: 3b08f4363edfc74ab37c74ae2e147f93c03e9bc9
+  models/components/bond.go:
+    id: dde7de27a7bc
+    last_write_checksum: sha1:b2ba5e877e14426ca1e70d3e558984f0e3eb3f34
+    pristine_git_object: 787964d42002ed88fe8dd5bb4c332a6c5c10baf4
+  models/components/candle.go:
+    id: db17f30fbddb
+    last_write_checksum: sha1:63986e55a1a5228dc813416698c6716bbf23e5dc
+    pristine_git_object: 0d1ab57f2598cf6aed78cb68a280fecf7761a1dd
+  models/components/candlelist.go:
+    id: 380fdaa9a7dd
+    last_write_checksum: sha1:d22db78f622d16186a761fde922d061d08bc41fb
+    pristine_git_object: b8678886892db0347d9f39efa0e799adec0c653f
+  models/components/cashaccount.go:
+    id: ab5bddf48e48
+    last_write_checksum: sha1:1f0a109485fdc008e9a3411fe74b861861df9edd
+    pristine_git_object: 011017abd970a79f01bc68a4b841355483f5457d
+  models/components/cashbalance.go:
+    id: e717094ee267
+    last_write_checksum: sha1:e5edd7592f0ee08ba7395a2e5145f1d0665cdc30
+    pristine_git_object: c01d5f11b0dbff6f3ebbaef90e0ad01a3c7d9a11
+  models/components/cashinitialbalance.go:
+    id: c09372d9e19c
+    last_write_checksum: sha1:3fecde95b49975ddcd70f752d974624400c2de44
+    pristine_git_object: feb4b8063b810ab757faa8025dadfe9dafa8cb18
+  models/components/collectiveinvestment.go:
+    id: bc83f34ff9fd
+    last_write_checksum: sha1:578656f223dcdb7f91258cde064d6c0c1d0199ff
+    pristine_git_object: 82cb2ed9ab79ae2a1ce6286b98e1cb693957e099
+  models/components/commission.go:
+    id: 312ddb060209
+    last_write_checksum: sha1:762d27a405d607943b1f05fb1df66fd75979f70a
+    pristine_git_object: 8c0a4969225f7126bc38800f4ac5a4a8afda8dd1
+  models/components/commissionandfee.go:
+    id: f2249e0cb6cd
+    last_write_checksum: sha1:62831623574e7e89450702a556b67486a0fa0c21
+    pristine_git_object: a2795825381c2329a664b223eb612b0d81c03b6c
+  models/components/commissionleg.go:
+    id: b0ca54b5a049
+    last_write_checksum: sha1:a6bd7478e7cfad226ecfd3ac253047ed1f01d836
+    pristine_git_object: 2c2978bca55c81cf193cc632989c52800256fa85
+  models/components/commissionvalue.go:
+    id: 0c785dbf81a8
+    last_write_checksum: sha1:c14031259f087f8a2c6da1bb8ebacf8abd199374
+    pristine_git_object: f96a4d16beacda9cdb301a378e60b5f499151e08
+  models/components/complexorderstrategytype.go:
+    id: 7443e54d5b50
+    last_write_checksum: sha1:12a82ddc120fd9dd0bd5a84e08bd4ac8e9fe4d48
+    pristine_git_object: 739ad715c0fb664e3f03308770520e9b5895ef14
+  models/components/contracttype.go:
+    id: 69773af645bf
+    last_write_checksum: sha1:8061c6eae193db6fe8995e9894c2786476f43bc6
+    pristine_git_object: 3b87d45eed894d2be20d682fc037d3855156a95a
+  models/components/divfreq.go:
+    id: 0e18c5f06296
+    last_write_checksum: sha1:ce58975d266ddf9de637d7dd355f01491c3b7da4
+    pristine_git_object: 17b587071196bbc45f2be0b17c6700259e603abe
+  models/components/duration.go:
+    id: 4b45fa8f5b11
+    last_write_checksum: sha1:00e8c119a50b2a12be926e9d038eedee02b49e7d
+    pristine_git_object: 5841e4b68b14be1c54b9d8601d14922ab5fdac6e
+  models/components/equityassetsubtype.go:
+    id: 63cea2410c67
+    last_write_checksum: sha1:c6ef3c3d41ed9d110f023bb54e7369d55cc0d26a
+    pristine_git_object: 897075e1c1de33a192153f7a2e5d936dbb6b86e2
+  models/components/equityresponse.go:
+    id: f9a23e1c0403
+    last_write_checksum: sha1:d83a3a9fc71234107b01822f494da27962a69947
+    pristine_git_object: 4536a5ef58888884dce5625c93280a10b7dc49aa
+  models/components/error.go:
+    id: 101a721ad2e7
+    last_write_checksum: sha1:2464348ff6b5e696fd48275106113582c0990c24
+    pristine_git_object: a67b821603f8e7a95db026e5d782e5e82e858361
+  models/components/errorsource.go:
+    id: abdf8218355e
+    last_write_checksum: sha1:d88d445b7570895725d1231a603ed85f830020e8
+    pristine_git_object: e2ed0c6bfa0b3dcc6346105552166baac79bde45
+  models/components/executionleg.go:
+    id: c45a8546cd57
+    last_write_checksum: sha1:d9ae123d53d801e9e46f62814f8afc0a64086a9c
+    pristine_git_object: 85d064e4e48678c08b032307b22f6c828f7bbed4
+  models/components/exercisetype.go:
+    id: eb89a7868174
+    last_write_checksum: sha1:6394b5e99057012e2c005bff2f3c5676d79febe6
+    pristine_git_object: ef27f6257204b0b471a8909144c957edebe5cbdb
+  models/components/expiration.go:
+    id: 65aee2867725
+    last_write_checksum: sha1:baeb89282aa63cf7f209030474871294c15ba3d3
+    pristine_git_object: bac5bf8bf10ac9bf058ac63ebd158b22e3df68bf
+  models/components/expirationchain.go:
+    id: 1c7a643f0daf
+    last_write_checksum: sha1:9bb72c957141ded909168a16a15f66877ef66b64
+    pristine_git_object: 9909a4e7494db5ac4642f63521c2a5d37269e290
+  models/components/expirationtype.go:
+    id: cb111b3d2057
+    last_write_checksum: sha1:e5ca2c13adfa592f33df270547e5679575e5e14c
+    pristine_git_object: 9729bcb8aafef1eb43e6451ff2cbe9f678189ea7
+  models/components/extendedmarket.go:
+    id: ceeb841ebcf4
+    last_write_checksum: sha1:78544cf6a3840b106e42481783ba6aa1511ba342
+    pristine_git_object: 20ba200b80247018745ae9a45f2e30bcdccacf52
+  models/components/feeleg.go:
+    id: 03e848fb425f
+    last_write_checksum: sha1:fee73c1c01b65559a2f3310917e480078223de9d
+    pristine_git_object: 42240dc081932d0864df12214235d37fb8ac9040
+  models/components/fees.go:
+    id: 81a58d889bb0
+    last_write_checksum: sha1:dbb5eb2c2c2029e1ca7bf460d4ae39b527c17265
+    pristine_git_object: edbd984094f26d2fc86efc00516c8f703faae509
+  models/components/feetype.go:
+    id: 3dc64704d73a
+    last_write_checksum: sha1:21ea1d7b4aa60947c0b9747cf130baac6948c2db
+    pristine_git_object: 4c7df93ce776ef866e5165ecbbc38e9eb7c2467f
+  models/components/feevalue.go:
+    id: ad7d62185302
+    last_write_checksum: sha1:7539cbe0d8ff8e04d090eb0a9963f5f4a32b0fa4
+    pristine_git_object: 6714d17a868feb809483230af1c07478ce9b0274
+  models/components/forex.go:
+    id: 768887c2e148
+    last_write_checksum: sha1:f41603fb56d28aa4ce3527948020a56b7ab6f54b
+    pristine_git_object: 8592586105839d4aad071971befd67905bf3ea47
+  models/components/forexresponse.go:
+    id: 303343ca30d2
+    last_write_checksum: sha1:d9c0e6694fb7af91de0133bf643b57f9ae37b87a
+    pristine_git_object: 58bebeabe82ac9d1269c81e15a3a7a1b21798799
+  models/components/fundamental.go:
+    id: 3c99e1f9a023
+    last_write_checksum: sha1:5b124bfdbeeaacf9bcaed6f0bb86f1b75e6da8db
+    pristine_git_object: 6c08f441a6280d4cd2445626f4cd05e1fe3ee16a
+  models/components/fundamentalinst.go:
+    id: d9d181daa40d
+    last_write_checksum: sha1:4aae1e561593713411783c3d5343d7b5b231f545
+    pristine_git_object: 0c5ae2a71ca80a3e3c0728cd6294d2f742f425c3
+  models/components/fundstrategy.go:
+    id: 81153396fe98
+    last_write_checksum: sha1:6123ed9db37b21ae2054fb918578101ea4e66dab
+    pristine_git_object: d7bb877b0ed46a672c217bf7160a75db1c78b3a6
+  models/components/future.go:
+    id: 790fab3dd6ab
+    last_write_checksum: sha1:d091a73becc339aeafa1ceed6264ce07123aa0d8
+    pristine_git_object: 0378c69d23852244171846b7a08f8a7a8f3c3c73
+  models/components/futureoptionresponse.go:
+    id: 5a58c4b7c529
+    last_write_checksum: sha1:97e79e5508b49fdcacb7504dc854e960efde6b1e
+    pristine_git_object: 3ea602021ac38cc1767bc392a24f9dffcb9653de
+  models/components/futureresponse.go:
+    id: 90b810314cf0
+    last_write_checksum: sha1:bdba9ae4526db642fc003f7627641979199ac1c4
+    pristine_git_object: f26aa16ae55801fe5d996a8ad1321a6fb5620597
+  models/components/hours.go:
+    id: d60e7063b1b5
+    last_write_checksum: sha1:54e846b8fe6011c5ffd924c4c0e9991389f810df
+    pristine_git_object: dd8ad3a5b86850075abb47c20dfd62804320ce56
+  models/components/httpmetadata.go:
+    id: 790bad4a7abb
+    last_write_checksum: sha1:01a20fcff33179809ff9920ee431c7adabbd98f1
+    pristine_git_object: 148ec47fb2dea6c188ec68eb3532d93169608168
+  models/components/index.go:
+    id: 73b95c0af68b
+    last_write_checksum: sha1:a1e1edbe5ab7afedd6358ea1605e84934dd01da0
+    pristine_git_object: b558ca0b493d287a0230de983858b8eb23bd8e7b
+  models/components/indexresponse.go:
+    id: a9da967c2f81
+    last_write_checksum: sha1:9ab5674d862b272fe90e47615dad24107fb49779
+    pristine_git_object: e1053c2d4dbc4ddddb419d0fc66809f162149224
+  models/components/instruction.go:
+    id: cbb50312f666
+    last_write_checksum: sha1:727efbcd2b3a4ce3195e878826474bfa4bef63cd
+    pristine_git_object: 111737e864b0a89096abf7b9024415ef829ac9c7
+  models/components/instrument.go:
+    id: a81300b0ec86
+    last_write_checksum: sha1:09fd83a48a96152173aac16da3e25464bdaad641
+    pristine_git_object: 6ef9d4fcf8ee98699c9aa5f4c3f76bea821b5158
+  models/components/instrumentresponse.go:
+    id: 9c9b3b2a5ae0
+    last_write_checksum: sha1:3ad62fa1998f3755ad7964405abdb4a982b7e0d4
+    pristine_git_object: c926c81e39e978b4804300fa9c561235f1e1eef3
+  models/components/interval.go:
+    id: ebedd02fd6ee
+    last_write_checksum: sha1:22e273dd0431792672b35ae17d047af51e1d14fc
+    pristine_git_object: 9b6088d6638846c7f64457c22f702afa7e9d9c6c
+  models/components/marginaccount.go:
+    id: fc8d63f63045
+    last_write_checksum: sha1:900480a4a06de0d8535d4c08f6243be85720885e
+    pristine_git_object: d183ef1e1aee2fb1723fb39ceecf52469f0586c7
+  models/components/marginbalance.go:
+    id: 6a9c05a6f086
+    last_write_checksum: sha1:3d2e0d3b7eaa9d3765d79aaff33d7dd758dec96d
+    pristine_git_object: 476cc21e6bd425f93190868a6776d4562327fddb
+  models/components/margininitialbalance.go:
+    id: 1682f0c14e6c
+    last_write_checksum: sha1:f712971edc21190f02b61a723cbf6494657c61c5
+    pristine_git_object: 7e4c99511c25ca3626cb90fe9083835d2b3fee20
+  models/components/mutualfundassetsubtype.go:
+    id: 616d241cbfa2
+    last_write_checksum: sha1:236a67a2d66156c90c452aaf1af7bbf7bc2a5029
+    pristine_git_object: 0054556977c549c450da0d40ff4d36a6c65cfe7d
+  models/components/mutualfundresponse.go:
+    id: 4d54462a2b62
+    last_write_checksum: sha1:fe22fa4109e9abfd9b0adfef42ddf76a5d7f37ad
+    pristine_git_object: b67fd855c960a08181f981e3f8d831bc14accab6
+  models/components/offer.go:
+    id: c86dc2c0612e
+    last_write_checksum: sha1:f71fc114ef7d6db136837dd519394fd2140f30e8
+    pristine_git_object: c0b9fef4ba0b3f0e5c92a0a5dcda0ba184ff01c3
+  models/components/optionchain.go:
+    id: e3a82d231d3a
+    last_write_checksum: sha1:788afed524e0214ad1f10fa7a77f1bb9ea8d080c
+    pristine_git_object: 7edcdbe437e509bfe68ac93a7f44daa9816ed227
+  models/components/optioncontract.go:
+    id: fbee6d990e66
+    last_write_checksum: sha1:21fdf9d05943c7e5aaf8d27ee32f8da295934722
+    pristine_git_object: 14f1b619d060458206ef1e60b9ec4f764e0bbf06
+  models/components/optiondeliverables.go:
+    id: f5947ae71932
+    last_write_checksum: sha1:b2ecf8bb08b8efb0b49fc11484e1e74c866dc124
+    pristine_git_object: 48aa3cb5a065664c29e42b04c2b9f577dcf0a954
+  models/components/optionresponse.go:
+    id: 3104adc30e66
+    last_write_checksum: sha1:7597262fb45829112fe34b7b334d4e8a86298e30
+    pristine_git_object: 0473642f95e385b8e9f60f900102cf06204da7cd
+  models/components/order.go:
+    id: a88f176b88cc
+    last_write_checksum: sha1:69e20f9b4554249e3ae98a527ee62ecbf6f751d7
+    pristine_git_object: 226fc2e64697cd6e4be69888a13288a42b0daf94
+  models/components/orderactivity.go:
+    id: a90583713b83
+    last_write_checksum: sha1:8579f2383367e4e68e88a620df0d61cb7210f20c
+    pristine_git_object: c1c4b27e1f8a630e104dee8a9ddef1c8a20d3abc
+  models/components/orderbalance.go:
+    id: 260723a16cc2
+    last_write_checksum: sha1:c7faacbdd022c6b00226aa6e9534aa77fd6943d5
+    pristine_git_object: 07a52042d316b2f78977c599b826e170c43f3ab2
+  models/components/orderleg.go:
+    id: 4e3085753794
+    last_write_checksum: sha1:e71ce1bb891bca70bf129d6ae931890979c6ce9a
+    pristine_git_object: 76213bcad5c07e1109775ed25de93da5ad4fefff
+  models/components/orderlegcollection.go:
+    id: 30982383ae6a
+    last_write_checksum: sha1:d6eb245c49fe5247e249c51da84d1fd764c1ed87
+    pristine_git_object: 55cf0f5cc30d2f24362a84f18c4efb5e823ee762
+  models/components/orderrequest.go:
+    id: 3b2986587e34
+    last_write_checksum: sha1:cc4c2872e369936ce5a04b0646c999ca5c54ad6d
+    pristine_git_object: 05ad156167b62ea28beaf542199350d3d4e36e77
+  models/components/orderstrategy.go:
+    id: 40cd692a0bd6
+    last_write_checksum: sha1:dfb0981a6136aa01189ee1bfa005659679221bc2
+    pristine_git_object: 5c1c0633c2066e6188c6c3028610f87874051817
+  models/components/orderstrategytype.go:
+    id: 9155e4e3a858
+    last_write_checksum: sha1:a23ea39e6bf71cc177443def5dc9cc9e9f2032d0
+    pristine_git_object: 7e7b44fd1c61108f4d4f0a3c1c5147f34c5b9ec7
+  models/components/ordertype.go:
+    id: 1175adcdb40b
+    last_write_checksum: sha1:57d55e75a6cf8056fa229ee0669b3621b4b202a9
+    pristine_git_object: d9429114ccf3e83de9084ca2f37c5c12cda4ffed
+  models/components/ordertyperequest.go:
+    id: 1bdcbd19927f
+    last_write_checksum: sha1:148527fedc156f53e2c6c158bfba0bbfc5a61c8c
+    pristine_git_object: 836d51158de18684f466102f8a77fb0e2188fad8
+  models/components/ordervalidationdetail.go:
+    id: 2af00ed7e23e
+    last_write_checksum: sha1:72acbb348e923ec1ee12cd165293d1e392c3d1d9
+    pristine_git_object: 1d1cf4029e1c8d4cc2498852ae70799476171b08
+  models/components/ordervalidationresult.go:
+    id: 00b60d94da7d
+    last_write_checksum: sha1:a18bc1e3a216d6ddcc036b7d6e1934154debe0c7
+    pristine_git_object: 64458d040928cfcd639142b04579f0977a389093
+  models/components/pathparammarket.go:
+    id: 9673e96eafa7
+    last_write_checksum: sha1:17bb1540994170defd1291baeff8f94011a548dd
+    pristine_git_object: 718d3c365bb68691d1c4285fdc7f80c54b43ffa9
+  models/components/pathparamsymbol.go:
+    id: fb60bae1d75a
+    last_write_checksum: sha1:599425ec7b715636d7edf04b8064c01862872431
+    pristine_git_object: 9125f9fdd230ac352787a37ceb8d42fffebe0d89
+  models/components/position.go:
+    id: 7d33a9a721c8
+    last_write_checksum: sha1:ab6a462cab820988f2af3b5bf748240915767d98
+    pristine_git_object: be7add86f6fc763e6f9e5b1c59ac165de565990a
+  models/components/previeworder.go:
+    id: f4558fd5f1be
+    last_write_checksum: sha1:2948ce1d2026313c922669f12877a28e1facdfa6
+    pristine_git_object: fed3195b9eff69227439165f59c3fcfa27ce4744
+  models/components/pricelinkbasis.go:
+    id: d6f1d56e02df
+    last_write_checksum: sha1:2f6f94832f2c9653313eae27f210af21194392cc
+    pristine_git_object: 19285f098740a0237ade6f2ac251f91b94bdcdc0
+  models/components/pricelinktype.go:
+    id: fc76dfdd2f1f
+    last_write_checksum: sha1:c8a76e5413e43905cde5facfb76ea593cd40a77a
+    pristine_git_object: adaef54290ee99740be87a1e12885dec8a512eff
+  models/components/product.go:
+    id: f2cd775c6c02
+    last_write_checksum: sha1:546422f6ae71bbc65c7e050190c5b0add69a9442
+    pristine_git_object: eaa5936b46e64fbf959483e8bfa89665de79ae07
+  models/components/queryparamcontracttype.go:
+    id: de667c5085ed
+    last_write_checksum: sha1:d1ff6210119b8ba6027b0df30f8db67eb342a03d
+    pristine_git_object: 340691dae0b72ea5a7c851ab652070dcad7a6bd6
+  models/components/queryparamentitlement.go:
+    id: 8688287ecbd8
+    last_write_checksum: sha1:43cda8eed790d8bb1248df012353a0ab82786c7f
+    pristine_git_object: f540ac20788962f4024a97df0c5b66d982e7a7b2
+  models/components/queryparamexpmonth.go:
+    id: 7c6c5754c9aa
+    last_write_checksum: sha1:430b1c45f2b1569fe6193875206f672f51886f52
+    pristine_git_object: 24d1639e77374990d42137266d5711c9cf45ee86
+  models/components/queryparamfrequency.go:
+    id: 149cf316e05b
+    last_write_checksum: sha1:4bf967ef27bebafb132265aacd7eaac6e7b33778
+    pristine_git_object: 95ea538570005110dfe480db6bc6149e677829ba
+  models/components/queryparamfrequencytype.go:
+    id: a49f8d2168cf
+    last_write_checksum: sha1:cc8b36f4130381d7d40bac5fb8bb4a0490c3e0c6
+    pristine_git_object: bc773cd79c473a13abb5bc0aa9cd26306438d5c6
+  models/components/queryparammarkets.go:
+    id: 5bed5d8f9c89
+    last_write_checksum: sha1:be75b0d12d2cf2cfa9978428a8d13aa06132bbad
+    pristine_git_object: 968fdbade9543296459fb3dd18b3ce5bf2f23cf9
+  models/components/queryparamperiodtype.go:
+    id: 5eaeeb25ac18
+    last_write_checksum: sha1:8815f670528bc20ad67eff0381319fbf570ee4f8
+    pristine_git_object: 3430b529953bbfde961c9dc8899ac7d082814e06
+  models/components/queryparamprojection.go:
+    id: 82756a0e970c
+    last_write_checksum: sha1:b63810eb0fde4ddac1356bd1f06a268ce3a0a2ff
+    pristine_git_object: fb613117488a136636d7950d6dd77a3ff0480aaa
+  models/components/queryparamsort.go:
+    id: 0dd49bd094d2
+    last_write_checksum: sha1:cc96ac33682be415247b823a23ea2dbc58143f36
+    pristine_git_object: d66b35d497b5ccf2081455749b26d497182566f7
+  models/components/queryparamstrategy.go:
+    id: 02705893e888
+    last_write_checksum: sha1:59b4f3f8831e9446d7510f6d069f72a2ca657dc7
+    pristine_git_object: 3d88138bd68a01001f96c29d8547722899496515
+  models/components/quoteequity.go:
+    id: cfdc4cc4aed1
+    last_write_checksum: sha1:c08c4a3f9745c1ad0655f3951c8798b8e58bf407
+    pristine_git_object: b19577271ef6b99e6194b9bb6b35ca7343026637
+  models/components/quoteerror.go:
+    id: 3adf08ff251d
+    last_write_checksum: sha1:ad047f8427528d3fc89fdcd69ca65c5c5bf0e6be
+    pristine_git_object: 01f9da0b001bdf5b4f9ebc59642d92c30b757c1e
+  models/components/quoteforex.go:
+    id: 1b9028d20750
+    last_write_checksum: sha1:6cead2d0cb15a3fed75a4d4bfe2a4379e55b5495
+    pristine_git_object: 5dcc4800db5a7a9221cf97cd1cb0fbdd529d3b14
+  models/components/quotefuture.go:
+    id: 12ad5d6aaede
+    last_write_checksum: sha1:eab1ab4c36de6b8bb873ff69dc707344071b5c50
+    pristine_git_object: fcba02423614af76b9cfa7238dc5d6090c3b5e54
+  models/components/quotefutureoption.go:
+    id: 21d55fe3ce8c
+    last_write_checksum: sha1:efcfd30083bd4f0db5c29dda472c7eb8d41c9d12
+    pristine_git_object: 693b8dfd8aebe17da6344d52fc1887f6a1c02369
+  models/components/quoteindex.go:
+    id: 2bcd54ab4523
+    last_write_checksum: sha1:de9d0a2661b205c77c5834d673f23dcf6dd4b42e
+    pristine_git_object: d3c5db893eb977d80e124c5450df0cafde4631bb
+  models/components/quotemutualfund.go:
+    id: 154344f93c52
+    last_write_checksum: sha1:c45999c864857891e1fab0400fd440b4be91f348
+    pristine_git_object: b3c6e830b8e465b6a2917d8b8755f41688c8703a
+  models/components/quoteoption.go:
+    id: a0ff85e30ce5
+    last_write_checksum: sha1:596d19b4d71ac41663b784ef6c3465d723d7304e
+    pristine_git_object: 2aed82e9540a9736f3aa3642e0f6fa74a33060a4
+  models/components/quoteresponseobject.go:
+    id: 38f9b06e43ba
+    last_write_checksum: sha1:f2b0572d6e5ec4a1a99b00fcf789f0c510743be0
+    pristine_git_object: 24c428873e6ade6459f12617531adcdd7f8d564a
+  models/components/quotetype.go:
+    id: 99c47b0fd3e3
+    last_write_checksum: sha1:7c21582db01796bf751cdc96f905bffe847e0490
+    pristine_git_object: d2af6324deb73e11f4ca33ddb45fd19deb8fd26e
+  models/components/referenceequity.go:
+    id: 6cf94f56499e
+    last_write_checksum: sha1:ce0979e3f5093090dcdc529ee0052f413eb7d4d6
+    pristine_git_object: 461a02947d52c95c92c4df9af1238715dcef7557
+  models/components/referenceforex.go:
+    id: c2a09f82a72a
+    last_write_checksum: sha1:5a0b5eb8ea285eb448e83885fc83c337f5920f27
+    pristine_git_object: 90a496d62901dc995e5a9ff96a79fdb5ddc971af
+  models/components/referencefuture.go:
+    id: a8d5af83c81a
+    last_write_checksum: sha1:12bee90945270816efbfdf2595139c577ec9c574
+    pristine_git_object: 47c9204634bcbb6ebca6e2e4878ee04bc376d637
+  models/components/referencefutureoption.go:
+    id: 9baf733c9192
+    last_write_checksum: sha1:9f8effcca60396133f60d1799376e242fed8479c
+    pristine_git_object: e6b22fa391e2f0698d83aa0facd3d498efddd8f1
+  models/components/referenceindex.go:
+    id: 2f254057a5bb
+    last_write_checksum: sha1:0f8fa4fde9e00b595a260d93576c9a7b4a891092
+    pristine_git_object: d98ee5bc55dc0ae8d98b72cd4bead1b36168607e
+  models/components/referencemutualfund.go:
+    id: 6f1d2b926ff7
+    last_write_checksum: sha1:e97df27f9687c58ee06772bd5f1815e217fc5a23
+    pristine_git_object: 2be0e0fb2425173cfca3b7b22eb2b5fbc54e8912
+  models/components/referenceoption.go:
+    id: aa90f5800cf9
+    last_write_checksum: sha1:4aa5800566ad7fb2e1cce0a3bfd6d7cbdc53d9f0
+    pristine_git_object: 911a1b9b6b0cec93453a96faac239c204b609755
+  models/components/regularmarket.go:
+    id: c6b79277dbcc
+    last_write_checksum: sha1:32d584a8ec5eb16d7615cc0eddcf907556feddaa
+    pristine_git_object: 03bcdcafd6629dd8e7340a3dc0ea397ee1a4285d
+  models/components/requesteddestination.go:
+    id: b96ee5f386bc
+    last_write_checksum: sha1:dbba0055ce6e3c5b29c71279be49fead81e296fb
+    pristine_git_object: 575f6e8e8f634e058910549ee6252ad76d67a52f
+  models/components/screener.go:
+    id: b69fd477bf1e
+    last_write_checksum: sha1:40f3b3c92acbe50c940afaf51f4ff9cd543a1f41
+    pristine_git_object: f0e6e21c199959c5880f38ba914b2b30d55f9b83
+  models/components/securitiesaccount.go:
+    id: 08e672acce41
+    last_write_checksum: sha1:78563ebd273f540c8d4793859079cce7170337ce
+    pristine_git_object: fb5cec425b3834baa1a4860d468d0617a195fc08
+  models/components/security.go:
+    id: 3a5eba5fe9e0
+    last_write_checksum: sha1:fcefc6c7d885898bb7d66b96e3b92dc6172a1776
+    pristine_git_object: a18095039dc17ff01ec0f39eb49db6a9f4907083
+  models/components/session.go:
+    id: 37f2618e84a3
+    last_write_checksum: sha1:5dcdb5b5d5774de97ee5afb6ab0bfe9e9344feb0
+    pristine_git_object: 677195b6b632e491a72a95baa7cf7e539e9a0bf1
+  models/components/settlementinstruction.go:
+    id: 1a9e0939e75e
+    last_write_checksum: sha1:be8aa8c2ee3b7e9e4abfef09dd82bced7521a0c8
+    pristine_git_object: 46cb5a4f5faf363181509bc15220a16d5659d977
+  models/components/settlementtype.go:
+    id: a82b317b8db3
+    last_write_checksum: sha1:0cf540dfbd4aedd1100eea9dc454caa5cef0ca0c
+    pristine_git_object: d15c58671ad161df4301d5197dc46d4c47b177c0
+  models/components/specialinstruction.go:
+    id: 307af4acbbb9
+    last_write_checksum: sha1:65d5b21d5d2aa13d24f44563b8eda4496ac2f513
+    pristine_git_object: 4a2b06b4e2177fdb75ff6fe62b98e789e5e1a627
+  models/components/status.go:
+    id: 3931e1b1e90a
+    last_write_checksum: sha1:c639937331e700dda0f2b5382dcdfcae14887d50
+    pristine_git_object: 8f8cc6425d88d09dbdf5266dd8522c6bdf842acc
+  models/components/stoppricelinkbasis.go:
+    id: 72e75bc623a3
+    last_write_checksum: sha1:a80074161a988a6aa448f58b94466c8171277843
+    pristine_git_object: 9c96fa2e0292868afeb015143328f0bae036eb47
+  models/components/stoppricelinktype.go:
+    id: d84216a4700d
+    last_write_checksum: sha1:f69c9c281e1e1225c4012b6de69a212af18c5016
+    pristine_git_object: 759e162238c33e4df27f84d7544a6ff5cb763680
+  models/components/stoptype.go:
+    id: 6e927b9aff6f
+    last_write_checksum: sha1:55889e06397c7e5fd1f428fd6e0ad30dfefd7fee
+    pristine_git_object: 602df95fed0f52f7b1cb47deb97c61605ad28403
+  models/components/streamerinfo.go:
+    id: 85c59c78b560
+    last_write_checksum: sha1:a47f49e423dbf6a74a407bbee50ed239187a5d9c
+    pristine_git_object: c142fc01ed0b85e9ea0c5cbbcd8746fcbd156157
+  models/components/taxlotmethod.go:
+    id: 398c7c36b142
+    last_write_checksum: sha1:134696e204dfbd1bef712cb3db2e240e6e1cb558
+    pristine_git_object: 87735ca2d4ec325216dcf88864d4c1eb6c7e1cee
+  models/components/transaction.go:
+    id: b5e609d96e9d
+    last_write_checksum: sha1:df0fce03a25d3ee9f4e75439463e16a7409c7bd6
+    pristine_git_object: 1b5974b363881a567848184dca9cfbe79fbcf4e9
+  models/components/transactionapioptiondeliverable1.go:
+    id: "363385556279"
+    last_write_checksum: sha1:135f2e50ebde40818e2bdd73e7cddc7b541ec607
+    pristine_git_object: e61de8d70bae57a334315a6628d1897768795bbf
+  models/components/transactionbaseinstrument.go:
+    id: 80d96271e9cc
+    last_write_checksum: sha1:d3b8fd295b1b03c0774b0489cd2830a28778d13a
+    pristine_git_object: 50079de38fdc261e9ce73d53202d7b104d241e27
+  models/components/transactioncashequivalent.go:
+    id: 80a83c985290
+    last_write_checksum: sha1:6cd948bc004e465cffc5112b01fcafac55f9be0a
+    pristine_git_object: 56176a1cb05b14b7dab028dc9e6d45e4bbcdc660
+  models/components/transactionequity.go:
+    id: 21bc7be4a216
+    last_write_checksum: sha1:5f2d204c707a85f914d2f59343f28af6c9ddb26e
+    pristine_git_object: 5ff45af88e7bf15783a2fba206bd03e4ca160b37
+  models/components/transactionfixedincome.go:
+    id: be33764c7879
+    last_write_checksum: sha1:00e648e93b7a6ea2d2d81e65f742cb6460e95959
+    pristine_git_object: b9b0ff91fb963e88bcaf3cf8f73c01ba501f93c2
+  models/components/transactioninstrument.go:
+    id: 5a906a68afce
+    last_write_checksum: sha1:9ecc4768c173d1c7bef28394a920d451f71c3764
+    pristine_git_object: 2508c92ee7a9aee1e67c60f5fd06e27cf85ff48a
+  models/components/transactionmutualfund.go:
+    id: f6f634052c96
+    last_write_checksum: sha1:d8132c54a2ece450733b72f062fa66f6739b5771
+    pristine_git_object: cc5fd037bbdfc43d67f15f2f64522e32d0337dc6
+  models/components/transactionoption1.go:
+    id: 085da63548f1
+    last_write_checksum: sha1:b9e38a2becce7e85df5bd85aaa6eeba816433138
+    pristine_git_object: 192240ac111925c3a21a209ef784906dea1be125
+  models/components/transactiontype.go:
+    id: 97262f03a766
+    last_write_checksum: sha1:6a6e3854c4ede236e0feea6450b9a446d16ac522
+    pristine_git_object: 44b602830b075d46d6d995f8cf83421571a78444
+  models/components/transferitem.go:
+    id: c0b4181a2285
+    last_write_checksum: sha1:8f0c35604b9e090d82c8bafd72da5c846ab7e638
+    pristine_git_object: 4d774f035d663cca2d87a06d1e0f70af64baa1a5
+  models/components/underlying.go:
+    id: 39e01f60860d
+    last_write_checksum: sha1:02896b2c9bb9f3ff91c9a10854a711efbb71e5e1
+    pristine_git_object: 4afb32f925c448582abf4ad7c75945381f7a0fd0
+  models/components/userdetails.go:
+    id: 3536d71f5447
+    last_write_checksum: sha1:df9350cc7ce36fb02015865fae47369b8498a02f
+    pristine_git_object: 722d5cc093c8d58dc30343e58413dd340aa41ece
+  models/components/userpreference.go:
+    id: f525806ed372
+    last_write_checksum: sha1:b5f101d6e48ed2207bda4d3b6e1e74b0adfe018d
+    pristine_git_object: 05ae13916032c7d7ed50c251d9813174c4cd8b4f
+  models/components/userpreferenceaccount.go:
+    id: 29625e10f33f
+    last_write_checksum: sha1:de1e303ee8e397f041c766bd0ab662bad22867e4
+    pristine_git_object: 3d044f70d4fd108ccd64dca34e4d6edc9f3e6976
+  models/operations/cancelorder.go:
+    id: a99e9f9c867c
+    last_write_checksum: sha1:18d57b700876057bf94b5264b800b3e37e55f944
+    pristine_git_object: 6be81dc4264495547e458028f63dbf3083377b65
+  models/operations/getaccount.go:
+    id: 69b832924a29
+    last_write_checksum: sha1:a16767e9a1ed8305e296f109b06f6f19077f8d68
+    pristine_git_object: f720f30d824235cea53f63cdb8d646c54f2319f6
+  models/operations/getaccountnumbers.go:
+    id: 5a76caae2ff7
+    last_write_checksum: sha1:f25e1440346ad8241c502c740b6da6aaea4f3bf0
+    pristine_git_object: afd95856e7dde6b77abb117d0fc54ff851a812dc
+  models/operations/getaccounts.go:
+    id: ab9ebd3f1581
+    last_write_checksum: sha1:e5d1ebecd74380156c69629475ea97f9d16e568e
+    pristine_git_object: 6351defa16b5490d238bbef7e455c6549564310d
+  models/operations/getchain.go:
+    id: 1bce62f04d5a
+    last_write_checksum: sha1:3c9c4d34a675556cc1a4b7cec23bf56262c4a51c
+    pristine_git_object: 813e3ab590e6d2704e9a06af66099a298eda1d02
+  models/operations/getexpirationchain.go:
+    id: 8ca0e704f726
+    last_write_checksum: sha1:aa98548fdd9803fdb32dd68ddc44dd08a1333d1e
+    pristine_git_object: db5e63309578e1cc8d562a8b59a5d68e966603e6
+  models/operations/getinstruments.go:
+    id: 020afab0fd5e
+    last_write_checksum: sha1:fdaa3501647a0fc28b49caa662a9c6304973c90a
+    pristine_git_object: 2177d4e0cddc73f6a820967a2dbfa15a7c6ad236
+  models/operations/getinstrumentsbycusip.go:
+    id: 470d5e3b02c3
+    last_write_checksum: sha1:98294d98823f88f72ec18fb722521ee5546b73c8
+    pristine_git_object: 50ee0f74ffd0051cc6b8dd82697506c12dda5b8d
+  models/operations/getmarkethour.go:
+    id: 736ae06f09bf
+    last_write_checksum: sha1:9ae5bf02af79222f92e5ae2d7f53cf07b920bb97
+    pristine_git_object: 99d5cfd059b474d0e56f66750fbbe357864cce6f
+  models/operations/getmarkethours.go:
+    id: a39b1133115f
+    last_write_checksum: sha1:684141c60f80fcc7cec1904b60aca1d2a3877a0f
+    pristine_git_object: 8d665b0b435e092bf665a06b9b09921af59f8536
+  models/operations/getmovers.go:
+    id: 2b7d5169559f
+    last_write_checksum: sha1:5d37295e2846afd610666accb32893478f4ddbf0
+    pristine_git_object: c3129b53a62984405e747423d28dcc80c45e2ed9
+  models/operations/getorder.go:
+    id: e326131e5dcc
+    last_write_checksum: sha1:910ad65ac78f54145ada5a90b88833437026c126
+    pristine_git_object: b70980bbc787fee33ce23370d53828f1e69619b8
+  models/operations/getordersbypathparam.go:
+    id: 683ef70b88f0
+    last_write_checksum: sha1:9a0b6744db372ec6131f6d9adf5724d647982eeb
+    pristine_git_object: 7e9775e95b971a4f4f6eeb36128d3abef8029a80
+  models/operations/getordersbyqueryparam.go:
+    id: a011436c1653
+    last_write_checksum: sha1:6277bd9487c14109cfd22ae3675e7d1f1c6b1c0e
+    pristine_git_object: e1bf3b074584f6c08006ae97c24b953456553baf
+  models/operations/getpricehistory.go:
+    id: ed403fc4ef3e
+    last_write_checksum: sha1:f400ae2a3d62b973ebb9671466a3d3686fee0c3b
+    pristine_git_object: 878185e9652be286745cabc1a1954e6deef2280a
+  models/operations/getquote.go:
+    id: 3d8186903bfe
+    last_write_checksum: sha1:f89c0433a808bfcc1f20df409d7e9c552a4e26c5
+    pristine_git_object: 3e99f81950ce0b725df4317a2bcb7e9429f6b050
+  models/operations/getquotes.go:
+    id: bd5a28484543
+    last_write_checksum: sha1:86bc92633b93bab12836ea220d1e8ffd87d63547
+    pristine_git_object: 962a7a32fcdec95124798c7cfc5f3f9de445fab7
+  models/operations/gettransactionsbyid.go:
+    id: ad62d7c27af8
+    last_write_checksum: sha1:c40c15de3901188e04125fe421da8ac6e05c1556
+    pristine_git_object: f40d5cf82879e2b838ba0f545113afb9e5098de3
+  models/operations/gettransactionsbypathparam.go:
+    id: 28ee75271134
+    last_write_checksum: sha1:9e0bfa5bd8c990043244ac1a3262f19002ecc75d
+    pristine_git_object: e5634d0de8ef5afe45c167aca5b61593bcb5244c
+  models/operations/getuserpreference.go:
+    id: 2cd7cdadc6e2
+    last_write_checksum: sha1:4b9a4ed39b66751b85cc4271337b19d73f9fff31
+    pristine_git_object: 2bb5daaa67aa5f7d3b9e46462c818e919cb73593
+  models/operations/options.go:
+    id: d20dd4db9865
+    last_write_checksum: sha1:9ec3221f8bbd7ee6fe155369b6e14be3cefed029
+    pristine_git_object: 009b9e187b7fe1ffd99a7089225dbc8144b3269a
+  models/operations/placeorder.go:
+    id: 37bbdbfb057e
+    last_write_checksum: sha1:169fca3edae281c2622ae0b6631db16b88e20827
+    pristine_git_object: 9e158dd81dada817fdbfe5fc1d0b3a890e9e8399
+  models/operations/previeworder.go:
+    id: 54b19e0eb0b2
+    last_write_checksum: sha1:529c3021f81b2f370cb075671975455dbca6541c
+    pristine_git_object: 8b14bce214bbf861381a08192b75151311feee6f
+  models/operations/replaceorder.go:
+    id: fcfc6c304d4e
+    last_write_checksum: sha1:a72af96c3bf2ee12dc0c9385cd8c968b9b8305c7
+    pristine_git_object: 1e280e39a35cce41b7882ac3700cb5b6c9fce793
+  movers.go:
+    id: 4a9cb5d88269
+    last_write_checksum: sha1:d67635268f419f99b148eb3d19b32b2df026795b
+    pristine_git_object: 88f48120578ed740b8dbe0406aa73f2468c887ed
+  optionalnullable/optionalnullable.go:
+    id: ce60f259ead3
+    last_write_checksum: sha1:d6aff1a420c31e025ea21d46cf056e305ae76fe8
+    pristine_git_object: c6739be0619b6726565e0f11855ffe44b0e5607e
+  optionalnullable/optionalnullable_test.go:
+    id: ad67101ebca3
+    last_write_checksum: sha1:2e9433eff1651ac77d6678ea76880d9a4980cbc2
+    pristine_git_object: e6e5a01c6e721e879e24a38a1f97e3e27d4686d4
+  optionchains.go:
+    id: 3a644a141be1
+    last_write_checksum: sha1:f6d04af21849455d2e5f22a941d9fdec78b96171
+    pristine_git_object: f4fc152b07bede926e9ddc07960d369b8d157975
+  optionexpirationchain.go:
+    id: 2ab2f394a2bd
+    last_write_checksum: sha1:646a224612a81d3a65ea3f6add7c448686758022
+    pristine_git_object: 3f7506c9d17fa5278fa4b555395debb297e0a5b1
+  orders.go:
+    id: 1b73efd3b2ef
+    last_write_checksum: sha1:17a2c3404dea069e3ff5bd76acec2d42b70e2631
+    pristine_git_object: caabaf989caf34b7192b061742024e663e36dc2a
+  pricehistory.go:
+    id: 09844141d3b3
+    last_write_checksum: sha1:c3e56ce9b10b0fbea7f37ae5f00970b4c3f9debb
+    pristine_git_object: a2682ae1aa92dfcc51303701ea6dcfb4588b0ecc
+  quotes.go:
+    id: 6d39d96c5baf
+    last_write_checksum: sha1:9f98f2b061b32cb7da98237130831c864395832f
+    pristine_git_object: 30308f7ae75394709658220d41de275fd2ff8fe9
+  retry/config.go:
+    id: 82d673cb0389
+    last_write_checksum: sha1:f565273be789ffe0e3c160de1ac72a63cfe67fbe
+    pristine_git_object: aa809fccb3445b1e2530a979dad620512f50e70f
+  sdk.go:
+    id: 8db9b9536b0a
+    last_write_checksum: sha1:db7e1f67d1cfc8a68f79d0e4d229cacce0b01d19
+    pristine_git_object: 80626f7e0c083207558fa352d09c4a73b5cdfdea
+  transactions.go:
+    id: e48bd0c328ca
+    last_write_checksum: sha1:ae40ba3378180d4e4070b74a4bbfd0f63bb2da2f
+    pristine_git_object: 4f53b31b8bbe758e58174b49fe8407b2b73a4980
+  types/bigint.go:
+    id: 6f911e1a03c3
+    last_write_checksum: sha1:49b004005d0461fb04b846eca062b070b0360b31
+    pristine_git_object: 9c6a086d51595888a6ff787ebcb8693559afee95
+  types/date.go:
+    id: 231a623ce1b7
+    last_write_checksum: sha1:3036a2e1ed15a1d484c093367eba000c38f384d0
+    pristine_git_object: 5b2782f219efe6bfbce46fc2dec68998eb759438
+  types/datetime.go:
+    id: 5023aac30a47
+    last_write_checksum: sha1:196d050af6450669214e9ae4fd28e56263ae2b5d
+    pristine_git_object: 3eff332daa04e34cec5ffb10add670bafd8ac454
+  types/pointers.go:
+    id: 6d0d0a6cb6f3
+    last_write_checksum: sha1:fc2275ea006257ba9ba4ff6f2a2cdb6205371eef
+    pristine_git_object: 35c439d2661e08fcb6a854096fd7b9a8561b3938
+  userpreference.go:
+    id: f610718e0022
+    last_write_checksum: sha1:6a0c897f1d049f0f7e439bfde2dc503a0fb855ae
+    pristine_git_object: 22b1e93532f4c11612d13340b4c5fac1dc3933f0
+examples:
+  getAccountNumbers:
+    speakeasy-default-get-account-numbers:
+      responses:
+        "200":
+          application/json: [{}]
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
+  getAccounts:
+    speakeasy-default-get-accounts:
+      responses:
+        "200":
+          application/json: [{}]
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
+  getAccount:
+    speakeasy-default-get-account:
+      parameters:
+        path:
+          accountNumber: "<value>"
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
+  getOrdersByPathParam:
+    speakeasy-default-get-orders-by-path-param:
+      parameters:
+        path:
+          accountNumber: "<value>"
+        query:
+          fromEnteredTime: "<value>"
+          toEnteredTime: "<value>"
+      responses:
+        "200":
+          application/json: [{"cancelable": false, "editable": false}]
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
+  placeOrder:
+    speakeasy-default-place-order:
+      parameters:
+        path:
+          accountNumber: "<value>"
+      requestBody:
+        application/json: {"cancelable": false, "editable": false}
+      responses:
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
+  getOrder:
+    speakeasy-default-get-order:
+      parameters:
+        path:
+          accountNumber: "<value>"
+          orderId: 550049
+      responses:
+        "200":
+          application/json: {"cancelable": false, "editable": false}
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
+  cancelOrder:
+    speakeasy-default-cancel-order:
+      parameters:
+        path:
+          accountNumber: "<value>"
+          orderId: 325883
+      responses:
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
+  replaceOrder:
+    speakeasy-default-replace-order:
+      parameters:
+        path:
+          accountNumber: "<value>"
+          orderId: 786311
+      requestBody:
+        application/json: {"cancelable": false, "editable": false}
+      responses:
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
+  getOrdersByQueryParam:
+    speakeasy-default-get-orders-by-query-param:
+      parameters:
+        query:
+          fromEnteredTime: "<value>"
+          toEnteredTime: "<value>"
+      responses:
+        "200":
+          application/json: [{"cancelable": false, "editable": false}]
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
+  previewOrder:
+    speakeasy-default-preview-order:
+      parameters:
+        path:
+          accountNumber: "<value>"
+      requestBody:
+        application/json: {}
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
+  getTransactionsByPathParam:
+    speakeasy-default-get-transactions-by-path-param:
+      parameters:
+        path:
+          accountNumber: "<value>"
+        query:
+          startDate: "<value>"
+          endDate: "<value>"
+          types: "CASH_DISBURSEMENT"
+      responses:
+        "200":
+          application/json: [{}]
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
+  getTransactionsById:
+    speakeasy-default-get-transactions-by-id:
+      parameters:
+        path:
+          accountNumber: "<value>"
+          transactionId: 923773
+      responses:
+        "200":
+          application/json: [{}]
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
+  getUserPreference:
+    speakeasy-default-get-user-preference:
+      responses:
+        "200":
+          application/json: [{}]
+        "400":
+          application/json: {}
+        "500":
+          application/json: {}
+  getQuotes:
+    speakeasy-default-get-quotes:
+      parameters:
+        query:
+          symbols: "MRAD,EATOF,EBIZ,AAPL,BAC,AAAHX,AAAIX,$DJI,$SPX,MVEN,SOBS,TOITF,CNSWF,AMZN  230317C01360000,DJX   231215C00290000,/ESH23,./ADUF23C0.55,AUD/CAD"
+          fields: "quote,reference"
+          indicative: false
+      responses:
+        "200":
+          application/json: {"key": {"ssid": 1234567890, "symbol": "AAPL", "realtime": true, "quote": {"52WeekHigh": 145.09, "52WeekLow": 77.581, "closePrice": 126.27, "highPrice": 126.99, "lastPrice": 122.3, "lowPrice": 52.74, "netChange": -0.04, "netPercentChange": -0.0756, "openPrice": 52.8, "securityStatus": "Normal", "totalVolume": 20171188, "tradeTime": 1621376731304}, "reference": {"description": "DOW JONES 30 INDUSTRIALS", "exchange": "q"}}}
+        "400":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+        "500":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+    MultiCriteriaSearch:
+      parameters:
+        query:
+          symbols: "MRAD,EATOF,EBIZ,AAPL,BAC,AAAHX,AAAIX,$DJI,$SPX,MVEN,SOBS,TOITF,CNSWF,AMZN  230317C01360000,DJX   231215C00290000,/ESH23,./ADUF23C0.55,AUD/CAD"
+          fields: "quote,reference"
+          indicative: false
+      responses:
+        "200":
+          application/json: {"AAPL": {}, "AAAIX": {"ssid": 1234567890, "symbol": "AAPL", "realtime": true, "quote": {"52WeekHigh": 145.09, "52WeekLow": 77.581, "closePrice": 126.27, "highPrice": 126.99, "lastPrice": 122.3, "lowPrice": 52.74, "netChange": -0.04, "netPercentChange": -0.0756, "openPrice": 52.8, "securityStatus": "Normal", "totalVolume": 20171188, "tradeTime": 1621376731304}, "reference": {"description": "DOW JONES 30 INDUSTRIALS", "exchange": "q"}}, "AAAHX": {}, "BAC": {"assetMainType": "EQUITY", "ssid": 851234497, "symbol": "BAC", "realtime": true, "quoteType": "NBBO", "fundamental": {"avg10DaysVolume": 43411957, "avg1YearVolume": 40653250, "declarationDate": "2021-07-21T05:00:00Z", "divAmount": 0.75, "divExDate": "2021-09-02T05:00:00Z", "divFreq": 4, "divPayAmount": 0.75, "divPayDate": "2021-09-24T05:00:00Z", "divYield": 1.77, "eps": 2.996, "fundLeverageFactor": 0, "nextDivExDate": "2021-12-27T06:00:00Z", "nextDivPayDate": "2021-12-27T06:00:00Z", "peRatio": 13.50133}, "quote": {"52WeekHigh": 48.185, "52WeekLow": 22.95, "askMICId": "XNYS", "askPrice": 47.2, "askSize": 2100, "askTime": 1644854683639, "bidMICId": "XNYS", "bidPrice": 47.19, "bidSize": 3700, "bidTime": 1644854683640, "closePrice": 44.49, "highPrice": 48.185, "lastMICId": "ARCX", "lastPrice": 47.195, "lastSize": 200, "lowPrice": 47.06, "mark": 47.195, "markChange": 2.7049999999999983, "markPercentChange": 6.080017981568888, "netChange": 2.705, "netPercentChange": 6.080017981568888, "openPrice": 48.02, "quoteTime": 1644854683640, "securityStatus": "Normal", "totalVolume": 13573182, "tradeTime": 1644854683638, "volatility": 0.0206}, "reference": {"cusip": "060505104", "description": "Bank Of America Corp", "exchange": "N", "exchangeName": "NYSE"}, "regular": {"regularMarketLastPrice": 47.195, "regularMarketLastSize": 2, "regularMarketNetChange": 2.705, "regularMarketPercentChange": 6.080017981568888, "regularMarketTradeTime": 1644854683638}}, "$SPX": {"assetMainType": "INDEX", "ssid": 1819771877, "symbol": "$SPX", "realtime": true, "quote": {"52WeekHigh": 4423.46, "52WeekLow": 4385.52, "closePrice": 4766.18, "highPrice": 4423.46, "lastPrice": 4396.2, "lowPrice": 4385.52, "netChange": -369.98, "netPercentChange": -7.762610728088331, "openPrice": 4412.61, "securityStatus": "Unknown", "totalVolume": 628009977, "tradeTime": 1644854683056}, "reference": {"description": "S&P DOW JONES INDEX            S&P 500", "exchange": "0", "exchangeName": "Index"}}, "MRAD": {"ssid": 1234567890, "symbol": "AAPL", "realtime": true, "extended": {"askPrice": 124.85, "askSize": 51771, "bidPrice": 124.85, "bidSize": 51771, "lastPrice": 124.85, "lastSize": 51771, "mark": 1.1246, "quoteTime": 1621368000400, "totalVolume": 12345, "tradeTime": 1621368000400}, "fundamental": {"declarationDate": "2021-04-28T00:00:00Z", "divAmount": 0.88, "divExDate": "2021-05-07T00:00:00Z", "divPayAmount": 0.22, "divPayDate": "2021-05-13T00:00:00Z", "divYield": 0.7, "eps": 4.45645, "fundLeverageFactor": -1, "nextDivExDate": "2021-02-12T00:00:00Z", "nextDivPayDate": "2021-02-12T00:00:00Z", "peRatio": 28.599}, "quote": {"52WeekHigh": 145.09, "52WeekLow": 77.581, "askMICId": "XNYS", "askPrice": 124.63, "askSize": 700, "askTime": 1621376892336, "bidMICId": "XNYS", "bidPrice": 124.6, "bidSize": 300, "bidTime": 1621376892336, "closePrice": 126.27, "highPrice": 126.99, "lastMICId": "XNYS", "lastPrice": 122.3, "lastSize": 100, "mark": 52.93, "markChange": -0.01, "markPercentChange": -0.0189, "netChange": -0.04, "netPercentChange": -0.0756, "openPrice": 52.8, "quoteTime": 1621376892336, "securityStatus": "Normal", "totalVolume": 20171188, "tradeTime": 1621376731304, "volatility": 0.0094}, "reference": {"cusip": "A23456789", "description": "Apple Inc. - Common Stock", "exchange": "q", "htbQuantity": 100, "htbRate": 4.5, "isHardToBorrow": false, "isShortable": false}, "regular": {"regularMarketLastPrice": 124.85, "regularMarketLastSize": 51771, "regularMarketNetChange": -1.42, "regularMarketPercentChange": -1.1246, "regularMarketTradeTime": 1621368000400}}, "EBIZ": {"assetMainType": "EQUITY", "assetSubType": "ETF", "ssid": 52313178, "symbol": "EBIZ", "realtime": true, "quoteType": "NBBO", "fundamental": {"avg10DaysVolume": 0, "avg1YearVolume": 0, "declarationDate": "2020-12-29T06:00:00Z", "divAmount": 0, "divExDate": "2020-12-30T06:00:00Z", "divFreq": 1, "divPayAmount": 0.26641, "divPayDate": "2021-01-08T06:00:00Z", "divYield": 0.88276, "eps": 0, "fundLeverageFactor": 0, "fundStrategy": "P", "nextDivExDate": "2022-01-10T06:00:00Z", "nextDivPayDate": "2022-01-10T06:00:00Z", "peRatio": 0}, "quote": {"52WeekHigh": 37.9754, "52WeekLow": 24.52, "askMICId": "XNAS", "askPrice": 24.85, "askSize": 200, "askTime": 1644854683318, "bidMICId": "XNAS", "bidPrice": 24.79, "bidSize": 200, "bidTime": 1644854683318, "closePrice": 27.45, "highPrice": 24.8303, "lastMICId": "XADF", "lastPrice": 24.8303, "lastSize": 100, "lowPrice": 24.52, "mark": 24.8303, "markChange": -2.619699999999998, "markPercentChange": -9.543533697632052, "netChange": -2.6197, "netPercentChange": -9.543533697632052, "openPrice": 24.55, "quoteTime": 1644854683318, "securityStatus": "Normal", "totalVolume": 1626, "tradeTime": 1644850278470, "volatility": 0}, "reference": {"cusip": "37954Y467", "description": "GLOBAL X E-COMMERCE ETF", "exchange": "Q", "exchangeName": "NASDAQ"}, "regular": {"regularMarketLastPrice": 24.8303, "regularMarketLastSize": 1, "regularMarketNetChange": -2.6197, "regularMarketPercentChange": -9.543533697632052, "regularMarketTradeTime": 1644850278470}}, "$DJI": {"assetMainType": "INDEX", "ssid": 0, "symbol": "$DJI", "realtime": true, "quote": {"52WeekHigh": 34744.56, "52WeekLow": 34364.39, "closePrice": 34738.06, "highPrice": 34744.56, "lastPrice": 34436.13, "lowPrice": 34364.39, "netChange": -301.93, "netPercentChange": -0.8691619508976618, "openPrice": 34694.5, "securityStatus": "Unknown", "totalVolume": 106647543, "tradeTime": 1644854683055}, "reference": {"description": "Dow Jones Industrial Average", "exchange": "0", "exchangeName": "Index"}}, "AMZN  220617C03170000": {"ssid": 1234567890, "symbol": "AAPL", "realtime": true, "quote": {"52WeekHigh": 145.09, "52WeekLow": 77.581, "askPrice": 124.63, "askSize": 700, "bidPrice": 124.6, "bidSize": 300, "closePrice": 126.27, "highPrice": 126.99, "lastPrice": 122.3, "lastSize": 100, "lowPrice": 52.74, "mark": 52.93, "netChange": -0.04, "netPercentChange": -0.0756, "openPrice": 52.8, "quoteTime": 1621376892336, "securityStatus": "Normal", "tick": 0, "tickAmount": 0, "totalVolume": 20171188, "tradeTime": 1621376731304}, "reference": {"description": "Euro/USDollar Spot", "exchange": "q", "isTradable": true, "product": "Generic Wooden Bike"}}, "DJX   231215C00290000": {"ssid": 1234567890, "symbol": "AAPL", "realtime": true, "extended": {"askPrice": 124.85, "askSize": 51771, "bidPrice": 124.85, "bidSize": 51771, "lastPrice": 124.85, "lastSize": 51771, "mark": 1.1246, "quoteTime": 1621368000400, "totalVolume": 12345, "tradeTime": 1621368000400}, "fundamental": {"declarationDate": "2021-04-28T00:00:00Z", "divAmount": 0.88, "divExDate": "2021-05-07T00:00:00Z", "divPayAmount": 0.22, "divPayDate": "2021-05-13T00:00:00Z", "divYield": 0.7, "eps": 4.45645, "fundLeverageFactor": -1, "nextDivExDate": "2021-02-12T00:00:00Z", "nextDivPayDate": "2021-02-12T00:00:00Z", "peRatio": 28.599}, "quote": {"52WeekHigh": 145.09, "52WeekLow": 77.581, "askMICId": "XNYS", "askPrice": 124.63, "askSize": 700, "askTime": 1621376892336, "bidMICId": "XNYS", "bidPrice": 124.6, "bidSize": 300, "bidTime": 1621376892336, "closePrice": 126.27, "highPrice": 126.99, "lastMICId": "XNYS", "lastPrice": 122.3, "lastSize": 100, "mark": 52.93, "markChange": -0.01, "markPercentChange": -0.0189, "netChange": -0.04, "netPercentChange": -0.0756, "openPrice": 52.8, "quoteTime": 1621376892336, "securityStatus": "Normal", "totalVolume": 20171188, "tradeTime": 1621376731304, "volatility": 0.0094}, "reference": {"cusip": "A23456789", "description": "Apple Inc. - Common Stock", "exchange": "q", "htbQuantity": 100, "htbRate": 4.5, "isHardToBorrow": false, "isShortable": false}, "regular": {"regularMarketLastPrice": 124.85, "regularMarketLastSize": 51771, "regularMarketNetChange": -1.42, "regularMarketPercentChange": -1.1246, "regularMarketTradeTime": 1621368000400}}, "TOITF": {"assetMainType": "EQUITY", "ssid": 68444487, "symbol": "TOITF", "realtime": true, "quoteType": "NBBO", "quote": {"52WeekHigh": 75.702, "52WeekLow": 45.3933, "askPrice": 75.978, "askSize": 10000, "askTime": 1644849000209, "bidPrice": 72.5951, "bidSize": 10000, "bidTime": 1644849000209, "closePrice": 92.7, "highPrice": 75.702, "lastPrice": 75.702, "lastSize": 100, "lowPrice": 72.5478, "mark": 75.702, "netChange": -16.998, "openPrice": 74.8977, "quoteTime": 1644854676927, "securityStatus": "Normal", "totalVolume": 4274, "tradeTime": 1644854585000, "volatility": 0}, "reference": {"cusip": "89072T102", "description": "TOPICUS COM INC", "exchange": "9", "exchangeName": "OTC Markets", "otcMarketTier": "PC"}, "regular": {"regularMarketLastPrice": 75.702, "regularMarketLastSize": 1, "regularMarketNetChange": -16.998, "regularMarketTradeTime": 1644854585000}}, "EATOF": {"assetMainType": "EQUITY", "assetSubType": "ETF", "ssid": 43253301, "symbol": "EATOF", "realtime": true, "quoteType": "NBBO", "quote": {"52WeekHigh": 47.1993, "52WeekLow": 24.2835, "askPrice": 33.1512, "askSize": 400000, "askTime": 1644849000044, "bidPrice": 33.0487, "bidSize": 250000, "bidTime": 1644849000044, "closePrice": 40.198, "highPrice": 33.1196, "lastPrice": 33.1196, "lastSize": 200, "lowPrice": 32.82, "mark": 33.1196, "netChange": -7.0784, "openPrice": 32.82, "quoteTime": 1644854660496, "securityStatus": "Normal", "totalVolume": 1017, "tradeTime": 1644850274000, "volatility": 0}, "reference": {"cusip": "30052J102", "description": "EVOLVE AUTMBL INVTN INDX ETF", "exchange": "9", "exchangeName": "OTC Markets", "otcMarketTier": "EM"}, "regular": {"regularMarketLastPrice": 33.1196, "regularMarketLastSize": 2, "regularMarketNetChange": -7.0784, "regularMarketTradeTime": 1644850274000}}, "CNSWF": {"assetMainType": "EQUITY", "ssid": 807850646, "symbol": "CNSWF", "realtime": true, "quoteType": "NBBO", "quote": {"52WeekHigh": 1709.738, "52WeekLow": 904.0901, "askPrice": 1693.4699, "askSize": 30000, "askTime": 1644849000567, "bidPrice": 1688.4547, "bidSize": 20000, "bidTime": 1644849000567, "closePrice": 1856.4626, "highPrice": 1709.738, "lastPrice": 1693.4541, "lastSize": 100, "lowPrice": 1680.1511, "mark": 1693.4541, "netChange": -163.0084, "openPrice": 1682.0121, "quoteTime": 1644854655233, "securityStatus": "Normal", "totalVolume": 13901, "tradeTime": 1644854560000, "volatility": 0}, "reference": {"cusip": "21037X100", "description": "Constellation Softwr", "exchange": "9", "exchangeName": "OTC Markets", "otcMarketTier": "PC"}, "regular": {"regularMarketLastPrice": 1693.4541, "regularMarketLastSize": 1, "regularMarketNetChange": -163.0084, "regularMarketTradeTime": 1644854560000}}, "MVEN": {"ssid": 1234567890, "symbol": "AAPL", "realtime": true, "extended": {"askPrice": 124.85, "askSize": 51771, "bidPrice": 124.85, "bidSize": 51771, "lastPrice": 124.85, "lastSize": 51771, "mark": 1.1246, "quoteTime": 1621368000400, "totalVolume": 12345, "tradeTime": 1621368000400}, "fundamental": {"declarationDate": "2021-04-28T00:00:00Z", "divAmount": 0.88, "divExDate": "2021-05-07T00:00:00Z", "divPayAmount": 0.22, "divPayDate": "2021-05-13T00:00:00Z", "divYield": 0.7, "eps": 4.45645, "fundLeverageFactor": -1, "nextDivExDate": "2021-02-12T00:00:00Z", "nextDivPayDate": "2021-02-12T00:00:00Z", "peRatio": 28.599}, "quote": {"52WeekHigh": 145.09, "52WeekLow": 77.581, "askMICId": "XNYS", "askPrice": 124.63, "askSize": 700, "askTime": 1621376892336, "bidMICId": "XNYS", "bidPrice": 124.6, "bidSize": 300, "bidTime": 1621376892336, "closePrice": 126.27, "highPrice": 126.99, "lastMICId": "XNYS", "lastPrice": 122.3, "lastSize": 100, "mark": 52.93, "markChange": -0.01, "markPercentChange": -0.0189, "netChange": -0.04, "netPercentChange": -0.0756, "openPrice": 52.8, "quoteTime": 1621376892336, "securityStatus": "Normal", "totalVolume": 20171188, "tradeTime": 1621376731304, "volatility": 0.0094}, "reference": {"cusip": "A23456789", "description": "Apple Inc. - Common Stock", "exchange": "q", "htbQuantity": 100, "htbRate": 4.5, "isHardToBorrow": false, "isShortable": false}, "regular": {"regularMarketLastPrice": 124.85, "regularMarketLastSize": 51771, "regularMarketNetChange": -1.42, "regularMarketPercentChange": -1.1246, "regularMarketTradeTime": 1621368000400}}, "SOBS": {"assetMainType": "EQUITY", "ssid": 561081427, "symbol": "SOBS", "realtime": true, "quoteType": "NBBO", "fundamental": {"avg10DaysVolume": 1296, "avg1YearVolume": 0, "declarationDate": "2021-09-21T05:00:00Z", "divAmount": 1.48, "divExDate": "2021-09-30T05:00:00Z", "divFreq": 4, "divPayAmount": 1.47, "divPayDate": "2021-10-29T05:00:00Z", "divYield": 3.869, "eps": 0, "fundLeverageFactor": 0, "nextDivExDate": "2022-01-31T06:00:00Z", "nextDivPayDate": "2022-01-31T06:00:00Z", "peRatio": 0}, "quote": {"52WeekHigh": 43, "52WeekLow": 30.28, "askPrice": 45, "askSize": 200, "askTime": 0, "bidPrice": 39, "bidSize": 100, "bidTime": 0, "closePrice": 38.219, "highPrice": 0, "lastPrice": 38.219, "lastSize": 0, "lowPrice": 0, "mark": 38.219, "markChange": 0, "markPercentChange": 0, "netChange": 0, "netPercentChange": 0, "openPrice": 0, "quoteTime": 1644613200189, "securityStatus": "Normal", "totalVolume": 0, "tradeTime": 0, "volatility": 0}, "reference": {"cusip": "83441Q105", "description": "Solvay Bank Corp Sol", "exchange": "9", "exchangeName": "OTC Markets", "otcMarketTier": "PC"}, "regular": {"regularMarketLastPrice": 38.219, "regularMarketLastSize": 0, "regularMarketNetChange": 0, "regularMarketPercentChange": 0, "regularMarketTradeTime": 0}}, "/ESZ21": {"ssid": 1234567890, "symbol": "AAPL", "realtime": true, "quote": {"52WeekHigh": 145.09, "52WeekLow": 77.581, "closePrice": 126.27, "highPrice": 126.99, "lastPrice": 122.3, "lowPrice": 52.74, "netChange": -0.04, "netPercentChange": -0.0756, "openPrice": 52.8, "securityStatus": "Normal", "totalVolume": 20171188, "tradeTime": 1621376731304}, "reference": {"description": "DOW JONES 30 INDUSTRIALS", "exchange": "q"}}, "EUR/USD": {"assetMainType": "FOREX", "ssid": 1, "symbol": "EUR/USD", "realtime": true, "quote": {"52WeekHigh": 1.135, "52WeekLow": 1.1331, "askPrice": 1.13456, "askSize": 1000000, "bidPrice": 1.13434, "bidSize": 1000000, "closePrice": 1.13191, "highPrice": 1.135, "lastPrice": 1.13445, "lastSize": 0, "lowPrice": 1.1331, "mark": 1.13445, "netChange": 0.00254, "netPercentChange": 0, "openPrice": 1.13324, "quoteTime": 1637236739892, "securityStatus": "Unknown", "tick": 0, "tickAmount": 0, "totalVolume": 0, "tradeTime": 1637236739892}, "reference": {"description": "Euro/USDollar Spot", "exchange": "T", "exchangeName": "GFT", "isTradable": false, "marketMaker": "", "product": "", "tradingHours": ""}}}
+  getQuote:
+    speakeasy-default-get-quote:
+      parameters:
+        path:
+          symbol_id: "TSLA"
+        query:
+          fields: "quote,reference"
+      responses:
+        "200":
+          application/json: {"key": {"ssid": 1234567890, "symbol": "AAPL", "realtime": true, "quote": {"52WeekHigh": 145.09, "52WeekLow": 77.581, "closePrice": 126.27, "highPrice": 126.99, "lastPrice": 122.3, "lowPrice": 52.74, "netChange": -0.04, "netPercentChange": -0.0756, "openPrice": 52.8, "securityStatus": "Normal", "totalVolume": 20171188, "tradeTime": 1621376731304}, "reference": {"description": "DOW JONES 30 INDUSTRIALS", "exchange": "q"}}}
+        "400":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+        "500":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+    SingleCriteriaSearch:
+      parameters:
+        path:
+          symbol_id: "TSLA"
+        query:
+          fields: "quote,reference"
+      responses:
+        "200":
+          application/json: {"symbol": {"ssid": 1234567890, "symbol": "AAPL", "realtime": true, "quote": {"askMICId": "XNYS", "askPrice": 124.63, "askSize": 700, "bidMICId": "XNYS", "bidPrice": 124.6, "bidSize": 300, "closePrice": 126.27, "highPrice": 126.99, "lastMICId": "XNYS", "lastPrice": 122.3, "lastSize": 100, "lowPrice": 52.74, "mark": 52.93, "markChange": -0.04, "netChange": -0.04, "netPercentChange": -0.0756, "openInterest": 317, "openPrice": 52.8, "quoteTime": 1621376892336, "securityStatus": "Normal", "settlemetPrice": 52.8, "tick": 0, "tickAmount": 0, "totalVolume": 20171188, "tradeTime": 1621376731304}, "reference": {"description": "AMZN Aug 20 2021 2300 Put", "exchange": "q", "multiplier": 100, "strikePrice": 2300, "underlying": "AMZN Aug 20 2021 2300 Put"}}, "empty": {}, "previousClose": {"ssid": 1234567890, "symbol": "AAPL", "realtime": true, "quote": {"askMICId": "XNYS", "askPrice": 4083.25, "askSize": 36, "askTime": 1621376892336, "bidMICId": "XNYS", "bidPrice": 4083, "bidSize": 18, "bidTime": 1621376892336, "closePrice": 4123, "futurePercentChange": -0.0756, "highPrice": 4123, "lastMICId": "XNYS", "lastPrice": 4083, "lastSize": 7, "lowPrice": 4075.5, "mark": 4083, "netChange": -40, "openInterest": 2517139, "openPrice": 4114, "quoteTime": 1621427004585, "quotedInSession": false, "securityStatus": "Normal", "settleTime": 1621376892336, "tick": 0.25, "tickAmount": 12.5, "totalVolume": 20171188, "tradeTime": 1621376731304}, "reference": {"description": "E-mini S&P 500 Index Futures,Jun-2021,ETH", "exchange": "q", "futureActiveSymbol": "/ESM21", "futureExpirationDate": 1623988800000, "futureIsActive": true, "futureMultiplier": 50, "futurePriceFormat": "D,D", "futureSettlementPrice": 4123, "futureTradingHours": "GLBX(de=1640;0=-1700151515301600;1=r-17001515r15301600d-15551640;7=d-16401555)", "product": "/ES"}}, "previousCloseDate": {"ssid": 1234567890, "symbol": "AAPL", "realtime": true, "quote": {"52WeekHigh": 145.09, "52WeekLow": 77.581, "askPrice": 124.63, "askSize": 700, "bidPrice": 124.6, "bidSize": 300, "closePrice": 126.27, "highPrice": 126.99, "lastPrice": 122.3, "lastSize": 100, "lowPrice": 52.74, "mark": 52.93, "netChange": -0.04, "netPercentChange": -0.0756, "openPrice": 52.8, "quoteTime": 1621376892336, "securityStatus": "Normal", "tick": 0, "tickAmount": 0, "totalVolume": 20171188, "tradeTime": 1621376731304}, "reference": {"description": "Euro/USDollar Spot", "exchange": "q", "isTradable": true, "product": "Rustic Plastic Shirt"}}, "candles": {}}
+  getChain:
+    speakeasy-default-get-chain:
+      parameters:
+        query:
+          symbol: "AAPL"
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+        "500":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+  getExpirationChain:
+    speakeasy-default-get-expiration-chain:
+      parameters:
+        query:
+          symbol: "AAPL"
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+        "500":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+    GetExpirationChain:
+      parameters:
+        query:
+          symbol: "AAPL"
+      responses:
+        "200":
+          application/json: {"expirationList": [{"daysToExpiration": 2, "expirationType": "W", "standard": true}, {"daysToExpiration": 9, "expirationType": "W", "standard": true}, {"daysToExpiration": 16, "expirationType": "S", "standard": true}, {"daysToExpiration": 23, "expirationType": "W", "standard": true}, {"daysToExpiration": 30, "expirationType": "W", "standard": true}, {"daysToExpiration": 37, "expirationType": "W", "standard": true}, {"daysToExpiration": 44, "expirationType": "S", "standard": true}, {"daysToExpiration": 72, "expirationType": "S", "standard": true}, {"daysToExpiration": 99, "expirationType": "S", "standard": true}, {"daysToExpiration": 135, "expirationType": "S", "standard": true}, {"daysToExpiration": 163, "expirationType": "S", "standard": true}, {"daysToExpiration": 191, "expirationType": "S", "standard": true}, {"daysToExpiration": 254, "expirationType": "S", "standard": true}, {"daysToExpiration": 380, "expirationType": "S", "standard": true}, {"daysToExpiration": 436, "expirationType": "S", "standard": true}, {"daysToExpiration": 527, "expirationType": "S", "standard": true}, {"daysToExpiration": 618, "expirationType": "S", "standard": true}, {"daysToExpiration": 744, "expirationType": "S", "standard": true}]}
+  getPriceHistory:
+    speakeasy-default-get-price-history:
+      parameters:
+        query:
+          symbol: "AAPL"
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+        "500":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+    SingleSymbolCriteriaSearch:
+      parameters:
+        query:
+          symbol: "AAPL"
+      responses:
+        "200":
+          application/json: {"candles": [{"close": 175.04, "datetime": 1639137600000, "high": 175.15, "low": 175.01, "open": 175.01, "volume": 10719}, {"close": 175.05, "datetime": 1639137660000, "high": 175.09, "low": 175.05, "open": 175.08, "volume": 500}, {"close": 176.25, "datetime": 1640307300000, "high": 176.27, "low": 176.22, "open": 176.22, "volume": 3395}, {"close": 176.26, "datetime": 1640307360000, "high": 176.27, "low": 176.26, "open": 176.26, "volume": 2174}, {"close": 176.3, "datetime": 1640307420000, "high": 176.31, "low": 176.26, "open": 176.26, "volume": 15401}, {"close": 176.3, "datetime": 1640307480000, "high": 176.3, "low": 176.3, "open": 176.3, "volume": 1700}, {"close": 176.32, "datetime": 1640307540000, "high": 176.5, "low": 176.3, "open": 176.3, "volume": 5941}], "empty": false, "previousClose": 174.56, "previousCloseDate": 1639029600000, "symbol": "AAPL"}
+  getMovers:
+    speakeasy-default-get-movers:
+      parameters:
+        path:
+          symbol_id: "$DJI"
+        query:
+          sort: "VOLUME"
+          frequency: 0
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+        "500":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+    SearchMoversByIndexSymbol:
+      parameters:
+        path:
+          symbol_id: "$DJI"
+        query:
+          sort: "VOLUME"
+          frequency: 0
+      responses:
+        "200":
+          application/json: {"screeners": [{"change": 10, "description": "Dow jones", "direction": "up", "last": 100, "symbol": "$DJI", "totalVolume": 100}, {"change": 10, "description": "Dow jones", "direction": "up", "last": 100, "symbol": "$DJI", "totalVolume": 100}, {"change": 10, "description": "Dow jones", "direction": "up", "last": 100, "symbol": "$DJI", "totalVolume": 100}]}
+  getMarketHours:
+    GetMarketHours:
+      parameters:
+        query:
+          markets: []
+      responses:
+        "200":
+          application/json: {"equity": {"EQ": {"date": "2022-04-14", "marketType": "EQUITY", "product": "EQ", "productName": "equity", "isOpen": true, "sessionHours": {"preMarket": [{"start": "2022-04-14T07:00:00-04:00", "end": "2022-04-14T09:30:00-04:00"}], "regularMarket": [{"start": "2022-04-14T09:30:00-04:00", "end": "2022-04-14T16:00:00-04:00"}], "postMarket": [{"start": "2022-04-14T16:00:00-04:00", "end": "2022-04-14T20:00:00-04:00"}]}}}, "option": {"EQO": {"date": "2022-04-14", "marketType": "OPTION", "product": "EQO", "productName": "equity option", "isOpen": true, "sessionHours": {"regularMarket": [{"start": "2022-04-14T09:30:00-04:00", "end": "2022-04-14T16:00:00-04:00"}]}}, "IND": {"date": "2022-04-14", "marketType": "OPTION", "product": "IND", "productName": "index option", "isOpen": true, "sessionHours": {"regularMarket": [{"start": "2022-04-14T09:30:00-04:00", "end": "2022-04-14T16:15:00-04:00"}]}}}}
+    speakeasy-default-get-market-hours:
+      parameters:
+        query:
+          markets: []
+      responses:
+        "200":
+          application/json: {"key": {"key": {}}, "key1": {}, "key2": {"key": {}}}
+        "400":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+        "500":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+  getMarketHour:
+    GetMarketHour:
+      parameters:
+        path:
+          market_id: "forex"
+      responses:
+        "200":
+          application/json: {"equity": {"EQ": {"date": "2022-04-14", "marketType": "EQUITY", "exchange": "NULL", "category": "NULL", "product": "EQ", "productName": "equity", "isOpen": true, "sessionHours": {"preMarket": [{"start": "2022-04-14T07:00:00-04:00", "end": "2022-04-14T09:30:00-04:00"}], "regularMarket": [{"start": "2022-04-14T09:30:00-04:00", "end": "2022-04-14T16:00:00-04:00"}], "postMarket": [{"start": "2022-04-14T16:00:00-04:00", "end": "2022-04-14T20:00:00-04:00"}]}}}}
+    speakeasy-default-get-market-hour:
+      parameters:
+        path:
+          market_id: "future"
+      responses:
+        "200":
+          application/json: {"key": {}, "key1": {"key": {}}, "key2": {}}
+        "400":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+        "500":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+  getInstruments:
+    GetInstruments:
+      parameters:
+        query:
+          symbol: "<value>"
+          projection: "symbol-regex"
+      responses:
+        "200":
+          application/json: {"instruments": [{"cusip": "037833100", "symbol": "AAPL", "description": "Apple Inc", "exchange": "NASDAQ", "assetType": "EQUITY"}, {"cusip": "060505104", "symbol": "BAC", "description": "Bank Of America Corp", "exchange": "NYSE", "assetType": "EQUITY"}]}
+    speakeasy-default-get-instruments:
+      parameters:
+        query:
+          symbol: "<value>"
+          projection: "desc-regex"
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+        "500":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+  getInstrumentsByCusip:
+    GetInstrumentByCusip:
+      parameters:
+        path:
+          cusip_id: "<id>"
+      responses:
+        "200":
+          application/json: {"cusip": "037833100", "symbol": "AAPL", "description": "Apple Inc", "exchange": "NASDAQ", "assetType": "EQUITY"}
+    speakeasy-default-get-instruments-by-cusip:
+      parameters:
+        path:
+          cusip_id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+        "400":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+        "500":
+          application/json: {"errors": [{"id": "9821320c-8500-4edf-bd46-a9299c13d2e0", "status": "400", "title": "Missing header", "detail": "Search combination should not exceed 500.", "source": {"pointer": ["/data/attributes/symbols", "/data/attributes/cusips", "/data/attributes/ssids"], "parameter": "fields", "header": "Schwab-Client-CorrelId"}}]}
+examplesVersion: 1.0.2

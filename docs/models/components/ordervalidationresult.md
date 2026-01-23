@@ -1,0 +1,12 @@
+# OrderValidationResult
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `Alerts`                                                                               | [][components.OrderValidationDetail](../../models/components/ordervalidationdetail.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
+| `Accepts`                                                                              | [][components.OrderValidationDetail](../../models/components/ordervalidationdetail.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
+| `Rejects`                                                                              | [][components.OrderValidationDetail](../../models/components/ordervalidationdetail.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
+| `Reviews`                                                                              | [][components.OrderValidationDetail](../../models/components/ordervalidationdetail.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
+| `Warns`                                                                                | [][components.OrderValidationDetail](../../models/components/ordervalidationdetail.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |

@@ -1,0 +1,15 @@
+# OptionResponse
+
+Quote info of Option security
+
+
+## Fields
+
+| Field                                                                     | Type                                                                      | Required                                                                  | Description                                                               | Example                                                                   |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `AssetMainType`                                                           | [*components.AssetMainType](../../models/components/assetmaintype.md)     | :heavy_minus_sign:                                                        | Instrument's asset type                                                   |                                                                           |
+| `Ssid`                                                                    | **int64*                                                                  | :heavy_minus_sign:                                                        | SSID of instrument                                                        | 1234567890                                                                |
+| `Symbol`                                                                  | **string*                                                                 | :heavy_minus_sign:                                                        | Symbol of instrument                                                      | AAPL                                                                      |
+| `Realtime`                                                                | **bool*                                                                   | :heavy_minus_sign:                                                        | is quote realtime                                                         | true                                                                      |
+| `Quote`                                                                   | [*components.QuoteOption](../../models/components/quoteoption.md)         | :heavy_minus_sign:                                                        | Quote data of Option security                                             |                                                                           |
+| `Reference`                                                               | [*components.ReferenceOption](../../models/components/referenceoption.md) | :heavy_minus_sign:                                                        | Reference data of Option security                                         |                                                                           |
