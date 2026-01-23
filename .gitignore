@@ -1,5 +1,6 @@
 # .gitignore
 .DS_Store
+.speakeasy/
 **/.speakeasy/temp/
 **/.speakeasy/logs/
 .speakeasy/reports
