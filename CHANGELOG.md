@@ -8,8 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Standardized `.agent/validate.sh` script to verify build, formatting, and tests.
+- **New SDK**: Regenerated SDK using Speakeasy to match current Schwab API spec.
+- **Hooks**: Implemented `URLRewriteHook` to handle `getPriceHistory` and `getChain` URL path corrections (/trader/v1 -> /marketdata/v1).
+- **Validation**: Added standardized `.agent/validate.sh` scaffolding.
 
 ### Fixed
-- Fixed critical generator bug: `package undefined` in `optionchains.go` and `pricehistory.go` is now `package sdk`.
-- Fixed broken internal imports from `undefined/...` to correct module path.
+- Fixed critical generator bug (`package undefined`).
+- Fixed broken internal imports globally.
