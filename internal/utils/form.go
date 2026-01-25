@@ -10,8 +10,8 @@ import (
 	"strings"
 	"time"
 
-	"undefined/optionalnullable"
-	"undefined/types"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/optionalnullable"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/types"
 )
 
 func populateForm(paramName string, explode bool, objType reflect.Type, objValue reflect.Value, delimiter string, defaultValue *string, allowEmptyValue map[string]struct{}, getFieldName func(reflect.StructField) string) url.Values {

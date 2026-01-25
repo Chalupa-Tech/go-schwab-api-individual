@@ -8,11 +8,38 @@ package hooks
  * Hooks are registered per SDK instance, and are valid for the lifetime of the SDK instance.
  */
 
-func initHooks(h *Hooks) {
-	// exampleHook := &ExampleHook{}
+import (
+	"fmt"
 
-	// h.registerSDKInitHook(exampleHook)
-	// h.registerBeforeRequestHook(exampleHook)
-	// h.registerAfterErrorHook(exampleHook)
-	// h.registerAfterSuccessHook(exampleHook)
+	"github.com/sirupsen/logrus"
+)
+
+// Define a simple hook
+type SimpleHook struct{}
+
+func (s *SimpleHook) BeforeRequest(req interface{}) error {
+	fmt.Println("SimpleHook: BeforeRequest")
+	return nil
+}
+
+func (s *SimpleHook) AfterSuccess(resp interface{}) error {
+	fmt.Println("SimpleHook: AfterSuccess")
+	return nil
+}
+
+func (s *SimpleHook) AfterError(err error) error {
+	fmt.Println("SimpleHook: AfterError")
+	return nil
+}
+
+func initHooks(h *Hooks) {
+	// Initialize logger
+	logger := logrus.New()
+	logger.SetLevel(logrus.DebugLevel)
+
+	// Register URL Rewrite Hook
+	urlRewriteHook := NewURLRewriteHook(logger)
+	h.registerBeforeRequestHook(urlRewriteHook)
+
+	fmt.Println("Registered URLRewriteHook")
 }

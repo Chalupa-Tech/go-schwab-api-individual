@@ -5,7 +5,7 @@ package components
 import (
 	"errors"
 	"fmt"
-	"undefined/internal/utils"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
 )
 
 type TransactionInstrumentType string

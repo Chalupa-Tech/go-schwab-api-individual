@@ -6,7 +6,7 @@ import (
 	"context"
 	"errors"
 	"net/http"
-	"undefined/internal/config"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/config"
 )
 
 type FailEarly struct {

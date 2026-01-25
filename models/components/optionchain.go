@@ -3,7 +3,9 @@
 package components
 
 import (
-	"undefined/internal/utils"
+	"encoding/json"
+
+	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
 )
 
 type Strategy string
@@ -59,9 +61,46 @@ func (o OptionChain) MarshalJSON() ([]byte, error) {
 }
 
 func (o *OptionChain) UnmarshalJSON(data []byte) error {
-	if err := utils.UnmarshalJSON(data, &o, "", false, nil); err != nil {
+	type OptionChainAlias OptionChain
+	aux := &struct {
+		CallExpDateMap json.RawMessage `json:"callExpDateMap,omitzero"`
+		PutExpDateMap  json.RawMessage `json:"putExpDateMap,omitzero"`
+		*OptionChainAlias
+	}{
+		OptionChainAlias: (*OptionChainAlias)(o),
+	}
+
+	if err := json.Unmarshal(data, &aux); err != nil {
 		return err
 	}
+
+	processMap := func(raw json.RawMessage) (map[string]map[string]OptionContract, error) {
+		if len(raw) == 0 {
+			return nil, nil
+		}
+		// Try unmarshaling as map first
+		var m map[string]map[string]OptionContract
+		if err := json.Unmarshal(raw, &m); err == nil {
+			return m, nil
+		}
+		// If map fails, try empty array (or any array, treated as empty/nil map)
+		var arr []interface{}
+		if err := json.Unmarshal(raw, &arr); err == nil {
+			return nil, nil
+		}
+		return nil, json.Unmarshal(raw, &m) // return original map error
+	}
+
+	var err error
+	o.CallExpDateMap, err = processMap(aux.CallExpDateMap)
+	if err != nil {
+		return err
+	}
+	o.PutExpDateMap, err = processMap(aux.PutExpDateMap)
+	if err != nil {
+		return err
+	}
+
 	return nil
 }
 

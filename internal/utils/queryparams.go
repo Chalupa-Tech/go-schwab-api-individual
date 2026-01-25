@@ -12,8 +12,8 @@ import (
 	"reflect"
 	"time"
 
-	"undefined/optionalnullable"
-	"undefined/types"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/optionalnullable"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/types"
 )
 
 func PopulateQueryParams(_ context.Context, req *http.Request, queryParams interface{}, globals interface{}, allowEmptyValue map[string]struct{}) error {

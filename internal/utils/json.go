@@ -14,7 +14,7 @@ import (
 	"time"
 	"unsafe"
 
-	"undefined/types"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/types"
 )
 
 func MarshalJSON(v interface{}, tag reflect.StructTag, topLevel bool) ([]byte, error) {
@@ -158,6 +158,10 @@ func UnmarshalJSON(b []byte, v interface{}, tag reflect.StructTag, topLevel bool
 		// to ensure nested structs with custom tags (like integer:"string") are handled correctly
 		if topLevel && implementsJSONUnmarshaler(reflect.TypeOf(v)) {
 			return json.Unmarshal(b, v)
+		}
+
+		if len(b) > 0 && b[0] == '[' {
+			return nil
 		}
 
 		var unmarshaled map[string]json.RawMessage

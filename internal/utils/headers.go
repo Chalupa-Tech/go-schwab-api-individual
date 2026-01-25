@@ -9,7 +9,7 @@ import (
 	"reflect"
 	"strings"
 
-	"undefined/optionalnullable"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/optionalnullable"
 )
 
 func PopulateHeaders(_ context.Context, req *http.Request, headers interface{}, globals interface{}) {

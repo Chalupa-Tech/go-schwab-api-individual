@@ -3,7 +3,7 @@
 package operations
 
 import (
-	"undefined/models/components"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 )
 
 type ReplaceOrderRequest struct {

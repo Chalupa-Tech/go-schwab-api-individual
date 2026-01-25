@@ -11,8 +11,8 @@ import (
 	"strings"
 	"time"
 
-	"undefined/optionalnullable"
-	"undefined/types"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/optionalnullable"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/types"
 )
 
 func GenerateURL(_ context.Context, serverURL, path string, pathParams interface{}, globals interface{}) (string, error) {

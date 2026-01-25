@@ -3,7 +3,10 @@
 package components
 
 import (
-	"undefined/internal/utils"
+	"bytes"
+	"encoding/json"
+
+	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
 )
 
 type OptionContractPutCall string
@@ -87,6 +90,20 @@ func (o OptionContract) MarshalJSON() ([]byte, error) {
 }
 
 func (o *OptionContract) UnmarshalJSON(data []byte) error {
+	trimmed := bytes.TrimSpace(data)
+	if len(trimmed) > 0 && trimmed[0] == '[' {
+		var arr []json.RawMessage
+		if err := json.Unmarshal(data, &arr); err != nil {
+			return err
+		}
+		if len(arr) > 0 {
+			data = arr[0]
+		} else {
+			// Empty array means no contract data
+			return nil
+		}
+	}
+
 	if err := utils.UnmarshalJSON(data, &o, "", false, nil); err != nil {
 		return err
 	}

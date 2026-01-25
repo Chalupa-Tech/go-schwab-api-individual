@@ -6,7 +6,8 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"undefined/internal/utils"
+
+	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
 )
 
 type AccountsInstrumentType string
@@ -23,8 +24,8 @@ type AccountsInstrument struct {
 	AccountCashEquivalent  *AccountCashEquivalent  `queryParam:"inline" union:"member"`
 	AccountsBaseInstrument *AccountsBaseInstrument `queryParam:"inline" union:"member"`
 	AccountFixedIncome     *AccountFixedIncome     `queryParam:"inline" union:"member"`
-	AccountsBaseInstrument *AccountsBaseInstrument `queryParam:"inline" union:"member"`
-	AccountOption          *AccountOption          `queryParam:"inline" union:"member"`
+
+	AccountOption *AccountOption `queryParam:"inline" union:"member"`
 
 	Type AccountsInstrumentType
 }

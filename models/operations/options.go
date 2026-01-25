@@ -5,8 +5,8 @@ package operations
 import (
 	"errors"
 	"time"
-	"undefined/internal/utils"
-	"undefined/retry"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/retry"
 )
 
 var ErrUnsupportedOption = errors.New("unsupported option")

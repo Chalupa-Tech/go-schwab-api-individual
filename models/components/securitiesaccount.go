@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"undefined/internal/utils"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
 )
 
 type SecuritiesAccountType string

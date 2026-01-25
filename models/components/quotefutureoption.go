@@ -3,7 +3,7 @@
 package components
 
 import (
-	"undefined/internal/utils"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
 )
 
 // QuoteFutureOption - Quote data of Option security

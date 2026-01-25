@@ -9,7 +9,7 @@ import (
 	"strings"
 	"time"
 
-	"undefined/types"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/types"
 )
 
 // UnionCandidate represents a candidate type during union deserialization

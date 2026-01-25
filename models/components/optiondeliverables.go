@@ -3,10 +3,10 @@
 package components
 
 type OptionDeliverables struct {
-	Symbol           *string `json:"symbol,omitzero"`
-	AssetType        *string `json:"assetType,omitzero"`
-	DeliverableUnits *string `json:"deliverableUnits,omitzero"`
-	CurrencyType     *string `json:"currencyType,omitzero"`
+	Symbol           *string  `json:"symbol,omitzero"`
+	AssetType        *string  `json:"assetType,omitzero"`
+	DeliverableUnits *float64 `json:"deliverableUnits,omitzero"`
+	CurrencyType     *string  `json:"currencyType,omitzero"`
 }
 
 func (o *OptionDeliverables) GetSymbol() *string {
@@ -23,7 +23,7 @@ func (o *OptionDeliverables) GetAssetType() *string {
 	return o.AssetType
 }
 
-func (o *OptionDeliverables) GetDeliverableUnits() *string {
+func (o *OptionDeliverables) GetDeliverableUnits() *float64 {
 	if o == nil {
 		return nil
 	}

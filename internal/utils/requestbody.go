@@ -15,7 +15,7 @@ import (
 	"reflect"
 	"regexp"
 
-	"undefined/optionalnullable"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/optionalnullable"
 )
 
 const (

@@ -3,7 +3,7 @@
 package components
 
 import (
-	"undefined/internal/utils"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
 )
 
 type MarginBalance struct {
@@ -23,7 +23,7 @@ type MarginBalance struct {
 	ShortBalance                     *float64 `json:"shortBalance,omitzero"`
 	ShortMarginValue                 *float64 `json:"shortMarginValue,omitzero"`
 	Sma                              *float64 `json:"sma,omitzero"`
-	IsInCall                         *float64 `json:"isInCall,omitzero"`
+	IsInCall                         *bool    `json:"isInCall,omitzero"`
 	StockBuyingPower                 *float64 `json:"stockBuyingPower,omitzero"`
 	OptionBuyingPower                *float64 `json:"optionBuyingPower,omitzero"`
 }
@@ -151,7 +151,7 @@ func (m *MarginBalance) GetSma() *float64 {
 	return m.Sma
 }
 
-func (m *MarginBalance) GetIsInCall() *float64 {
+func (m *MarginBalance) GetIsInCall() *bool {
 	if m == nil {
 		return nil
 	}

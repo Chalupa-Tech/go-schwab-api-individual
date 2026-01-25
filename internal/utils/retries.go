@@ -15,7 +15,7 @@ import (
 	"strconv"
 	"strings"
 	"time"
-	"undefined/retry"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/retry"
 )
 
 // Deprecated: Use retry.BackoffStrategy instead.

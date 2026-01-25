@@ -3,8 +3,8 @@
 package components
 
 import (
-	"undefined/internal/utils"
-	"undefined/optionalnullable"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/optionalnullable"
 )
 
 // MutualFundResponse - Quote info of MutualFund security

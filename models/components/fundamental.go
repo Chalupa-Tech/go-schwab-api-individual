@@ -4,8 +4,8 @@ package components
 
 import (
 	"time"
-	"undefined/internal/utils"
-	"undefined/optionalnullable"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/optionalnullable"
 )
 
 // Fundamental - Fundamentals of a security

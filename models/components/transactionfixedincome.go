@@ -4,7 +4,7 @@ package components
 
 import (
 	"time"
-	"undefined/internal/utils"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
 )
 
 type TransactionFixedIncomeAssetType string

@@ -6,7 +6,7 @@ import (
 	"context"
 	"net/http"
 	"time"
-	"undefined/retry"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/retry"
 )
 
 type HTTPClient interface {

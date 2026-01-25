@@ -4,7 +4,7 @@ package apierrors
 
 import (
 	"encoding/json"
-	"undefined/models/components"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 )
 
 // ServiceError - An error message indicating the validation problem with the request.

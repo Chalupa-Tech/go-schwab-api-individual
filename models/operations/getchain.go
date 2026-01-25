@@ -3,10 +3,10 @@
 package operations
 
 import (
-	"undefined/internal/utils"
-	"undefined/models/components"
-	"undefined/optionalnullable"
-	"undefined/types"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/optionalnullable"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/types"
 )
 
 type GetChainRequest struct {
