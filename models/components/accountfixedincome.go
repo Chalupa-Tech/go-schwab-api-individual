@@ -3,8 +3,8 @@
 package components
 
 import (
-	"time"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
+	"time"
 )
 
 type AccountFixedIncomeAssetType string

@@ -6,7 +6,6 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"net/http"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/config"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/hooks"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
@@ -14,6 +13,7 @@ import (
 	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/models/operations"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/retry"
+	"net/http"
 )
 
 // Get Movers Web Service.

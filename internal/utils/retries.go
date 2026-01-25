@@ -6,6 +6,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/retry"
 	"io"
 	"math"
 	"math/rand"
@@ -15,7 +16,6 @@ import (
 	"strconv"
 	"strings"
 	"time"
-	"github.com/Chalupa-Tech/go-schwab-api-individual/retry"
 )
 
 // Deprecated: Use retry.BackoffStrategy instead.

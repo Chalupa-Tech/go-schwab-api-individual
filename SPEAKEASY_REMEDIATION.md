@@ -61,8 +61,37 @@ actions:
       format: double
 ```
 
+## 3. URL Routing / Server Definitions
+
+**Issue:**
+The consumer application (`tayvens-stock-report`) currently has to implement manual Hooks or URL patches because the SDK defaults to a single Base URL (`api.schwabapi.com/trader/v1`), whereas Market Data endpoints require `api.schwabapi.com/marketdata/v1`.
+
+**Remediation:**
+The OpenAPI spec should formally define these distinction servers / base paths.
+
+1.  **Define Multiple Servers** in the Spec:
+    ```yaml
+    servers:
+      - url: https://api.schwabapi.com/trader/v1
+        description: Trader API
+      - url: https://api.schwabapi.com/marketdata/v1
+        description: Market Data API
+    ```
+2.  **Operation Overrides**:
+    Assign the correct server to the specific operations (e.g., `getPriceHistory`, `getOptionChain`) in the Spec.
+    ```yaml
+    paths:
+      /pricehistory:
+        get:
+          servers:
+            - url: https://api.schwabapi.com/marketdata/v1
+          ...
+    ```
+**Benefit**: Use of `hook` logic in consumers will become unnecessary.
+
 ## Summary for Orchestrator
 When automating this fix:
-1.  Apply the `openapi-overlay.yaml` to the source Spec.
-2.  Regenerate the SDK using `speakeasy generate`.
-3.  Verify `models/components/optiondeliverables.go` uses `*float64`.
+1.  Apply the `openapi-overlay.yaml` to the source Spec for Data Types.
+2.  Modify the Spec to include operation-specific `servers` for Market Data endpoints.
+3.  Regenerate the SDK using `speakeasy generate`.
+4.  Verify (1) `models/components/optiondeliverables.go` uses `*float64`, and (2) Generated `options.go` uses the correct Base URL.

@@ -4,9 +4,9 @@ package config
 
 import (
 	"context"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/retry"
 	"net/http"
 	"time"
-	"github.com/Chalupa-Tech/go-schwab-api-individual/retry"
 )
 
 type HTTPClient interface {

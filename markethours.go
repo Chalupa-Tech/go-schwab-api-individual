@@ -6,8 +6,6 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"net/http"
-	"net/url"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/config"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/hooks"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
@@ -16,6 +14,8 @@ import (
 	"github.com/Chalupa-Tech/go-schwab-api-individual/models/operations"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/retry"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/types"
+	"net/http"
+	"net/url"
 )
 
 // Get MarketHours Web Service.

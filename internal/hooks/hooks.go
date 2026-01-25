@@ -5,8 +5,8 @@ package hooks
 import (
 	"context"
 	"errors"
-	"net/http"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/config"
+	"net/http"
 )
 
 type FailEarly struct {

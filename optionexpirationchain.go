@@ -6,8 +6,6 @@ import (
 	"bytes"
 	"context"
 	"fmt"
-	"net/http"
-	"net/url"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/config"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/hooks"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
@@ -15,6 +13,8 @@ import (
 	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/models/operations"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/retry"
+	"net/http"
+	"net/url"
 )
 
 // OptionExpirationChain - Get Option Expiration Chain Web Service.

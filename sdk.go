@@ -7,13 +7,13 @@ package sdk
 import (
 	"context"
 	"fmt"
-	"net/http"
-	"time"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/config"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/hooks"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/retry"
+	"net/http"
+	"time"
 )
 
 // ServerList contains the list of servers available to the SDK
