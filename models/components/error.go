@@ -3,20 +3,17 @@
 package components
 
 import (
-	"fmt"
-
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
 )
 
 // ErrorStatus - The HTTP status code .
-// ErrorStatus - The HTTP status code .
-type ErrorStatus int64
+type ErrorStatus string
 
 const (
-	ErrorStatusFourHundred        ErrorStatus = 400
-	ErrorStatusFourHundredAndOne  ErrorStatus = 401
-	ErrorStatusFourHundredAndFour ErrorStatus = 404
-	ErrorStatusFiveHundred        ErrorStatus = 500
+	ErrorStatusFourHundred        ErrorStatus = "400"
+	ErrorStatusFourHundredAndOne  ErrorStatus = "401"
+	ErrorStatusFourHundredAndFour ErrorStatus = "404"
+	ErrorStatusFiveHundred        ErrorStatus = "500"
 )
 
 func (e ErrorStatus) ToPointer() *ErrorStatus {
@@ -27,30 +24,11 @@ func (e ErrorStatus) ToPointer() *ErrorStatus {
 func (e *ErrorStatus) IsExact() bool {
 	if e != nil {
 		switch *e {
-		case 400, 401, 404, 500:
+		case "400", "401", "404", "500":
 			return true
 		}
 	}
 	return false
-}
-
-func (e *ErrorStatus) UnmarshalJSON(data []byte) error {
-	var v int64
-	if err := utils.UnmarshalJSON(data, &v, "", false, nil); err == nil {
-		*e = ErrorStatus(v)
-		return nil
-	}
-	var s string
-	if err := utils.UnmarshalJSON(data, &s, "", false, nil); err == nil {
-		// attempt to parse string to int
-		// validation omitted for brevity, assuming standard int string
-		var i int64
-		if _, err := fmt.Sscanf(s, "%d", &i); err == nil {
-			*e = ErrorStatus(i)
-			return nil
-		}
-	}
-	return fmt.Errorf("could not unmarshal ErrorStatus")
 }
 
 type Error struct {

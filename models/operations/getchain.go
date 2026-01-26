@@ -9,6 +9,11 @@ import (
 	"github.com/Chalupa-Tech/go-schwab-api-individual/types"
 )
 
+var GetChainServerList = []string{
+	"https://api.schwabapi.com/marketdata/v1",
+	"https://api.schwabapi.com/marketdata/v1",
+}
+
 type GetChainRequest struct {
 	// Enter one symbol
 	Symbol string `queryParam:"style=form,explode=true,name=symbol"`

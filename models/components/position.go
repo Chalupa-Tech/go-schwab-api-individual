@@ -110,9 +110,9 @@ func (p *Position) GetInstrumentCashEquivalent() *AccountCashEquivalent {
 	return nil
 }
 
-func (p *Position) GetInstrumentEquity() *AccountsBaseInstrument {
+func (p *Position) GetInstrumentEquity() *AccountEquity {
 	if v := p.GetInstrument(); v != nil {
-		return v.AccountsBaseInstrument
+		return v.AccountEquity
 	}
 	return nil
 }
@@ -124,9 +124,9 @@ func (p *Position) GetInstrumentFixedIncome() *AccountFixedIncome {
 	return nil
 }
 
-func (p *Position) GetInstrumentMutualFund() *AccountsBaseInstrument {
+func (p *Position) GetInstrumentMutualFund() *AccountMutualFund {
 	if v := p.GetInstrument(); v != nil {
-		return v.AccountsBaseInstrument
+		return v.AccountMutualFund
 	}
 	return nil
 }

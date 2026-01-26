@@ -23,7 +23,7 @@ type MarginBalance struct {
 	ShortBalance                     *float64 `json:"shortBalance,omitzero"`
 	ShortMarginValue                 *float64 `json:"shortMarginValue,omitzero"`
 	Sma                              *float64 `json:"sma,omitzero"`
-	IsInCall                         *bool    `json:"isInCall,omitzero"`
+	IsInCall                         *float64 `json:"isInCall,omitzero"`
 	StockBuyingPower                 *float64 `json:"stockBuyingPower,omitzero"`
 	OptionBuyingPower                *float64 `json:"optionBuyingPower,omitzero"`
 }
@@ -151,7 +151,7 @@ func (m *MarginBalance) GetSma() *float64 {
 	return m.Sma
 }
 
-func (m *MarginBalance) GetIsInCall() *bool {
+func (m *MarginBalance) GetIsInCall() *float64 {
 	if m == nil {
 		return nil
 	}

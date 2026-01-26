@@ -24,16 +24,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/operations"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
-        undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+    s := schwab.New(
+        "https://api.example.com",
+        schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
     )
 
     res, err := s.Orders.GetOrdersByPathParam(ctx, operations.GetOrdersByPathParamRequest{
@@ -82,16 +83,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
-        undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+    s := schwab.New(
+        "https://api.example.com",
+        schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
     )
 
     res, err := s.Orders.PlaceOrder(ctx, "<value>", components.OrderRequest{})
@@ -137,15 +139,16 @@ package main
 
 import(
 	"context"
-	"undefined"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
-        undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+    s := schwab.New(
+        "https://api.example.com",
+        schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
     )
 
     res, err := s.Orders.GetOrder(ctx, "<value>", 550049)
@@ -191,15 +194,16 @@ package main
 
 import(
 	"context"
-	"undefined"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
-        undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+    s := schwab.New(
+        "https://api.example.com",
+        schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
     )
 
     res, err := s.Orders.CancelOrder(ctx, "<value>", 325883)
@@ -245,16 +249,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
-        undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+    s := schwab.New(
+        "https://api.example.com",
+        schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
     )
 
     res, err := s.Orders.ReplaceOrder(ctx, "<value>", 786311, components.OrderRequest{})
@@ -301,15 +306,16 @@ package main
 
 import(
 	"context"
-	"undefined"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
-        undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+    s := schwab.New(
+        "https://api.example.com",
+        schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
     )
 
     res, err := s.Orders.GetOrdersByQueryParam(ctx, "<value>", "<value>", nil, nil)
@@ -357,16 +363,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
-        undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+    s := schwab.New(
+        "https://api.example.com",
+        schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
     )
 
     res, err := s.Orders.PreviewOrder(ctx, "<value>", components.PreviewOrder{})

@@ -7,6 +7,11 @@ import (
 	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 )
 
+var GetInstrumentsServerList = []string{
+	"https://api.schwabapi.com/marketdata/v1",
+	"https://api.schwabapi.com/marketdata/v1",
+}
+
 type GetInstrumentsRequest struct {
 	// symbol of a security
 	Symbol string `queryParam:"style=form,explode=true,name=symbol"`

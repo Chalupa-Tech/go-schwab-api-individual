@@ -7,6 +7,11 @@ import (
 	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 )
 
+var GetQuotesServerList = []string{
+	"https://api.schwabapi.com/marketdata/v1",
+	"https://api.schwabapi.com/marketdata/v1",
+}
+
 type GetQuotesRequest struct {
 	// Comma separated list of symbol(s) to look up a quote
 	Symbols *string `queryParam:"style=form,explode=true,name=symbols"`

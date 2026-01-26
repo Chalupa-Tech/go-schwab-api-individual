@@ -34,7 +34,7 @@ type MarginInitialBalance struct {
 	ShortOptionMarketValue           *float64 `json:"shortOptionMarketValue,omitzero"`
 	ShortStockValue                  *float64 `json:"shortStockValue,omitzero"`
 	TotalCash                        *float64 `json:"totalCash,omitzero"`
-	IsInCall                         *bool    `json:"isInCall,omitzero"`
+	IsInCall                         *float64 `json:"isInCall,omitzero"`
 	UnsettledCash                    *float64 `json:"unsettledCash,omitzero"`
 	PendingDeposits                  *float64 `json:"pendingDeposits,omitzero"`
 	MarginBalance                    *float64 `json:"marginBalance,omitzero"`
@@ -242,7 +242,7 @@ func (m *MarginInitialBalance) GetTotalCash() *float64 {
 	return m.TotalCash
 }
 
-func (m *MarginInitialBalance) GetIsInCall() *bool {
+func (m *MarginInitialBalance) GetIsInCall() *float64 {
 	if m == nil {
 		return nil
 	}

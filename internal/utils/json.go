@@ -160,10 +160,6 @@ func UnmarshalJSON(b []byte, v interface{}, tag reflect.StructTag, topLevel bool
 			return json.Unmarshal(b, v)
 		}
 
-		if len(b) > 0 && b[0] == '[' {
-			return nil
-		}
-
 		var unmarshaled map[string]json.RawMessage
 
 		if err := json.Unmarshal(b, &unmarshaled); err != nil {

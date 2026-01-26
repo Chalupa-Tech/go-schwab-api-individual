@@ -9,10 +9,10 @@
 accountsInstrument := components.CreateAccountsInstrumentCashEquivalent(components.AccountCashEquivalent{/* values here */})
 ```
 
-### AccountsBaseInstrument
+### AccountEquity
 
 ```go
-accountsInstrument := components.CreateAccountsInstrumentEquity(components.AccountsBaseInstrument{/* values here */})
+accountsInstrument := components.CreateAccountsInstrumentEquity(components.AccountEquity{/* values here */})
 ```
 
 ### AccountFixedIncome
@@ -21,10 +21,10 @@ accountsInstrument := components.CreateAccountsInstrumentEquity(components.Accou
 accountsInstrument := components.CreateAccountsInstrumentFixedIncome(components.AccountFixedIncome{/* values here */})
 ```
 
-### AccountsBaseInstrument
+### AccountMutualFund
 
 ```go
-accountsInstrument := components.CreateAccountsInstrumentMutualFund(components.AccountsBaseInstrument{/* values here */})
+accountsInstrument := components.CreateAccountsInstrumentMutualFund(components.AccountMutualFund{/* values here */})
 ```
 
 ### AccountOption

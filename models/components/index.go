@@ -6,6 +6,34 @@ import (
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
 )
 
+type IndexAssetType string
+
+const (
+	IndexAssetTypeEquity               IndexAssetType = "EQUITY"
+	IndexAssetTypeOption               IndexAssetType = "OPTION"
+	IndexAssetTypeIndex                IndexAssetType = "INDEX"
+	IndexAssetTypeMutualFund           IndexAssetType = "MUTUAL_FUND"
+	IndexAssetTypeCashEquivalent       IndexAssetType = "CASH_EQUIVALENT"
+	IndexAssetTypeFixedIncome          IndexAssetType = "FIXED_INCOME"
+	IndexAssetTypeCurrency             IndexAssetType = "CURRENCY"
+	IndexAssetTypeCollectiveInvestment IndexAssetType = "COLLECTIVE_INVESTMENT"
+)
+
+func (e IndexAssetType) ToPointer() *IndexAssetType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *IndexAssetType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "EQUITY", "OPTION", "INDEX", "MUTUAL_FUND", "CASH_EQUIVALENT", "FIXED_INCOME", "CURRENCY", "COLLECTIVE_INVESTMENT":
+			return true
+		}
+	}
+	return false
+}
+
 type IndexType string
 
 const (
@@ -30,8 +58,14 @@ func (e *IndexType) IsExact() bool {
 }
 
 type Index struct {
-	ActiveContract *bool      `default:"false" json:"activeContract"`
-	Type           *IndexType `json:"type,omitzero"`
+	AssetType      IndexAssetType `json:"assetType"`
+	Cusip          *string        `json:"cusip,omitzero"`
+	Symbol         *string        `json:"symbol,omitzero"`
+	Description    *string        `json:"description,omitzero"`
+	InstrumentID   *int64         `json:"instrumentId,omitzero"`
+	NetChange      *float64       `json:"netChange,omitzero"`
+	ActiveContract *bool          `default:"false" json:"activeContract"`
+	Type           *IndexType     `json:"type,omitzero"`
 }
 
 func (i Index) MarshalJSON() ([]byte, error) {
@@ -43,6 +77,48 @@ func (i *Index) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (i *Index) GetAssetType() IndexAssetType {
+	if i == nil {
+		return IndexAssetType("")
+	}
+	return i.AssetType
+}
+
+func (i *Index) GetCusip() *string {
+	if i == nil {
+		return nil
+	}
+	return i.Cusip
+}
+
+func (i *Index) GetSymbol() *string {
+	if i == nil {
+		return nil
+	}
+	return i.Symbol
+}
+
+func (i *Index) GetDescription() *string {
+	if i == nil {
+		return nil
+	}
+	return i.Description
+}
+
+func (i *Index) GetInstrumentID() *int64 {
+	if i == nil {
+		return nil
+	}
+	return i.InstrumentID
+}
+
+func (i *Index) GetNetChange() *float64 {
+	if i == nil {
+		return nil
+	}
+	return i.NetChange
 }
 
 func (i *Index) GetActiveContract() *bool {

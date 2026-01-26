@@ -4,15 +4,16 @@ package main
 
 import (
 	"context"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
 	"log"
-	"undefined"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := undefined.New(
-		undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+	s := schwab.New(
+		"https://api.example.com",
+		schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
 	)
 
 	res, err := s.Accounts.GetAccountNumbers(ctx)

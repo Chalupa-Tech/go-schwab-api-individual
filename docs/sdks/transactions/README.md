@@ -19,17 +19,18 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
-	"undefined/models/operations"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/models/operations"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
-        undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+    s := schwab.New(
+        "https://api.example.com",
+        schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
     )
 
     res, err := s.Transactions.GetTransactionsByPathParam(ctx, operations.GetTransactionsByPathParamRequest{
@@ -79,15 +80,16 @@ package main
 
 import(
 	"context"
-	"undefined"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
-        undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+    s := schwab.New(
+        "https://api.example.com",
+        schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
     )
 
     res, err := s.Transactions.GetTransactionsByID(ctx, "<value>", 923773)

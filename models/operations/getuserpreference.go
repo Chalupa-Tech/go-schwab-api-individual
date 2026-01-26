@@ -7,6 +7,10 @@ import (
 	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 )
 
+var GetUserPreferenceServerList = []string{
+	"https://api.schwabapi.com/trader/v1",
+}
+
 type GetUserPreferenceResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// List of user preference values.

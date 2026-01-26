@@ -3,452 +3,96 @@
 package components
 
 import (
-	"bytes"
-	"encoding/json"
-
+	"errors"
+	"fmt"
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
 )
 
-type OptionContractPutCall string
+type OptionContractType string
 
 const (
-	OptionContractPutCallPut  OptionContractPutCall = "PUT"
-	OptionContractPutCallCall OptionContractPutCall = "CALL"
+	OptionContractTypeOptionContractObject        OptionContractType = "OptionContractObject"
+	OptionContractTypeArrayOfOptionContractObject OptionContractType = "arrayOfOptionContractObject"
 )
 
-func (e OptionContractPutCall) ToPointer() *OptionContractPutCall {
-	return &e
-}
-
-// IsExact returns true if the value matches a known enum value, false otherwise.
-func (e *OptionContractPutCall) IsExact() bool {
-	if e != nil {
-		switch *e {
-		case "PUT", "CALL":
-			return true
-		}
-	}
-	return false
-}
-
 type OptionContract struct {
-	PutCall                *OptionContractPutCall `json:"putCall,omitzero"`
-	Symbol                 *string                `json:"symbol,omitzero"`
-	Description            *string                `json:"description,omitzero"`
-	ExchangeName           *string                `json:"exchangeName,omitzero"`
-	BidPrice               *float64               `json:"bidPrice,omitzero"`
-	AskPrice               *float64               `json:"askPrice,omitzero"`
-	LastPrice              *float64               `json:"lastPrice,omitzero"`
-	MarkPrice              *float64               `json:"markPrice,omitzero"`
-	BidSize                *int                   `json:"bidSize,omitzero"`
-	AskSize                *int                   `json:"askSize,omitzero"`
-	LastSize               *int                   `json:"lastSize,omitzero"`
-	HighPrice              *float64               `json:"highPrice,omitzero"`
-	LowPrice               *float64               `json:"lowPrice,omitzero"`
-	OpenPrice              *float64               `json:"openPrice,omitzero"`
-	ClosePrice             *float64               `json:"closePrice,omitzero"`
-	TotalVolume            *int                   `json:"totalVolume,omitzero"`
-	TradeDate              *float64               `json:"tradeDate,omitzero"`
-	QuoteTimeInLong        *int                   `json:"quoteTimeInLong,omitzero"`
-	TradeTimeInLong        *int                   `json:"tradeTimeInLong,omitzero"`
-	NetChange              *float64               `json:"netChange,omitzero"`
-	Volatility             *float64               `json:"volatility,omitzero"`
-	Delta                  *float64               `json:"delta,omitzero"`
-	Gamma                  *float64               `json:"gamma,omitzero"`
-	Theta                  *float64               `json:"theta,omitzero"`
-	Vega                   *float64               `json:"vega,omitzero"`
-	Rho                    *float64               `json:"rho,omitzero"`
-	TimeValue              *float64               `json:"timeValue,omitzero"`
-	OpenInterest           *float64               `json:"openInterest,omitzero"`
-	IsInTheMoney           *bool                  `json:"isInTheMoney,omitzero"`
-	TheoreticalOptionValue *float64               `json:"theoreticalOptionValue,omitzero"`
-	TheoreticalVolatility  *float64               `json:"theoreticalVolatility,omitzero"`
-	IsMini                 *bool                  `json:"isMini,omitzero"`
-	IsNonStandard          *bool                  `json:"isNonStandard,omitzero"`
-	OptionDeliverablesList []OptionDeliverables   `json:"optionDeliverablesList,omitzero"`
-	StrikePrice            *float64               `json:"strikePrice,omitzero"`
-	ExpirationDate         *string                `json:"expirationDate,omitzero"`
-	DaysToExpiration       *float64               `json:"daysToExpiration,omitzero"`
-	// M for End Of Month Expiration Calendar Cycle. (To match the last business day of the month), Q for Quarterly expirations (last business day of the quarter month MAR/JUN/SEP/DEC), W for Weekly expiration (also called Friday Short Term Expirations) and S for Expires 3rd Friday of the month (also known as regular options).
-	ExpirationType *ExpirationType `json:"expirationType,omitzero"`
-	LastTradingDay *float64        `json:"lastTradingDay,omitzero"`
-	Multiplier     *float64        `json:"multiplier,omitzero"`
-	// option contract settlement type AM or PM
-	SettlementType    *SettlementType `json:"settlementType,omitzero"`
-	DeliverableNote   *string         `json:"deliverableNote,omitzero"`
-	IsIndexOption     *bool           `json:"isIndexOption,omitzero"`
-	PercentChange     *float64        `json:"percentChange,omitzero"`
-	MarkChange        *float64        `json:"markChange,omitzero"`
-	MarkPercentChange *float64        `json:"markPercentChange,omitzero"`
-	IsPennyPilot      *bool           `json:"isPennyPilot,omitzero"`
-	IntrinsicValue    *float64        `json:"intrinsicValue,omitzero"`
-	OptionRoot        *string         `json:"optionRoot,omitzero"`
+	OptionContractObject        *OptionContractObject  `queryParam:"inline" union:"member"`
+	ArrayOfOptionContractObject []OptionContractObject `queryParam:"inline" union:"member"`
+
+	Type OptionContractType
 }
 
-func (o OptionContract) MarshalJSON() ([]byte, error) {
-	return utils.MarshalJSON(o, "", false)
+func CreateOptionContractOptionContractObject(optionContractObject OptionContractObject) OptionContract {
+	typ := OptionContractTypeOptionContractObject
+
+	return OptionContract{
+		OptionContractObject: &optionContractObject,
+		Type:                 typ,
+	}
 }
 
-func (o *OptionContract) UnmarshalJSON(data []byte) error {
-	trimmed := bytes.TrimSpace(data)
-	if len(trimmed) > 0 && trimmed[0] == '[' {
-		var arr []json.RawMessage
-		if err := json.Unmarshal(data, &arr); err != nil {
-			return err
-		}
-		if len(arr) > 0 {
-			data = arr[0]
-		} else {
-			// Empty array means no contract data
-			return nil
-		}
+func CreateOptionContractArrayOfOptionContractObject(arrayOfOptionContractObject []OptionContractObject) OptionContract {
+	typ := OptionContractTypeArrayOfOptionContractObject
+
+	return OptionContract{
+		ArrayOfOptionContractObject: arrayOfOptionContractObject,
+		Type:                        typ,
+	}
+}
+
+func (u *OptionContract) UnmarshalJSON(data []byte) error {
+
+	var candidates []utils.UnionCandidate
+
+	// Collect all valid candidates
+	var optionContractObject OptionContractObject = OptionContractObject{}
+	if err := utils.UnmarshalJSON(data, &optionContractObject, "", true, nil); err == nil {
+		candidates = append(candidates, utils.UnionCandidate{
+			Type:  OptionContractTypeOptionContractObject,
+			Value: &optionContractObject,
+		})
 	}
 
-	if err := utils.UnmarshalJSON(data, &o, "", false, nil); err != nil {
-		return err
+	var arrayOfOptionContractObject []OptionContractObject = []OptionContractObject{}
+	if err := utils.UnmarshalJSON(data, &arrayOfOptionContractObject, "", true, nil); err == nil {
+		candidates = append(candidates, utils.UnionCandidate{
+			Type:  OptionContractTypeArrayOfOptionContractObject,
+			Value: arrayOfOptionContractObject,
+		})
 	}
-	return nil
-}
 
-func (o *OptionContract) GetPutCall() *OptionContractPutCall {
-	if o == nil {
+	if len(candidates) == 0 {
+		return fmt.Errorf("could not unmarshal `%s` into any supported union types for OptionContract", string(data))
+	}
+
+	// Pick the best candidate using multi-stage filtering
+	best := utils.PickBestUnionCandidate(candidates, data)
+	if best == nil {
+		return fmt.Errorf("could not unmarshal `%s` into any supported union types for OptionContract", string(data))
+	}
+
+	// Set the union type and value based on the best candidate
+	u.Type = best.Type.(OptionContractType)
+	switch best.Type {
+	case OptionContractTypeOptionContractObject:
+		u.OptionContractObject = best.Value.(*OptionContractObject)
+		return nil
+	case OptionContractTypeArrayOfOptionContractObject:
+		u.ArrayOfOptionContractObject = best.Value.([]OptionContractObject)
 		return nil
 	}
-	return o.PutCall
+
+	return fmt.Errorf("could not unmarshal `%s` into any supported union types for OptionContract", string(data))
 }
 
-func (o *OptionContract) GetSymbol() *string {
-	if o == nil {
-		return nil
+func (u OptionContract) MarshalJSON() ([]byte, error) {
+	if u.OptionContractObject != nil {
+		return utils.MarshalJSON(u.OptionContractObject, "", true)
 	}
-	return o.Symbol
-}
 
-func (o *OptionContract) GetDescription() *string {
-	if o == nil {
-		return nil
+	if u.ArrayOfOptionContractObject != nil {
+		return utils.MarshalJSON(u.ArrayOfOptionContractObject, "", true)
 	}
-	return o.Description
-}
 
-func (o *OptionContract) GetExchangeName() *string {
-	if o == nil {
-		return nil
-	}
-	return o.ExchangeName
-}
-
-func (o *OptionContract) GetBidPrice() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.BidPrice
-}
-
-func (o *OptionContract) GetAskPrice() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.AskPrice
-}
-
-func (o *OptionContract) GetLastPrice() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.LastPrice
-}
-
-func (o *OptionContract) GetMarkPrice() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.MarkPrice
-}
-
-func (o *OptionContract) GetBidSize() *int {
-	if o == nil {
-		return nil
-	}
-	return o.BidSize
-}
-
-func (o *OptionContract) GetAskSize() *int {
-	if o == nil {
-		return nil
-	}
-	return o.AskSize
-}
-
-func (o *OptionContract) GetLastSize() *int {
-	if o == nil {
-		return nil
-	}
-	return o.LastSize
-}
-
-func (o *OptionContract) GetHighPrice() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.HighPrice
-}
-
-func (o *OptionContract) GetLowPrice() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.LowPrice
-}
-
-func (o *OptionContract) GetOpenPrice() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.OpenPrice
-}
-
-func (o *OptionContract) GetClosePrice() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.ClosePrice
-}
-
-func (o *OptionContract) GetTotalVolume() *int {
-	if o == nil {
-		return nil
-	}
-	return o.TotalVolume
-}
-
-func (o *OptionContract) GetTradeDate() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.TradeDate
-}
-
-func (o *OptionContract) GetQuoteTimeInLong() *int {
-	if o == nil {
-		return nil
-	}
-	return o.QuoteTimeInLong
-}
-
-func (o *OptionContract) GetTradeTimeInLong() *int {
-	if o == nil {
-		return nil
-	}
-	return o.TradeTimeInLong
-}
-
-func (o *OptionContract) GetNetChange() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.NetChange
-}
-
-func (o *OptionContract) GetVolatility() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.Volatility
-}
-
-func (o *OptionContract) GetDelta() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.Delta
-}
-
-func (o *OptionContract) GetGamma() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.Gamma
-}
-
-func (o *OptionContract) GetTheta() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.Theta
-}
-
-func (o *OptionContract) GetVega() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.Vega
-}
-
-func (o *OptionContract) GetRho() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.Rho
-}
-
-func (o *OptionContract) GetTimeValue() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.TimeValue
-}
-
-func (o *OptionContract) GetOpenInterest() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.OpenInterest
-}
-
-func (o *OptionContract) GetIsInTheMoney() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.IsInTheMoney
-}
-
-func (o *OptionContract) GetTheoreticalOptionValue() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.TheoreticalOptionValue
-}
-
-func (o *OptionContract) GetTheoreticalVolatility() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.TheoreticalVolatility
-}
-
-func (o *OptionContract) GetIsMini() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.IsMini
-}
-
-func (o *OptionContract) GetIsNonStandard() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.IsNonStandard
-}
-
-func (o *OptionContract) GetOptionDeliverablesList() []OptionDeliverables {
-	if o == nil {
-		return nil
-	}
-	return o.OptionDeliverablesList
-}
-
-func (o *OptionContract) GetStrikePrice() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.StrikePrice
-}
-
-func (o *OptionContract) GetExpirationDate() *string {
-	if o == nil {
-		return nil
-	}
-	return o.ExpirationDate
-}
-
-func (o *OptionContract) GetDaysToExpiration() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.DaysToExpiration
-}
-
-func (o *OptionContract) GetExpirationType() *ExpirationType {
-	if o == nil {
-		return nil
-	}
-	return o.ExpirationType
-}
-
-func (o *OptionContract) GetLastTradingDay() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.LastTradingDay
-}
-
-func (o *OptionContract) GetMultiplier() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.Multiplier
-}
-
-func (o *OptionContract) GetSettlementType() *SettlementType {
-	if o == nil {
-		return nil
-	}
-	return o.SettlementType
-}
-
-func (o *OptionContract) GetDeliverableNote() *string {
-	if o == nil {
-		return nil
-	}
-	return o.DeliverableNote
-}
-
-func (o *OptionContract) GetIsIndexOption() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.IsIndexOption
-}
-
-func (o *OptionContract) GetPercentChange() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.PercentChange
-}
-
-func (o *OptionContract) GetMarkChange() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.MarkChange
-}
-
-func (o *OptionContract) GetMarkPercentChange() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.MarkPercentChange
-}
-
-func (o *OptionContract) GetIsPennyPilot() *bool {
-	if o == nil {
-		return nil
-	}
-	return o.IsPennyPilot
-}
-
-func (o *OptionContract) GetIntrinsicValue() *float64 {
-	if o == nil {
-		return nil
-	}
-	return o.IntrinsicValue
-}
-
-func (o *OptionContract) GetOptionRoot() *string {
-	if o == nil {
-		return nil
-	}
-	return o.OptionRoot
+	return nil, errors.New("could not marshal union type OptionContract: all fields are null")
 }

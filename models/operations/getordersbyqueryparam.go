@@ -7,6 +7,10 @@ import (
 	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 )
 
+var GetOrdersByQueryParamServerList = []string{
+	"https://api.schwabapi.com/trader/v1",
+}
+
 type GetOrdersByQueryParamRequest struct {
 	// The max number of orders to retrieve. Default is 3000.
 	MaxResults *int64 `queryParam:"style=form,explode=true,name=maxResults"`

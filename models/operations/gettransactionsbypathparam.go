@@ -7,6 +7,10 @@ import (
 	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 )
 
+var GetTransactionsByPathParamServerList = []string{
+	"https://api.schwabapi.com/trader/v1",
+}
+
 type GetTransactionsByPathParamRequest struct {
 	// The encrypted ID of the account
 	AccountNumber string `pathParam:"style=simple,explode=false,name=accountNumber"`

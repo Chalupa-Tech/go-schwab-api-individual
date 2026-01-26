@@ -8,6 +8,11 @@ import (
 	"github.com/Chalupa-Tech/go-schwab-api-individual/types"
 )
 
+var GetMarketHoursServerList = []string{
+	"https://api.schwabapi.com/marketdata/v1",
+	"https://api.schwabapi.com/marketdata/v1",
+}
+
 type GetMarketHoursRequest struct {
 	// List of markets
 	Markets []components.QueryParamMarkets `queryParam:"style=form,explode=true,name=markets"`

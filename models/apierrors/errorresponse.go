@@ -4,7 +4,6 @@ package apierrors
 
 import (
 	"encoding/json"
-
 	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 )
 
@@ -19,27 +18,4 @@ var _ error = &ErrorResponse{}
 func (e *ErrorResponse) Error() string {
 	data, _ := json.Marshal(e)
 	return string(data)
-}
-
-func (e *ErrorResponse) UnmarshalJSON(data []byte) error {
-	if len(data) == 0 {
-		return nil
-	}
-	if data[0] == '[' {
-		var errs []components.Error
-		if err := json.Unmarshal(data, &errs); err == nil {
-			e.Errors = errs
-			return nil
-		}
-		// if fails, maybe try something else or return error
-		// For now, return nil to avoid crashing client if unexpected array
-		return nil
-	}
-	type ErrorResponseAlias ErrorResponse
-	var aux ErrorResponseAlias
-	if err := json.Unmarshal(data, &aux); err != nil {
-		return err
-	}
-	*e = ErrorResponse(aux)
-	return nil
 }

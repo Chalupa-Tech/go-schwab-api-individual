@@ -13,7 +13,7 @@ Developer-friendly & type-safe Go SDK specifically catered to leverage *undefine
 <!-- Start Summary [summary] -->
 ## Summary
 
-Trader API - Account Access and User Preferences: Schwab Trader API access to Account, Order entry and User Preferences
+Market Data: Trader API - Market data
 <!-- End Summary [summary] -->
 
 <!-- Start Table of Contents [toc] -->
@@ -26,7 +26,6 @@ Trader API - Account Access and User Preferences: Schwab Trader API access to Ac
   * [Available Resources and Operations](#available-resources-and-operations)
   * [Retries](#retries)
   * [Error Handling](#error-handling)
-  * [Server Selection](#server-selection)
   * [Custom HTTP Client](#custom-http-client)
   * [Special Types](#special-types)
 * [Development](#development)
@@ -40,7 +39,7 @@ Trader API - Account Access and User Preferences: Schwab Trader API access to Ac
 
 To add the SDK as a dependency to your project:
 ```bash
-go get undefined
+go get github.com/Chalupa-Tech/go-schwab-api-individual
 ```
 <!-- End SDK Installation [installation] -->
 
@@ -54,15 +53,16 @@ package main
 
 import (
 	"context"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
 	"log"
-	"undefined"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := undefined.New(
-		undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+	s := schwab.New(
+		"https://api.example.com",
+		schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
 	)
 
 	res, err := s.Accounts.GetAccountNumbers(ctx)
@@ -94,15 +94,16 @@ package main
 
 import (
 	"context"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
 	"log"
-	"undefined"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := undefined.New(
-		undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+	s := schwab.New(
+		"https://api.example.com",
+		schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
 	)
 
 	res, err := s.Accounts.GetAccountNumbers(ctx)
@@ -193,17 +194,18 @@ package main
 
 import (
 	"context"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/retry"
 	"log"
 	"models/operations"
-	"undefined"
-	"undefined/retry"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := undefined.New(
-		undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+	s := schwab.New(
+		"https://api.example.com",
+		schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
 	)
 
 	res, err := s.Accounts.GetAccountNumbers(ctx, operations.WithRetries(
@@ -233,16 +235,17 @@ package main
 
 import (
 	"context"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/retry"
 	"log"
-	"undefined"
-	"undefined/retry"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := undefined.New(
-		undefined.WithRetryConfig(
+	s := schwab.New(
+		"https://api.example.com",
+		schwab.WithRetryConfig(
 			retry.Config{
 				Strategy: "backoff",
 				Backoff: &retry.BackoffStrategy{
@@ -253,7 +256,7 @@ func main() {
 				},
 				RetryConnectionErrors: false,
 			}),
-		undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+		schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
 	)
 
 	res, err := s.Accounts.GetAccountNumbers(ctx)
@@ -291,16 +294,17 @@ package main
 import (
 	"context"
 	"errors"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/models/apierrors"
 	"log"
-	"undefined"
-	"undefined/models/apierrors"
 )
 
 func main() {
 	ctx := context.Background()
 
-	s := undefined.New(
-		undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+	s := schwab.New(
+		"https://api.example.com",
+		schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
 	)
 
 	res, err := s.Accounts.GetAccountNumbers(ctx)
@@ -329,80 +333,6 @@ func main() {
 ```
 <!-- End Error Handling [errors] -->
 
-<!-- Start Server Selection [server] -->
-## Server Selection
-
-### Select Server by Index
-
-You can override the default server globally using the `WithServerIndex(serverIndex int)` option when initializing the SDK client instance. The selected server will then be used as the default on the operations that use it. This table lists the indexes associated with the available servers:
-
-| #   | Server                                    | Description |
-| --- | ----------------------------------------- | ----------- |
-| 0   | `https://api.schwabapi.com/trader/v1`     |             |
-| 1   | `https://api.schwabapi.com/marketdata/v1` |             |
-
-#### Example
-
-```go
-package main
-
-import (
-	"context"
-	"log"
-	"undefined"
-)
-
-func main() {
-	ctx := context.Background()
-
-	s := undefined.New(
-		undefined.WithServerIndex(0),
-		undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
-	)
-
-	res, err := s.Accounts.GetAccountNumbers(ctx)
-	if err != nil {
-		log.Fatal(err)
-	}
-	if res.AccountNumberHashes != nil {
-		// handle response
-	}
-}
-
-```
-
-### Override Server URL Per-Client
-
-The default server can also be overridden globally using the `WithServerURL(serverURL string)` option when initializing the SDK client instance. For example:
-```go
-package main
-
-import (
-	"context"
-	"log"
-	"undefined"
-)
-
-func main() {
-	ctx := context.Background()
-
-	s := undefined.New(
-		undefined.WithServerURL("https://api.schwabapi.com/marketdata/v1"),
-		undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
-	)
-
-	res, err := s.Accounts.GetAccountNumbers(ctx)
-	if err != nil {
-		log.Fatal(err)
-	}
-	if res.AccountNumberHashes != nil {
-		// handle response
-	}
-}
-
-```
-<!-- End Server Selection [server] -->
-
 <!-- Start Custom HTTP Client [http-client] -->
 ## Custom HTTP Client
 
@@ -421,12 +351,12 @@ import (
 	"net/http"
 	"time"
 
-	"undefined"
+	"github.com/Chalupa-Tech/go-schwab-api-individual"
 )
 
 var (
 	httpClient = &http.Client{Timeout: 30 * time.Second}
-	sdkClient  = undefined.New(undefined.WithClient(httpClient))
+	sdkClient  = schwab.New(schwab.WithClient(httpClient))
 )
 ```
 

@@ -7,6 +7,11 @@ import (
 	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 )
 
+var GetInstrumentsByCusipServerList = []string{
+	"https://api.schwabapi.com/marketdata/v1",
+	"https://api.schwabapi.com/marketdata/v1",
+}
+
 type GetInstrumentsByCusipRequest struct {
 	// cusip of a security
 	CusipID string `pathParam:"style=simple,explode=false,name=cusip_id"`

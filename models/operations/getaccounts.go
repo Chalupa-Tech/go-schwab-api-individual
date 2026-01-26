@@ -7,6 +7,10 @@ import (
 	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 )
 
+var GetAccountsServerList = []string{
+	"https://api.schwabapi.com/trader/v1",
+}
+
 type GetAccountsRequest struct {
 	// This allows one to determine which fields they want returned. Possible value in this String can be:
 	// <br><code>positions</code><br> Example:<br><code>fields=positions</code>

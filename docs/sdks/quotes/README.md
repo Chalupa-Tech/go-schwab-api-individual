@@ -21,18 +21,19 @@ package main
 
 import(
 	"context"
-	"undefined"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
-        undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+    s := schwab.New(
+        "https://api.example.com",
+        schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
     )
 
-    res, err := s.Quotes.GetQuotes(ctx, undefined.Pointer("MRAD,EATOF,EBIZ,AAPL,BAC,AAAHX,AAAIX,$DJI,$SPX,MVEN,SOBS,TOITF,CNSWF,AMZN  230317C01360000,DJX   231215C00290000,/ESH23,./ADUF23C0.55,AUD/CAD"), undefined.Pointer("quote,reference"), undefined.Pointer(false))
+    res, err := s.Quotes.GetQuotes(ctx, schwab.Pointer("MRAD,EATOF,EBIZ,AAPL,BAC,AAAHX,AAAIX,$DJI,$SPX,MVEN,SOBS,TOITF,CNSWF,AMZN  230317C01360000,DJX   231215C00290000,/ESH23,./ADUF23C0.55,AUD/CAD"), schwab.Pointer("quote,reference"), schwab.Pointer(false))
     if err != nil {
         log.Fatal(err)
     }
@@ -76,18 +77,19 @@ package main
 
 import(
 	"context"
-	"undefined"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
-        undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+    s := schwab.New(
+        "https://api.example.com",
+        schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
     )
 
-    res, err := s.Quotes.GetQuote(ctx, "TSLA", undefined.Pointer("quote,reference"))
+    res, err := s.Quotes.GetQuote(ctx, "TSLA", schwab.Pointer("quote,reference"))
     if err != nil {
         log.Fatal(err)
     }

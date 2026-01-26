@@ -21,16 +21,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
-        undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+    s := schwab.New(
+        "https://api.example.com",
+        schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
     )
 
     res, err := s.MarketHours.GetMarketHours(ctx, []components.QueryParamMarkets{}, nil)
@@ -76,16 +77,17 @@ package main
 
 import(
 	"context"
-	"undefined"
-	"undefined/models/components"
+	schwab "github.com/Chalupa-Tech/go-schwab-api-individual"
+	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 	"log"
 )
 
 func main() {
     ctx := context.Background()
 
-    s := undefined.New(
-        undefined.WithSecurity("<YOUR_OAUTH_HERE>"),
+    s := schwab.New(
+        "https://api.example.com",
+        schwab.WithSecurity("<YOUR_OAUTH_HERE>"),
     )
 
     res, err := s.MarketHours.GetMarketHour(ctx, components.PathParamMarketForex, nil)

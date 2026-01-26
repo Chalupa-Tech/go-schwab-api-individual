@@ -7,6 +7,10 @@ import (
 	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 )
 
+var GetAccountNumbersServerList = []string{
+	"https://api.schwabapi.com/trader/v1",
+}
+
 type GetAccountNumbersResponse struct {
 	HTTPMeta components.HTTPMetadata `json:"-"`
 	// List of valid "accounts", matching the provided input parameters.

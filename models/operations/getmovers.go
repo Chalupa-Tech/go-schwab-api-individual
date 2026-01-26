@@ -7,6 +7,11 @@ import (
 	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 )
 
+var GetMoversServerList = []string{
+	"https://api.schwabapi.com/marketdata/v1",
+	"https://api.schwabapi.com/marketdata/v1",
+}
+
 type GetMoversRequest struct {
 	// Index Symbol
 	SymbolID components.PathParamSymbol `pathParam:"style=simple,explode=false,name=symbol_id"`

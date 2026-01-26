@@ -138,9 +138,9 @@ func (o *OrderLegCollection) GetInstrumentCashEquivalent() *AccountCashEquivalen
 	return nil
 }
 
-func (o *OrderLegCollection) GetInstrumentEquity() *AccountsBaseInstrument {
+func (o *OrderLegCollection) GetInstrumentEquity() *AccountEquity {
 	if v := o.GetInstrument(); v != nil {
-		return v.AccountsBaseInstrument
+		return v.AccountEquity
 	}
 	return nil
 }
@@ -152,9 +152,9 @@ func (o *OrderLegCollection) GetInstrumentFixedIncome() *AccountFixedIncome {
 	return nil
 }
 
-func (o *OrderLegCollection) GetInstrumentMutualFund() *AccountsBaseInstrument {
+func (o *OrderLegCollection) GetInstrumentMutualFund() *AccountMutualFund {
 	if v := o.GetInstrument(); v != nil {
-		return v.AccountsBaseInstrument
+		return v.AccountMutualFund
 	}
 	return nil
 }

@@ -2,11 +2,26 @@
 
 package components
 
+import (
+	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
+)
+
 type OptionDeliverables struct {
 	Symbol           *string  `json:"symbol,omitzero"`
 	AssetType        *string  `json:"assetType,omitzero"`
 	DeliverableUnits *float64 `json:"deliverableUnits,omitzero"`
 	CurrencyType     *string  `json:"currencyType,omitzero"`
+}
+
+func (o OptionDeliverables) MarshalJSON() ([]byte, error) {
+	return utils.MarshalJSON(o, "", false)
+}
+
+func (o *OptionDeliverables) UnmarshalJSON(data []byte) error {
+	if err := utils.UnmarshalJSON(data, &o, "", false, nil); err != nil {
+		return err
+	}
+	return nil
 }
 
 func (o *OptionDeliverables) GetSymbol() *string {

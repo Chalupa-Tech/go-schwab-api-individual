@@ -6,7 +6,6 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-
 	"github.com/Chalupa-Tech/go-schwab-api-individual/internal/utils"
 )
 
@@ -21,11 +20,11 @@ const (
 )
 
 type AccountsInstrument struct {
-	AccountCashEquivalent  *AccountCashEquivalent  `queryParam:"inline" union:"member"`
-	AccountsBaseInstrument *AccountsBaseInstrument `queryParam:"inline" union:"member"`
-	AccountFixedIncome     *AccountFixedIncome     `queryParam:"inline" union:"member"`
-
-	AccountOption *AccountOption `queryParam:"inline" union:"member"`
+	AccountCashEquivalent *AccountCashEquivalent `queryParam:"inline" union:"member"`
+	AccountEquity         *AccountEquity         `queryParam:"inline" union:"member"`
+	AccountFixedIncome    *AccountFixedIncome    `queryParam:"inline" union:"member"`
+	AccountMutualFund     *AccountMutualFund     `queryParam:"inline" union:"member"`
+	AccountOption         *AccountOption         `queryParam:"inline" union:"member"`
 
 	Type AccountsInstrumentType
 }
@@ -42,15 +41,15 @@ func CreateAccountsInstrumentCashEquivalent(cashEquivalent AccountCashEquivalent
 	}
 }
 
-func CreateAccountsInstrumentEquity(equity AccountsBaseInstrument) AccountsInstrument {
+func CreateAccountsInstrumentEquity(equity AccountEquity) AccountsInstrument {
 	typ := AccountsInstrumentTypeEquity
 
-	typStr := AccountsBaseInstrumentAssetType(typ)
+	typStr := AccountEquityAssetType(typ)
 	equity.AssetType = typStr
 
 	return AccountsInstrument{
-		AccountsBaseInstrument: &equity,
-		Type:                   typ,
+		AccountEquity: &equity,
+		Type:          typ,
 	}
 }
 
@@ -66,15 +65,15 @@ func CreateAccountsInstrumentFixedIncome(fixedIncome AccountFixedIncome) Account
 	}
 }
 
-func CreateAccountsInstrumentMutualFund(mutualFund AccountsBaseInstrument) AccountsInstrument {
+func CreateAccountsInstrumentMutualFund(mutualFund AccountMutualFund) AccountsInstrument {
 	typ := AccountsInstrumentTypeMutualFund
 
-	typStr := AccountsBaseInstrumentAssetType(typ)
+	typStr := AccountMutualFundAssetType(typ)
 	mutualFund.AssetType = typStr
 
 	return AccountsInstrument{
-		AccountsBaseInstrument: &mutualFund,
-		Type:                   typ,
+		AccountMutualFund: &mutualFund,
+		Type:              typ,
 	}
 }
 
@@ -112,12 +111,12 @@ func (u *AccountsInstrument) UnmarshalJSON(data []byte) error {
 		u.Type = AccountsInstrumentTypeCashEquivalent
 		return nil
 	case "EQUITY":
-		accountsBaseInstrument := new(AccountsBaseInstrument)
-		if err := utils.UnmarshalJSON(data, &accountsBaseInstrument, "", true, nil); err != nil {
-			return fmt.Errorf("could not unmarshal `%s` into expected (AssetType == EQUITY) type AccountsBaseInstrument within AccountsInstrument: %w", string(data), err)
+		accountEquity := new(AccountEquity)
+		if err := utils.UnmarshalJSON(data, &accountEquity, "", true, nil); err != nil {
+			return fmt.Errorf("could not unmarshal `%s` into expected (AssetType == EQUITY) type AccountEquity within AccountsInstrument: %w", string(data), err)
 		}
 
-		u.AccountsBaseInstrument = accountsBaseInstrument
+		u.AccountEquity = accountEquity
 		u.Type = AccountsInstrumentTypeEquity
 		return nil
 	case "FIXED_INCOME":
@@ -130,12 +129,12 @@ func (u *AccountsInstrument) UnmarshalJSON(data []byte) error {
 		u.Type = AccountsInstrumentTypeFixedIncome
 		return nil
 	case "MUTUAL_FUND":
-		accountsBaseInstrument := new(AccountsBaseInstrument)
-		if err := utils.UnmarshalJSON(data, &accountsBaseInstrument, "", true, nil); err != nil {
-			return fmt.Errorf("could not unmarshal `%s` into expected (AssetType == MUTUAL_FUND) type AccountsBaseInstrument within AccountsInstrument: %w", string(data), err)
+		accountMutualFund := new(AccountMutualFund)
+		if err := utils.UnmarshalJSON(data, &accountMutualFund, "", true, nil); err != nil {
+			return fmt.Errorf("could not unmarshal `%s` into expected (AssetType == MUTUAL_FUND) type AccountMutualFund within AccountsInstrument: %w", string(data), err)
 		}
 
-		u.AccountsBaseInstrument = accountsBaseInstrument
+		u.AccountMutualFund = accountMutualFund
 		u.Type = AccountsInstrumentTypeMutualFund
 		return nil
 	case "OPTION":
@@ -157,16 +156,16 @@ func (u AccountsInstrument) MarshalJSON() ([]byte, error) {
 		return utils.MarshalJSON(u.AccountCashEquivalent, "", true)
 	}
 
-	if u.AccountsBaseInstrument != nil {
-		return utils.MarshalJSON(u.AccountsBaseInstrument, "", true)
+	if u.AccountEquity != nil {
+		return utils.MarshalJSON(u.AccountEquity, "", true)
 	}
 
 	if u.AccountFixedIncome != nil {
 		return utils.MarshalJSON(u.AccountFixedIncome, "", true)
 	}
 
-	if u.AccountsBaseInstrument != nil {
-		return utils.MarshalJSON(u.AccountsBaseInstrument, "", true)
+	if u.AccountMutualFund != nil {
+		return utils.MarshalJSON(u.AccountMutualFund, "", true)
 	}
 
 	if u.AccountOption != nil {

@@ -7,6 +7,11 @@ import (
 	"github.com/Chalupa-Tech/go-schwab-api-individual/models/components"
 )
 
+var GetPriceHistoryServerList = []string{
+	"https://api.schwabapi.com/marketdata/v1",
+	"https://api.schwabapi.com/marketdata/v1",
+}
+
 type GetPriceHistoryRequest struct {
 	// The Equity symbol used to look up price history
 	Symbol string `queryParam:"style=form,explode=true,name=symbol"`

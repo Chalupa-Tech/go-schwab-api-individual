@@ -7,6 +7,34 @@ import (
 	"time"
 )
 
+type FutureAssetType string
+
+const (
+	FutureAssetTypeEquity               FutureAssetType = "EQUITY"
+	FutureAssetTypeOption               FutureAssetType = "OPTION"
+	FutureAssetTypeIndex                FutureAssetType = "INDEX"
+	FutureAssetTypeMutualFund           FutureAssetType = "MUTUAL_FUND"
+	FutureAssetTypeCashEquivalent       FutureAssetType = "CASH_EQUIVALENT"
+	FutureAssetTypeFixedIncome          FutureAssetType = "FIXED_INCOME"
+	FutureAssetTypeCurrency             FutureAssetType = "CURRENCY"
+	FutureAssetTypeCollectiveInvestment FutureAssetType = "COLLECTIVE_INVESTMENT"
+)
+
+func (e FutureAssetType) ToPointer() *FutureAssetType {
+	return &e
+}
+
+// IsExact returns true if the value matches a known enum value, false otherwise.
+func (e *FutureAssetType) IsExact() bool {
+	if e != nil {
+		switch *e {
+		case "EQUITY", "OPTION", "INDEX", "MUTUAL_FUND", "CASH_EQUIVALENT", "FIXED_INCOME", "CURRENCY", "COLLECTIVE_INVESTMENT":
+			return true
+		}
+	}
+	return false
+}
+
 type FutureType string
 
 const (
@@ -30,12 +58,18 @@ func (e *FutureType) IsExact() bool {
 }
 
 type Future struct {
-	ActiveContract  *bool       `default:"false" json:"activeContract"`
-	Type            *FutureType `json:"type,omitzero"`
-	ExpirationDate  *time.Time  `json:"expirationDate,omitzero"`
-	LastTradingDate *time.Time  `json:"lastTradingDate,omitzero"`
-	FirstNoticeDate *time.Time  `json:"firstNoticeDate,omitzero"`
-	Multiplier      *float64    `json:"multiplier,omitzero"`
+	AssetType       FutureAssetType `json:"assetType"`
+	Cusip           *string         `json:"cusip,omitzero"`
+	Symbol          *string         `json:"symbol,omitzero"`
+	Description     *string         `json:"description,omitzero"`
+	InstrumentID    *int64          `json:"instrumentId,omitzero"`
+	NetChange       *float64        `json:"netChange,omitzero"`
+	ActiveContract  *bool           `default:"false" json:"activeContract"`
+	Type            *FutureType     `json:"type,omitzero"`
+	ExpirationDate  *time.Time      `json:"expirationDate,omitzero"`
+	LastTradingDate *time.Time      `json:"lastTradingDate,omitzero"`
+	FirstNoticeDate *time.Time      `json:"firstNoticeDate,omitzero"`
+	Multiplier      *float64        `json:"multiplier,omitzero"`
 }
 
 func (f Future) MarshalJSON() ([]byte, error) {
@@ -47,6 +81,48 @@ func (f *Future) UnmarshalJSON(data []byte) error {
 		return err
 	}
 	return nil
+}
+
+func (f *Future) GetAssetType() FutureAssetType {
+	if f == nil {
+		return FutureAssetType("")
+	}
+	return f.AssetType
+}
+
+func (f *Future) GetCusip() *string {
+	if f == nil {
+		return nil
+	}
+	return f.Cusip
+}
+
+func (f *Future) GetSymbol() *string {
+	if f == nil {
+		return nil
+	}
+	return f.Symbol
+}
+
+func (f *Future) GetDescription() *string {
+	if f == nil {
+		return nil
+	}
+	return f.Description
+}
+
+func (f *Future) GetInstrumentID() *int64 {
+	if f == nil {
+		return nil
+	}
+	return f.InstrumentID
+}
+
+func (f *Future) GetNetChange() *float64 {
+	if f == nil {
+		return nil
+	}
+	return f.NetChange
 }
 
 func (f *Future) GetActiveContract() *bool {
