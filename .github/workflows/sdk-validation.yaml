@@ -22,7 +22,7 @@ jobs:
         with:
           repository: tbigelow/schwab-reporter
           path: tayvens-stock-report
-          # token: ${{ secrets.PAT_TOKEN }} # Uncomment if repo is private
+          token: ${{ secrets.GH_PAT }}
 
       - name: Set up Go
         uses: actions/setup-go@v5
