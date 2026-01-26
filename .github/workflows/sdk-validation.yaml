@@ -20,7 +20,7 @@ jobs:
       - name: Checkout Consumer
         uses: actions/checkout@v4
         with:
-          repository: tbigelow/schwab-reporter
+          repository: Chalupa-Tech/tayvens-stock-report
           path: tayvens-stock-report
           token: ${{ secrets.GH_PAT }}
 
