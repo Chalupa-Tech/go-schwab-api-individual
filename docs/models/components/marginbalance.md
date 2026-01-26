@@ -21,6 +21,6 @@
 | `ShortBalance`                     | **float64*                         | :heavy_minus_sign:                 | N/A                                |
 | `ShortMarginValue`                 | **float64*                         | :heavy_minus_sign:                 | N/A                                |
 | `Sma`                              | **float64*                         | :heavy_minus_sign:                 | N/A                                |
-| `IsInCall`                         | **float64*                         | :heavy_minus_sign:                 | N/A                                |
+| `IsInCall`                         | **bool*                            | :heavy_minus_sign:                 | N/A                                |
 | `StockBuyingPower`                 | **float64*                         | :heavy_minus_sign:                 | N/A                                |
 | `OptionBuyingPower`                | **float64*                         | :heavy_minus_sign:                 | N/A                                |

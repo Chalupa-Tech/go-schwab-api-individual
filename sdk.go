@@ -109,9 +109,9 @@ func WithTimeout(timeout time.Duration) SDKOption {
 // New creates a new instance of the SDK with the provided serverURL and options
 func New(serverURL string, opts ...SDKOption) *SDK {
 	sdk := &SDK{
-		SDKVersion: "0.0.3",
+		SDKVersion: "0.0.4",
 		sdkConfiguration: config.SDKConfiguration{
-			UserAgent: "speakeasy-sdk/go 0.0.3 2.799.0 1.0.0 github.com/Chalupa-Tech/go-schwab-api-individual",
+			UserAgent: "speakeasy-sdk/go 0.0.4 2.799.0 1.0.0 github.com/Chalupa-Tech/go-schwab-api-individual",
 		},
 		hooks: hooks.New(),
 	}

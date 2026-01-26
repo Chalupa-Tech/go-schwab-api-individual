@@ -245,3 +245,17 @@ actions:
         _type:
           type: string
           default: AccountMutualFund
+
+  # 8. Fix isInCall Type Mismatch
+  - target: $.components.schemas.MarginInitialBalance.properties.isInCall
+    update:
+      type: boolean
+  - target: $.components.schemas.MarginBalance.properties.isInCall
+    update:
+      type: boolean
+  - target: $.components.schemas.CashInitialBalance.properties.isInCall
+    update:
+      type: boolean
+  - target: $.components.schemas.CashBalance.properties.isInCall
+    update:
+      type: boolean

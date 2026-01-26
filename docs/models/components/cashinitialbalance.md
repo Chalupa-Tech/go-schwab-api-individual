@@ -18,7 +18,7 @@
 | `MutualFundValue`            | **float64*                   | :heavy_minus_sign:           | N/A                          |
 | `ShortOptionMarketValue`     | **float64*                   | :heavy_minus_sign:           | N/A                          |
 | `ShortStockValue`            | **float64*                   | :heavy_minus_sign:           | N/A                          |
-| `IsInCall`                   | **float64*                   | :heavy_minus_sign:           | N/A                          |
+| `IsInCall`                   | **bool*                      | :heavy_minus_sign:           | N/A                          |
 | `UnsettledCash`              | **float64*                   | :heavy_minus_sign:           | N/A                          |
 | `CashDebitCallValue`         | **float64*                   | :heavy_minus_sign:           | N/A                          |
 | `PendingDeposits`            | **float64*                   | :heavy_minus_sign:           | N/A                          |

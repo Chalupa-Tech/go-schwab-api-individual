@@ -20,7 +20,7 @@ type CashInitialBalance struct {
 	MutualFundValue            *float64 `json:"mutualFundValue,omitzero"`
 	ShortOptionMarketValue     *float64 `json:"shortOptionMarketValue,omitzero"`
 	ShortStockValue            *float64 `json:"shortStockValue,omitzero"`
-	IsInCall                   *float64 `json:"isInCall,omitzero"`
+	IsInCall                   *bool    `json:"isInCall,omitzero"`
 	UnsettledCash              *float64 `json:"unsettledCash,omitzero"`
 	CashDebitCallValue         *float64 `json:"cashDebitCallValue,omitzero"`
 	PendingDeposits            *float64 `json:"pendingDeposits,omitzero"`
@@ -129,7 +129,7 @@ func (c *CashInitialBalance) GetShortStockValue() *float64 {
 	return c.ShortStockValue
 }
 
-func (c *CashInitialBalance) GetIsInCall() *float64 {
+func (c *CashInitialBalance) GetIsInCall() *bool {
 	if c == nil {
 		return nil
 	}

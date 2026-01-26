@@ -32,7 +32,7 @@
 | `ShortOptionMarketValue`           | **float64*                         | :heavy_minus_sign:                 | N/A                                |
 | `ShortStockValue`                  | **float64*                         | :heavy_minus_sign:                 | N/A                                |
 | `TotalCash`                        | **float64*                         | :heavy_minus_sign:                 | N/A                                |
-| `IsInCall`                         | **float64*                         | :heavy_minus_sign:                 | N/A                                |
+| `IsInCall`                         | **bool*                            | :heavy_minus_sign:                 | N/A                                |
 | `UnsettledCash`                    | **float64*                         | :heavy_minus_sign:                 | N/A                                |
 | `PendingDeposits`                  | **float64*                         | :heavy_minus_sign:                 | N/A                                |
 | `MarginBalance`                    | **float64*                         | :heavy_minus_sign:                 | N/A                                |
