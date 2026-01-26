@@ -393,11 +393,17 @@ d6 := types.MustDateFromString("2019-01-01") // returns types.Date and panics on
 
 # Development
 
-## Maturity
+## Versioning
 
-This SDK is in beta, and there may be breaking changes between versions without a major version update. Therefore, we recommend pinning usage
-to a specific package version. This way, you can install the same version each time without breaking changes unless you are intentionally
-looking for the latest version.
+This SDK follows [Semantic Versioning](https://semver.org/).
+
+- **v0.x.x**: Unstable. Public APIs, types, and schema definitions may change breakingly between minor versions as we refine the `openapi-overlay.yaml` patching strategy.
+- **v1.0.0**: Stable. Will mark the first release where the OptionContract unions and critical boolean/number types are considered solidified.
+
+### Schema Management
+This SDK uses an **Overlay-First Strategy** to patch the upstream Charles Schwab OpenAPI spec. 
+- 📄 See [docs/OVERLAY_STRATEGY.md](docs/OVERLAY_STRATEGY.md) for details on current patches.
+- 🛠️ Run `scripts/validate_consumer.sh` to verify changes against downstream consumers.
 
 ## Contributions
 
