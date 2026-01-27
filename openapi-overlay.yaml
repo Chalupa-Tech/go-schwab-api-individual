@@ -1,0 +1,261 @@
+overlay: 1.0.0
+info:
+  title: Fix Schwab SDK Data Types and Routing
+  version: 1.0.0
+actions:
+  # 1. OptionDeliverables Type Fix
+  - target: $.components.schemas.OptionDeliverables.properties.deliverableUnits
+    update:
+      type: number
+      format: double
+
+  # 2. Add OptionContractObject (Copy of OptionContract)
+  # Assuming merge behavior for objects
+  - target: $.components.schemas
+    update:
+      OptionContractObject:
+        type: object
+        properties:
+          putCall:
+            type: string
+            enum:
+              - PUT
+              - CALL
+          symbol:
+            type: string
+          description:
+            type: string
+          exchangeName:
+            type: string
+          bidPrice:
+            type: number
+            format: double
+          askPrice:
+            type: number
+            format: double
+          lastPrice:
+            type: number
+            format: double
+          markPrice:
+            type: number
+            format: double
+          bidSize:
+            type: integer
+            format: int32
+          askSize:
+            type: integer
+            format: int32
+          lastSize:
+            type: integer
+            format: int32
+          highPrice:
+            type: number
+            format: double
+          lowPrice:
+            type: number
+            format: double
+          openPrice:
+            type: number
+            format: double
+          closePrice:
+            type: number
+            format: double
+          totalVolume:
+            type: integer
+            format: int32
+          tradeDate:
+            type: number
+            format: integer
+          quoteTimeInLong:
+            type: integer
+            format: int32
+          tradeTimeInLong:
+            type: integer
+            format: int32
+          netChange:
+            type: number
+            format: double
+          volatility:
+            type: number
+            format: double
+          delta:
+            type: number
+            format: double
+          gamma:
+            type: number
+            format: double
+          theta:
+            type: number
+            format: double
+          vega:
+            type: number
+            format: double
+          rho:
+            type: number
+            format: double
+          timeValue:
+            type: number
+            format: double
+          openInterest:
+            type: number
+            format: double
+          isInTheMoney:
+            type: boolean
+          theoreticalOptionValue:
+            type: number
+            format: double
+          theoreticalVolatility:
+            type: number
+            format: double
+          isMini:
+            type: boolean
+          isNonStandard:
+            type: boolean
+          optionDeliverablesList:
+            type: array
+            items:
+              $ref: '#/components/schemas/OptionDeliverables'
+          strikePrice:
+            type: number
+            format: double
+          expirationDate:
+            type: string
+          daysToExpiration:
+            type: number
+            format: int
+          expirationType:
+            $ref: '#/components/schemas/ExpirationType'
+          lastTradingDay:
+            type: number
+            format: long
+          multiplier:
+            type: number
+            format: double
+          settlementType:
+            $ref: '#/components/schemas/SettlementType'
+          deliverableNote:
+            type: string
+          isIndexOption:
+            type: boolean
+          percentChange:
+            type: number
+            format: double
+          markChange:
+            type: number
+            format: double
+          markPercentChange:
+            type: number
+            format: double
+          isPennyPilot:
+            type: boolean
+          intrinsicValue:
+            type: number
+            format: double
+          optionRoot:
+            type: string
+
+  # 3. Change OptionContract to oneOf
+  - target: $.components.schemas.OptionContract.properties
+    remove: true
+  - target: $.components.schemas.OptionContract.type
+    remove: true
+  - target: $.components.schemas.OptionContract
+    update:
+      oneOf:
+        - $ref: '#/components/schemas/OptionContractObject'
+        - type: array
+          items:
+            $ref: '#/components/schemas/OptionContractObject'
+  
+  # 4. Define Servers
+  - target: $.servers
+    update:
+      - url: https://api.schwabapi.com/trader/v1
+        description: Trader API
+      - url: https://api.schwabapi.com/marketdata/v1
+        description: Market Data API
+
+  # 5. Route Market Data Operations
+  - target: $.paths['/quotes'].get
+    update:
+      servers:
+        - url: https://api.schwabapi.com/marketdata/v1
+
+  - target: $.paths['/{symbol_id}/quotes'].get
+    update:
+      servers:
+        - url: https://api.schwabapi.com/marketdata/v1
+
+  - target: $.paths['/chains'].get
+    update:
+      servers:
+        - url: https://api.schwabapi.com/marketdata/v1
+
+  - target: $.paths['/expirationchain'].get
+    update:
+      servers:
+        - url: https://api.schwabapi.com/marketdata/v1
+
+  - target: $.paths['/pricehistory'].get
+    update:
+      servers:
+        - url: https://api.schwabapi.com/marketdata/v1
+
+  - target: $.paths['/movers/{symbol_id}'].get
+    update:
+      servers:
+        - url: https://api.schwabapi.com/marketdata/v1
+
+  - target: $.paths['/markets'].get
+    update:
+      servers:
+        - url: https://api.schwabapi.com/marketdata/v1
+
+  - target: $.paths['/markets/{market_id}'].get
+    update:
+      servers:
+        - url: https://api.schwabapi.com/marketdata/v1
+
+  - target: $.paths['/instruments'].get
+    update:
+      servers:
+        - url: https://api.schwabapi.com/marketdata/v1
+
+  - target: $.paths['/instruments/{cusip_id}'].get
+    update:
+      servers:
+        - url: https://api.schwabapi.com/marketdata/v1
+
+  # 6. Fix Circular Dependencies in Future and Index
+  - target: $.components.schemas.Future.allOf[0].$ref
+    update: '#/components/schemas/TransactionBaseInstrument'
+  - target: $.components.schemas.Index.allOf[0].$ref
+    update: '#/components/schemas/TransactionBaseInstrument'
+
+  # 7. Disambiguate AccountEquity and AccountMutualFund
+  - target: $.components.schemas.AccountEquity
+    update:
+      properties:
+        _type:
+          type: string
+          default: AccountEquity
+  - target: $.components.schemas.AccountMutualFund
+    update:
+      properties:
+        _type:
+          type: string
+          default: AccountMutualFund
+
+  # 8. Fix isInCall Type Mismatch
+  - target: $.components.schemas.MarginInitialBalance.properties.isInCall
+    update:
+      type: boolean
+  - target: $.components.schemas.MarginBalance.properties.isInCall
+    update:
+      type: boolean
+  - target: $.components.schemas.CashInitialBalance.properties.isInCall
+    update:
+      type: boolean
+  - target: $.components.schemas.CashBalance.properties.isInCall
+    update:
+      type: boolean

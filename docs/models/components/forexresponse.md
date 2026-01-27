@@ -1,0 +1,15 @@
+# ForexResponse
+
+Quote info of Forex security
+
+
+## Fields
+
+| Field                                                                   | Type                                                                    | Required                                                                | Description                                                             | Example                                                                 |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `AssetMainType`                                                         | [*components.AssetMainType](../../models/components/assetmaintype.md)   | :heavy_minus_sign:                                                      | Instrument's asset type                                                 |                                                                         |
+| `Ssid`                                                                  | **int64*                                                                | :heavy_minus_sign:                                                      | SSID of instrument                                                      | 1234567890                                                              |
+| `Symbol`                                                                | **string*                                                               | :heavy_minus_sign:                                                      | Symbol of instrument                                                    | AAPL                                                                    |
+| `Realtime`                                                              | **bool*                                                                 | :heavy_minus_sign:                                                      | is quote realtime                                                       | true                                                                    |
+| `Quote`                                                                 | [*components.QuoteForex](../../models/components/quoteforex.md)         | :heavy_minus_sign:                                                      | Quote data of Forex security                                            |                                                                         |
+| `Reference`                                                             | [*components.ReferenceForex](../../models/components/referenceforex.md) | :heavy_minus_sign:                                                      | Reference data of Forex security                                        |                                                                         |

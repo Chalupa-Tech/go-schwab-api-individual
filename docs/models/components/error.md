@@ -1,0 +1,12 @@
+# Error
+
+
+## Fields
+
+| Field                                                             | Type                                                              | Required                                                          | Description                                                       | Example                                                           |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `ID`                                                              | **string*                                                         | :heavy_minus_sign:                                                | Unique error id.                                                  | 9821320c-8500-4edf-bd46-a9299c13d2e0                              |
+| `Status`                                                          | [*components.ErrorStatus](../../models/components/errorstatus.md) | :heavy_minus_sign:                                                | The HTTP status code .                                            | 400                                                               |
+| `Title`                                                           | **string*                                                         | :heavy_minus_sign:                                                | Short error description.                                          | Missing header                                                    |
+| `Detail`                                                          | **string*                                                         | :heavy_minus_sign:                                                | Detailed error description.                                       | Search combination should not exceed 500.                         |
+| `Source`                                                          | [*components.ErrorSource](../../models/components/errorsource.md) | :heavy_minus_sign:                                                | Who is responsible for triggering these errors.                   |                                                                   |

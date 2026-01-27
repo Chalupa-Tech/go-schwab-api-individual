@@ -1,0 +1,14 @@
+# Product
+
+
+## Fields
+
+| Field                                                                      | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `AssetType`                                                                | [components.ProductAssetType](../../models/components/productassettype.md) | :heavy_check_mark:                                                         | N/A                                                                        |
+| `Cusip`                                                                    | **string*                                                                  | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `Symbol`                                                                   | **string*                                                                  | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `Description`                                                              | **string*                                                                  | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `InstrumentID`                                                             | **int64*                                                                   | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `NetChange`                                                                | **float64*                                                                 | :heavy_minus_sign:                                                         | N/A                                                                        |
+| `Type`                                                                     | [*components.ProductType](../../models/components/producttype.md)          | :heavy_minus_sign:                                                         | N/A                                                                        |

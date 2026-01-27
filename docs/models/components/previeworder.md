@@ -1,0 +1,11 @@
+# PreviewOrder
+
+
+## Fields
+
+| Field                                                                                 | Type                                                                                  | Required                                                                              | Description                                                                           |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| `OrderID`                                                                             | **int64*                                                                              | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `OrderStrategy`                                                                       | [*components.OrderStrategy](../../models/components/orderstrategy.md)                 | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `OrderValidationResult`                                                               | [*components.OrderValidationResult](../../models/components/ordervalidationresult.md) | :heavy_minus_sign:                                                                    | N/A                                                                                   |
+| `CommissionAndFee`                                                                    | [*components.CommissionAndFee](../../models/components/commissionandfee.md)           | :heavy_minus_sign:                                                                    | N/A                                                                                   |

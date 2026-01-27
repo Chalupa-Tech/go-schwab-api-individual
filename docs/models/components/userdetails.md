@@ -1,0 +1,15 @@
+# UserDetails
+
+
+## Fields
+
+| Field                                                                     | Type                                                                      | Required                                                                  | Description                                                               |
+| ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+| `CdDomainID`                                                              | **string*                                                                 | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `Login`                                                                   | **string*                                                                 | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `Type`                                                                    | [*components.UserDetailsType](../../models/components/userdetailstype.md) | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `UserID`                                                                  | **int64*                                                                  | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `SystemUserName`                                                          | **string*                                                                 | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `FirstName`                                                               | **string*                                                                 | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `LastName`                                                                | **string*                                                                 | :heavy_minus_sign:                                                        | N/A                                                                       |
+| `BrokerRepCode`                                                           | **string*                                                                 | :heavy_minus_sign:                                                        | N/A                                                                       |

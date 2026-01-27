@@ -1,0 +1,20 @@
+workflowVersion: 1.0.0
+speakeasyVersion: latest
+sources:
+    Trader API - Account Access and User Preferences:
+        inputs:
+            - location: ../docs/account-access.openapispec.json
+            - location: ../docs/market-data.openapispec.json
+        output: .speakeasy/out.openapi.yaml
+        registry:
+            location: registry.speakeasyapi.dev/chalupa-tech/go-schwab/trader-api---account-access-and-user-preferences
+targets:
+    go-schwab-api-individual:
+        target: go
+        source: Trader API - Account Access and User Preferences
+        codeSamples:
+            registry:
+                location: registry.speakeasyapi.dev/chalupa-tech/go-schwab/trader-api---account-access-and-user-preferences-code-samples
+            labelOverride:
+                fixedValue: Go (SDK)
+            blocking: false

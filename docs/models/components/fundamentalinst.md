@@ -1,0 +1,65 @@
+# FundamentalInst
+
+
+## Fields
+
+| Field                 | Type                  | Required              | Description           |
+| --------------------- | --------------------- | --------------------- | --------------------- |
+| `Symbol`              | **string*             | :heavy_minus_sign:    | N/A                   |
+| `High52`              | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `Low52`               | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `DividendAmount`      | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `DividendYield`       | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `DividendDate`        | **string*             | :heavy_minus_sign:    | N/A                   |
+| `PeRatio`             | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `PegRatio`            | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `PbRatio`             | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `PrRatio`             | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `PcfRatio`            | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `GrossMarginTTM`      | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `GrossMarginMRQ`      | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `NetProfitMarginTTM`  | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `NetProfitMarginMRQ`  | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `OperatingMarginTTM`  | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `OperatingMarginMRQ`  | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `ReturnOnEquity`      | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `ReturnOnAssets`      | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `ReturnOnInvestment`  | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `QuickRatio`          | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `CurrentRatio`        | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `InterestCoverage`    | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `TotalDebtToCapital`  | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `LtDebtToEquity`      | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `TotalDebtToEquity`   | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `EpsTTM`              | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `EpsChangePercentTTM` | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `EpsChangeYear`       | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `EpsChange`           | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `RevChangeYear`       | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `RevChangeTTM`        | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `RevChangeIn`         | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `SharesOutstanding`   | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `MarketCapFloat`      | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `MarketCap`           | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `BookValuePerShare`   | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `ShortIntToFloat`     | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `ShortIntDayToCover`  | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `DivGrowthRate3Year`  | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `DividendPayAmount`   | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `DividendPayDate`     | **string*             | :heavy_minus_sign:    | N/A                   |
+| `Beta`                | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `Vol1DayAvg`          | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `Vol10DayAvg`         | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `Vol3MonthAvg`        | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `Avg10DaysVolume`     | **int64*              | :heavy_minus_sign:    | N/A                   |
+| `Avg1DayVolume`       | **int64*              | :heavy_minus_sign:    | N/A                   |
+| `Avg3MonthVolume`     | **int64*              | :heavy_minus_sign:    | N/A                   |
+| `DeclarationDate`     | **string*             | :heavy_minus_sign:    | N/A                   |
+| `DividendFreq`        | **int*                | :heavy_minus_sign:    | N/A                   |
+| `Eps`                 | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `CorpactionDate`      | **string*             | :heavy_minus_sign:    | N/A                   |
+| `DtnVolume`           | **int64*              | :heavy_minus_sign:    | N/A                   |
+| `NextDividendPayDate` | **string*             | :heavy_minus_sign:    | N/A                   |
+| `NextDividendDate`    | **string*             | :heavy_minus_sign:    | N/A                   |
+| `FundLeverageFactor`  | **float64*            | :heavy_minus_sign:    | N/A                   |
+| `FundStrategy`        | **string*             | :heavy_minus_sign:    | N/A                   |

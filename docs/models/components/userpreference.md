@@ -1,0 +1,10 @@
+# UserPreference
+
+
+## Fields
+
+| Field                                                                                  | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `Accounts`                                                                             | [][components.UserPreferenceAccount](../../models/components/userpreferenceaccount.md) | :heavy_minus_sign:                                                                     | N/A                                                                                    |
+| `StreamerInfo`                                                                         | [][components.StreamerInfo](../../models/components/streamerinfo.md)                   | :heavy_minus_sign:                                                                     | N/A                                                                                    |
+| `Offers`                                                                               | [][components.Offer](../../models/components/offer.md)                                 | :heavy_minus_sign:                                                                     | N/A                                                                                    |
