@@ -1,0 +1,38 @@
+name: Validation
+
+on:
+  pull_request:
+    branches: [ "main" ]
+  push:
+    branches-ignore: [ "main" ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.22'
+
+      - name: Tidy modules
+        run: go mod tidy
+
+      - name: Verify clean modules
+        run: |
+          if ! git diff --quiet go.mod go.sum; then
+            echo "go.mod or go.sum is not tidy. Please run 'go mod tidy' and commit the changes."
+            git diff
+            exit 1
+          fi
+
+      - name: Run Unit Tests
+        run: go test -v ./...
+
+      - name: Run Reference Consumer Validation
+        run: |
+          chmod +x scripts/validate_sdk.sh
+          ./scripts/validate_sdk.sh
