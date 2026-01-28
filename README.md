@@ -403,7 +403,7 @@ This SDK follows [Semantic Versioning](https://semver.org/).
 ### Schema Management
 This SDK uses an **Overlay-First Strategy** to patch the upstream Charles Schwab OpenAPI spec. 
 - 📄 See [docs/OVERLAY_STRATEGY.md](docs/OVERLAY_STRATEGY.md) for details on current patches.
-- 🛠️ Run `scripts/validate_consumer.sh` to verify changes against downstream consumers.
+- 🛠️ Run `scripts/validate_sdk.sh` to verify changes using the internal [examples/reference_consumer](examples/reference_consumer).
 
 ## Contributions
 
