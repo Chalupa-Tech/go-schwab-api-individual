@@ -24,7 +24,6 @@ jobs:
 
       - name: Tidy modules
         run: go mod tidy
-        working-directory: ./workspace/go-schwab-api-individual
 
       - name: Verify clean modules
         run: |
@@ -33,11 +32,9 @@ jobs:
             git diff
             exit 1
           fi
-        working-directory: ./workspace/go-schwab-api-individual
 
       - name: Run Tests
         run: go test -v ./...
-        working-directory: ./workspace/go-schwab-api-individual
 
       - name: Extract Release Data
         id: extract
@@ -45,7 +42,6 @@ jobs:
           VERSION=$(grep -m 1 "^## \[" CHANGELOG.md | sed -E 's/## \[([^]]+)\].*/\1/')
           echo "version=$VERSION" >> $GITHUB_OUTPUT
           awk '/^## \[/{if (p) exit; p=1; next} p' CHANGELOG.md > release_notes.md
-        working-directory: ./workspace/go-schwab-api-individual
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
