@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.1.0] - 2026-01-27
 ### Added
 - **New SDK**: Regenerated SDK using Speakeasy to match current Schwab API spec.
 - **Hooks**: Implemented `URLRewriteHook` to handle `getPriceHistory` and `getChain` URL path corrections (/trader/v1 -> /marketdata/v1).
