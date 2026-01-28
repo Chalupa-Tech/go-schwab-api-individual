@@ -36,6 +36,11 @@ jobs:
       - name: Run Tests
         run: go test -v ./...
 
+      - name: Run Reference Consumer Validation
+        run: |
+          chmod +x scripts/validate_sdk.sh
+          ./scripts/validate_sdk.sh
+
       - name: Extract Release Data
         id: extract
         run: |
