@@ -14,7 +14,15 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.24'
+          go-version: '1.25.6'
+
+      - name: Configure Git for Private Modules
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        if: env.GH_PAT != ''
+        run: |
+          git config --global url."https://${GH_PAT}:x-oauth-basic@github.com/StartYourLab".insteadOf "https://github.com/StartYourLab"
+          git config --global url."https://${GH_PAT}:x-oauth-basic@github.com/Chalupa-Tech".insteadOf "https://github.com/Chalupa-Tech"
 
       - name: Build
         run: go build -v ./...
