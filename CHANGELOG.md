@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **Standards**: Added `Makefile`, `.vscode/settings.json`, `PR Template`.
+- **CI**: Added `.github/workflows/ci.yml` and `.revive.toml`.
+
+### Fixed
+- **CI**: Removed legacy `StartYourLab` git URL rewrite rule ([#](https://github.com/Chalupa-Tech/go-schwab-api-individual/commit/HEAD)).
+
 ## [0.1.0] - 2026-01-30
 ### Added
 - **New SDK**: Regenerated SDK using Speakeasy to match current Schwab API spec.
