@@ -1,8 +1,8 @@
-# undefined
+# Charles Schwab Individual Trader API SDK
 
-Developer-friendly & type-safe Go SDK specifically catered to leverage *undefined* API.
+Developer-friendly & type-safe Go SDK specifically catered to leverage the **Charles Schwab Individual Trader** API.
 
-[![Built by Speakeasy](https://img.shields.io/badge/Built_by-SPEAKEASY-374151?style=for-the-badge&labelColor=f3f4f6)](https://www.speakeasy.com/?utm_source=undefined&utm_campaign=go)
+[![Built by Speakeasy](https://img.shields.io/badge/Built_by-SPEAKEASY-374151?style=for-the-badge&labelColor=f3f4f6)](https://www.speakeasy.com/?utm_source=go-schwab-api-individual&utm_campaign=go)
 [![License: MIT](https://img.shields.io/badge/LICENSE_//_MIT-3b5bdb?style=for-the-badge&labelColor=eff6ff)](https://opensource.org/licenses/MIT)
 
 
@@ -19,7 +19,7 @@ Market Data: Trader API - Market data
 <!-- Start Table of Contents [toc] -->
 ## Table of Contents
 <!-- $toc-max-depth=2 -->
-* [undefined](#undefined)
+* [Overview](#charles-schwab-individual-trader-api-sdk)
   * [SDK Installation](#sdk-installation)
   * [SDK Example Usage](#sdk-example-usage)
   * [Authentication](#authentication)
@@ -410,4 +410,4 @@ This SDK uses an **Overlay-First Strategy** to patch the upstream Charles Schwab
 While we value open-source contributions to this SDK, this library is generated programmatically. Any manual changes added to internal files will be overwritten on the next generation. 
 We look forward to hearing your feedback. Feel free to open a PR or an issue with a proof of concept and we'll do our best to include it in a future release. 
 
-### SDK Created by [Speakeasy](https://www.speakeasy.com/?utm_source=undefined&utm_campaign=go)
+### SDK Created by [Speakeasy](https://www.speakeasy.com/?utm_source=go-schwab-api-individual&utm_campaign=go)
